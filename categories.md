@@ -27,8 +27,8 @@ permalink: /categories/
     <p>Project records, experiments, build logs, and design decisions.</p>
   </section>
 
-  <section id="translations">
-    <h2>Translations</h2>
-    <p>English translations of selected Brunch essays and related Korean-language writing.</p>
+  <section id="fiction">
+    <h2>Fiction</h2>
+    <p>Short stories, fragments, and fictional experiments.</p>
   </section>
 </div>

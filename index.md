@@ -7,7 +7,7 @@ title: Home
   <p class="kicker">Ize Studio</p>
   <h1>Essays on writing, reading, typewriters, e-ink tools, and the making of Ize Compose.</h1>
   <p>
-    An English archive for essays, translations, reading notes, tool reflections, and project records.
+    An English archive for essays, fiction, reading notes, tool reflections, and project records.
   </p>
 </section>
 
@@ -45,6 +45,6 @@ title: Home
     <a href="{{ '/categories/#writing-tools' | relative_url }}">Writing Tools</a>
     <a href="{{ '/categories/#reading-notes' | relative_url }}">Reading Notes</a>
     <a href="{{ '/categories/#projects' | relative_url }}">Projects</a>
-    <a href="{{ '/categories/#translations' | relative_url }}">Translations</a>
+    <a href="{{ '/categories/#fiction' | relative_url }}">Fiction</a>
   </div>
 </section>

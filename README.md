@@ -2,7 +2,7 @@
 
 Essays on writing, reading, typewriters, e-ink tools, and the making of Ize Compose.
 
-This repository hosts the GitHub Pages site for Ize Studio, including English essays, translations from Brunch posts, reading notes, writing tool reflections, and project records.
+This repository hosts the GitHub Pages site for Ize Studio, including English essays, fiction, reading notes, writing tool reflections, and project records.
 
 ## Categories
 
@@ -10,7 +10,7 @@ This repository hosts the GitHub Pages site for Ize Studio, including English es
 - Writing Tools
 - Reading Notes
 - Projects
-- Translations
+- Fiction
 
 ## Writing Posts
 
