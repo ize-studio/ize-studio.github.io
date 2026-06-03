@@ -1,0 +1,12 @@
+{% if include.posts.size > 0 %}
+  <ul class="category-post-list">
+    {% for post in include.posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span>{{ post.date | date: "%B %-d, %Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p class="category-empty">No posts yet.</p>
+{% endif %}
