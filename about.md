@@ -12,4 +12,4 @@ It gathers fiction alongside notes on books, writing instruments, project record
 
 The site is not limited to Ize Compose. It is a home for connected work: essays, fiction, reading notes, writing systems, e-ink experiments, and project documentation.
 
-For videos of work, simulations, and typing sessions, visit [Ize Studio's YouTube](https://www.youtube.com/@ize-studio).
+작업/시뮬레이션/타건 등의 영상을 보려면 여기로 이동하세요: [Ize Studio's YouTube](https://www.youtube.com/@ize-studio).
