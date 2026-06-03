@@ -21,7 +21,7 @@ title: Home
       {% for post in site.posts limit: 8 %}
         <article class="post-item">
           <a href="{{ post.url | relative_url }}">
-            <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.category %} · {{ post.category }}{% endif %}</span>
+            <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.category %} &middot; {{ post.category }}{% endif %}</span>
             <h3>{{ post.title }}</h3>
             {% if post.excerpt %}
               <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
@@ -41,10 +41,10 @@ title: Home
   </div>
 
   <div class="category-grid">
-    <a href="{{ '/categories/#essays' | relative_url }}">Essays</a>
-    <a href="{{ '/categories/#writing-tools' | relative_url }}">Writing Tools</a>
-    <a href="{{ '/categories/#reading-notes' | relative_url }}">Reading Notes</a>
-    <a href="{{ '/categories/#projects' | relative_url }}">Projects</a>
-    <a href="{{ '/categories/#fiction' | relative_url }}">Fiction</a>
+    <a href="{{ '/categories/essays/' | relative_url }}">Essays</a>
+    <a href="{{ '/categories/writing-tools/' | relative_url }}">Writing Tools</a>
+    <a href="{{ '/categories/reading-notes/' | relative_url }}">Reading Notes</a>
+    <a href="{{ '/categories/projects/' | relative_url }}">Projects</a>
+    <a href="{{ '/categories/fiction/' | relative_url }}">Fiction</a>
   </div>
 </section>

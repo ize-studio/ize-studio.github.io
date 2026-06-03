@@ -6,39 +6,34 @@ permalink: /categories/
 
 # Categories
 
-<div class="category-sections">
-  <section id="essays">
-    <h2>Essays</h2>
-    <p>Long-form reflections on writing, reading, language, and tools.</p>
-    {% assign category_posts = site.posts | where: "category", "Essays" %}
-    {% include category-post-list.html posts=category_posts %}
-  </section>
+<div class="category-grid category-index">
+  {% assign essays_posts = site.posts | where: "category", "Essays" %}
+  <a href="{{ '/categories/essays/' | relative_url }}">
+    <strong>Essays</strong>
+    <span>{{ essays_posts.size }} posts</span>
+  </a>
 
-  <section id="writing-tools">
-    <h2>Writing Tools</h2>
-    <p>Notes on typewriters, keyboards, e-ink devices, software, and writing workflows.</p>
-    {% assign category_posts = site.posts | where: "category", "Writing Tools" %}
-    {% include category-post-list.html posts=category_posts %}
-  </section>
+  {% assign writing_tools_posts = site.posts | where: "category", "Writing Tools" %}
+  <a href="{{ '/categories/writing-tools/' | relative_url }}">
+    <strong>Writing Tools</strong>
+    <span>{{ writing_tools_posts.size }} posts</span>
+  </a>
 
-  <section id="reading-notes">
-    <h2>Reading Notes</h2>
-    <p>Book notes, quotations in context, and observations gathered while reading.</p>
-    {% assign category_posts = site.posts | where: "category", "Reading Notes" %}
-    {% include category-post-list.html posts=category_posts %}
-  </section>
+  {% assign reading_notes_posts = site.posts | where: "category", "Reading Notes" %}
+  <a href="{{ '/categories/reading-notes/' | relative_url }}">
+    <strong>Reading Notes</strong>
+    <span>{{ reading_notes_posts.size }} posts</span>
+  </a>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Project records, experiments, build logs, and design decisions.</p>
-    {% assign category_posts = site.posts | where: "category", "Projects" %}
-    {% include category-post-list.html posts=category_posts %}
-  </section>
+  {% assign projects_posts = site.posts | where: "category", "Projects" %}
+  <a href="{{ '/categories/projects/' | relative_url }}">
+    <strong>Projects</strong>
+    <span>{{ projects_posts.size }} posts</span>
+  </a>
 
-  <section id="fiction">
-    <h2>Fiction</h2>
-    <p>Short stories, fragments, and fictional experiments.</p>
-    {% assign category_posts = site.posts | where: "category", "Fiction" %}
-    {% include category-post-list.html posts=category_posts %}
-  </section>
+  {% assign fiction_posts = site.posts | where: "category", "Fiction" %}
+  <a href="{{ '/categories/fiction/' | relative_url }}">
+    <strong>Fiction</strong>
+    <span>{{ fiction_posts.size }} posts</span>
+  </a>
 </div>

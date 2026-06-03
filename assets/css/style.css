@@ -157,6 +157,8 @@ p {
 }
 
 .category-grid a {
+  display: grid;
+  gap: 4px;
   min-height: 64px;
   padding: 16px;
   border: 1px solid var(--line);
@@ -165,6 +167,16 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-decoration: none;
+}
+
+.category-grid span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.category-index {
+  margin-top: 26px;
 }
 
 .category-sections {
