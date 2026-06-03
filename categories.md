@@ -8,32 +8,37 @@ permalink: /categories/
 
 <div class="category-grid category-index">
   {% assign essays_posts = site.posts | where: "category", "Essays" %}
-  <a href="{{ '/categories/essays/' | relative_url }}">
+  <a class="category-card" href="{{ '/categories/essays/' | relative_url }}">
     <strong>Essays</strong>
-    <span>{{ essays_posts.size }} posts</span>
+    <span>Long-form reflections on writing, reading, language, and tools.</span>
+    <em>{{ essays_posts.size }} posts</em>
   </a>
 
   {% assign writing_tools_posts = site.posts | where: "category", "Writing Tools" %}
-  <a href="{{ '/categories/writing-tools/' | relative_url }}">
+  <a class="category-card" href="{{ '/categories/writing-tools/' | relative_url }}">
     <strong>Writing Tools</strong>
-    <span>{{ writing_tools_posts.size }} posts</span>
+    <span>Typewriters, keyboards, e-ink devices, software, and writing workflows.</span>
+    <em>{{ writing_tools_posts.size }} posts</em>
   </a>
 
   {% assign reading_notes_posts = site.posts | where: "category", "Reading Notes" %}
-  <a href="{{ '/categories/reading-notes/' | relative_url }}">
+  <a class="category-card" href="{{ '/categories/reading-notes/' | relative_url }}">
     <strong>Reading Notes</strong>
-    <span>{{ reading_notes_posts.size }} posts</span>
+    <span>Book notes, quotations in context, and observations gathered while reading.</span>
+    <em>{{ reading_notes_posts.size }} posts</em>
   </a>
 
   {% assign projects_posts = site.posts | where: "category", "Projects" %}
-  <a href="{{ '/categories/projects/' | relative_url }}">
+  <a class="category-card" href="{{ '/categories/projects/' | relative_url }}">
     <strong>Projects</strong>
-    <span>{{ projects_posts.size }} posts</span>
+    <span>Project records, experiments, build logs, and design decisions.</span>
+    <em>{{ projects_posts.size }} posts</em>
   </a>
 
   {% assign fiction_posts = site.posts | where: "category", "Fiction" %}
-  <a href="{{ '/categories/fiction/' | relative_url }}">
+  <a class="category-card" href="{{ '/categories/fiction/' | relative_url }}">
     <strong>Fiction</strong>
-    <span>{{ fiction_posts.size }} posts</span>
+    <span>Short stories, fragments, and fictional experiments.</span>
+    <em>{{ fiction_posts.size }} posts</em>
   </a>
 </div>

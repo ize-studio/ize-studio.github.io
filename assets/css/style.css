@@ -152,7 +152,7 @@ p {
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 10px;
 }
 
@@ -176,7 +176,34 @@ p {
 }
 
 .category-index {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   margin-top: 26px;
+}
+
+.category-card {
+  min-height: 150px;
+  align-content: start;
+}
+
+.category-card strong {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.category-card span {
+  margin-top: 6px;
+  line-height: 1.45;
+}
+
+.category-card em {
+  align-self: end;
+  margin-top: 14px;
+  color: var(--accent);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .category-sections {
