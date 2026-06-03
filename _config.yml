@@ -1,0 +1,32 @@
+title: Ize Studio
+description: Essays on writing, reading, typewriters, e-ink tools, and the making of Ize Compose.
+url: "https://ize-studio.github.io"
+baseurl: ""
+permalink: /:categories/:year/:month/:day/:title/
+timezone: Asia/Seoul
+
+author:
+  name: Ize Studio
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+categories:
+  - Essays
+  - Writing Tools
+  - Reading Notes
+  - Projects
+  - Translations
+
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-feed
