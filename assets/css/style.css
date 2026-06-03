@@ -289,6 +289,22 @@ p {
   line-height: 1.5;
 }
 
+.site-support {
+  margin-top: 18px;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.site-support p + p {
+  margin-top: 4px;
+}
+
+.site-support a {
+  color: var(--accent-strong);
+}
+
 @media (max-width: 640px) {
   body {
     font-size: 17px;
