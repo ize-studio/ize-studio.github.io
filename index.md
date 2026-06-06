@@ -16,12 +16,17 @@ title: Home
     <h2>Latest Posts</h2>
   </div>
 
-  {% if site.posts.size > 0 %}
+  {% assign latest_posts = site.posts | sort: "date" | reverse %}
+  {% if latest_posts.size > 0 %}
     <div class="post-list">
-      {% for post in site.posts limit: 8 %}
+      {% for post in latest_posts limit: 8 %}
         <article class="post-item">
           <a href="{{ post.url | relative_url }}">
-            <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.category %} &middot; {{ post.category }}{% endif %}</span>
+            {% assign post_category = post.category %}
+            {% if post_category == nil and post.categories.size > 0 %}
+              {% assign post_category = post.categories | first %}
+            {% endif %}
+            <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post_category %} &middot; {{ post_category }}{% endif %}</span>
             <h3>{{ post.title }}</h3>
             {% if post.excerpt %}
               <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>

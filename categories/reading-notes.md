@@ -8,5 +8,5 @@ permalink: /categories/reading-notes/
 
 Book notes, quotations in context, and observations gathered while reading.
 
-{% assign category_posts = site.posts | where: "category", "Reading Notes" %}
+{% assign category_posts = site.posts | where_exp: "post", "post.category == 'Reading Notes' or post.categories contains 'Reading Notes'" | sort: "date" | reverse %}
 {% include category-post-list.html posts=category_posts %}
