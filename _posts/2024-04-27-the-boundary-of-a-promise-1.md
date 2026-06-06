@@ -2,7 +2,7 @@
 layout: post
 title: "The Boundary of a Promise"
 date: 2024-04-27
-categories: [Fiction]
+category: Fiction
 tags: [essay, translation, brunch, fiction, promise, interpretation]
 ---
 
