@@ -1,8 +1,0 @@
-_site/
-.jekyll-cache/
-.sass-cache/
-.bundle/
-vendor/
-Gemfile.lock
-outputs/
-work/
