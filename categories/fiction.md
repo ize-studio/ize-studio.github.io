@@ -8,5 +8,4 @@ permalink: /categories/fiction/
 
 Short stories, fragments, and fictional experiments.
 
-{% assign category_posts = site.posts | where: "category", "Fiction" | sort: "date" | reverse %}
-{% include category-post-list.html posts=category_posts %}
+{% include category-post-list.html aliases="Fiction|fiction|Story|Stories|Short Story|Short Stories|소설|픽션|단편|이야기" %}

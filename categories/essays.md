@@ -8,5 +8,4 @@ permalink: /categories/essays/
 
 Long-form reflections on writing, reading, language, and tools.
 
-{% assign category_posts = site.posts | where: "category", "Essays" | sort: "date" | reverse %}
-{% include category-post-list.html posts=category_posts %}
+{% include category-post-list.html aliases="Essay|Essays|essay|essays|에세이|수필" %}

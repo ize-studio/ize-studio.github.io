@@ -8,5 +8,4 @@ permalink: /categories/writing-tools/
 
 Notes on typewriters, keyboards, e-ink devices, software, and writing workflows.
 
-{% assign category_posts = site.posts | where: "category", "Writing Tools" | sort: "date" | reverse %}
-{% include category-post-list.html posts=category_posts %}
+{% include category-post-list.html aliases="Writing Tool|Writing Tools|writing tool|writing tools|Tool|Tools|tool|tools|글쓰기 도구|쓰기 도구|작문 도구|도구" %}

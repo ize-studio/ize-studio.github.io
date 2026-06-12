@@ -8,5 +8,4 @@ permalink: /categories/projects/
 
 Project records, experiments, build logs, and design decisions.
 
-{% assign category_posts = site.posts | where: "category", "Projects" | sort: "date" | reverse %}
-{% include category-post-list.html posts=category_posts %}
+{% include category-post-list.html aliases="Project|Projects|project|projects|프로젝트|작업|제작" %}
