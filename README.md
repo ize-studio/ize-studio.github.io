@@ -30,3 +30,13 @@ date: 2026-06-03
 category: Essays
 ---
 ```
+
+`category` and `categories` are both accepted:
+
+```yaml
+category: Essays
+```
+
+```yaml
+categories: [Essays]
+```
