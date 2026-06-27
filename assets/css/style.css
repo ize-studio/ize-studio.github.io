@@ -117,9 +117,22 @@ p {
   max-width: 720px;
 }
 
-.intro p:last-child {
+.intro > p:not(.kicker) {
   color: var(--muted);
   font-size: 21px;
+}
+
+.intro-image {
+  max-width: min(100%, 720px);
+  margin: 34px 0 0;
+}
+
+.intro-image img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
 }
 
 .section {

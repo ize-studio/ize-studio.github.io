@@ -1,6 +1,6 @@
 # Ize Studio
 
-Essays on writing, reading, typewriters, e-ink tools, and the making of Ize Compose.
+Essays, fiction, and reading notes.
 
 This repository hosts the GitHub Pages site for Ize Studio, including English essays, fiction, reading notes, writing tool reflections, and project records.
 
