@@ -1,399 +1,784 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://ize-studio.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ize-studio.github.io/" rel="alternate" type="text/html" /><updated>2026-07-01T06:24:22+09:00</updated><id>https://ize-studio.github.io/feed.xml</id><title type="html">Ize Studio</title><subtitle>Essays, fiction, and reading notes.</subtitle><author><name>Ize Studio</name></author><entry xml:lang="en"><title type="html">The Last Assignment with Gemini</title><link href="https://ize-studio.github.io/posts/projects/the-last-assignment-with-gemini.html" rel="alternate" type="text/html" title="The Last Assignment with Gemini" /><published>2026-06-29T00:00:00+09:00</published><updated>2026-06-29T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/projects/the-last-assignment-with-gemini</id><content type="html" xml:base="https://ize-studio.github.io/posts/projects/the-last-assignment-with-gemini.html"><![CDATA[<p>Gemini had, in its own way, built the program quite meticulously. In a single C-language file, it had made the skeleton of a program that could write Korean, English, German, French, Turkish, and Montenegrin. As header files, there was little more than an engine for composing Korean jamo. So at the time, everything consisted of three files: one Arduino <code>*.ino</code> file that served as the main file, one header file containing the Korean font, and one header file for the Korean composition engine.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://ize-studio.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ize-studio.github.io/" rel="alternate" type="text/html" /><updated>2026-07-01T06:26:49+09:00</updated><id>https://ize-studio.github.io/feed.xml</id><title type="html">Ize Studio</title><subtitle>Essays, fiction, and reading notes.</subtitle><author><name>Ize Studio</name></author><entry xml:lang="en"><title type="html">The Last Assignment with Gemini</title><link href="https://ize-studio.github.io/posts/projects/the-last-assignment-with-gemini.html" rel="alternate" type="text/html" title="The Last Assignment with Gemini" /><published>2026-06-29T00:00:00+09:00</published><updated>2026-06-29T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/projects/the-last-assignment-with-gemini</id><content type="html" xml:base="https://ize-studio.github.io/posts/projects/the-last-assignment-with-gemini.html"><![CDATA[<p>Gemini had, in its own way, built the program quite meticulously. In a single C-language file, it had made the skeleton of a program that could write Korean, English, German, French, Turkish, and Montenegrin. As header files, there was little more than an engine for composing Korean jamo. So at the time, everything consisted of three files: one Arduino <code class="language-plaintext highlighter-rouge">*.ino</code> file that served as the main file, one header file containing the Korean font, and one header file for the Korean composition engine.</p>
+
 <p>As I wrote, problems popped up one by one, but even if the fixes were improvised each time, I somehow solved them. It was still a period when I naturally assumed that there were parts Gemini had simply failed to think of and apply. Sometimes, when a document went beyond 500 characters, the device almost froze. At other times, if I went back to the beginning of the text and returned, only the very bottom line of the screen would display normally from then on. Still, I looked through the functions in order, read Gemini’s explanations, and corrected them one by one.</p>
-<p>When everything was finished, when it had literally reached the point where I could say to other people, “Maybe this is complete enough,” I posted photos and videos of the screen on Reddit. That was also when I made the code public on GitHub. Since I knew nothing except that the code had been written in the Arduino IDE, I skipped all the environment details and simply uploaded those three files. That was the end of it. At that time, I probably had not even written a <code>README.md</code> file explaining the code. I only learned how to write one after connecting Codex and Claude to Visual Studio Code.</p>
+
+<p>When everything was finished, when it had literally reached the point where I could say to other people, “Maybe this is complete enough,” I posted photos and videos of the screen on Reddit. That was also when I made the code public on GitHub. Since I knew nothing except that the code had been written in the Arduino IDE, I skipped all the environment details and simply uploaded those three files. That was the end of it. At that time, I probably had not even written a <code class="language-plaintext highlighter-rouge">README.md</code> file explaining the code. I only learned how to write one after connecting Codex and Claude to Visual Studio Code.</p>
+
 <p>At that point, I indulged one ambition. Later, I would set the new goal of every language in the world, but before that, back when I was still using only Gemini and the Arduino IDE, I could not set such a grand goal. It was something modest: since the main file was too large and the functions were concentrated there, I wanted to restructure it into more header files and a smaller main file, with the functions distributed by feature, so that I could study it step by step myself.</p>
+
 <p>The code as completed up to that point looked like this.</p>
+
 <ul>
-<li>It could fill the screen from the bottom line upward and automatically wrap lines when the end of the screen was reached.</li>
-<li>It could create text files.</li>
-<li>It could save.</li>
-<li>It could move the cursor with the arrow keys.</li>
-<li>It could delete characters backward from the current cursor position with Backspace.</li>
-<li>It could switch between Korean and foreign-language input with Control-Space.</li>
-<li>It had a search function with Control-F.</li>
-<li>It had a sleep function with Control-L.</li>
-<li>It could move between words with Control and the arrow keys.</li>
-<li>It could delete by word with Control-Backspace.</li>
-<li>The menu allowed adjustment of font size, character spacing, sleep delay, and so on.</li>
-<li>In the menu, Korean was fixed, and the remaining languages - English, French, German, Turkish, and Montenegrin - could be selected.</li>
+  <li>It could fill the screen from the bottom line upward and automatically wrap lines when the end of the screen was reached.</li>
+  <li>It could create text files.</li>
+  <li>It could save.</li>
+  <li>It could move the cursor with the arrow keys.</li>
+  <li>It could delete characters backward from the current cursor position with Backspace.</li>
+  <li>It could switch between Korean and foreign-language input with Control-Space.</li>
+  <li>It had a search function with Control-F.</li>
+  <li>It had a sleep function with Control-L.</li>
+  <li>It could move between words with Control and the arrow keys.</li>
+  <li>It could delete by word with Control-Backspace.</li>
+  <li>The menu allowed adjustment of font size, character spacing, sleep delay, and so on.</li>
+  <li>In the menu, Korean was fixed, and the remaining languages - English, French, German, Turkish, and Montenegrin - could be selected.</li>
 </ul>
-<p>I think there may have been network functions at that point, but I do not remember exactly. I do not know whether it was then or afterward, but there was a time when I enabled Bluetooth mode and made the device usable as an external Bluetooth keyboard. I also once made it act as a web server so that, in Wi-Fi mode, another device could connect to this device and view the writing. Since there was a <code>Network.h</code> file at that time, I think at least one of those functions must have been implemented. In any case, the fact that the program looked like that list meant that it had not been made from a plan from the beginning, but that I had attached those functions one by one in layers. So having the main code call and combine the functions while collecting the bodies of the functions by type meant, in effect, that I was now trying to design the overall structure once.</p>
+
+<p>I think there may have been network functions at that point, but I do not remember exactly. I do not know whether it was then or afterward, but there was a time when I enabled Bluetooth mode and made the device usable as an external Bluetooth keyboard. I also once made it act as a web server so that, in Wi-Fi mode, another device could connect to this device and view the writing. Since there was a <code class="language-plaintext highlighter-rouge">Network.h</code> file at that time, I think at least one of those functions must have been implemented. In any case, the fact that the program looked like that list meant that it had not been made from a plan from the beginning, but that I had attached those functions one by one in layers. So having the main code call and combine the functions while collecting the bodies of the functions by type meant, in effect, that I was now trying to design the overall structure once.</p>
+
 <p>But the conclusion was failure. When Gemini could not see the code, it got variable names, function names, and even function parameter names wrong all the time. Even when I uploaded files, it absolutely did not read them. It kept giving me wrong instructions, and when I told it there was no such variable, it only replied, “In general, functions with names like that are used that way, so I did not know.” In the end, after wasting about three days like that, I decided to give up on splitting the files. Uploading the whole file only made the credits drain faster; nothing changed. Whether I copied and pasted the code or uploaded the code file itself, it answered without looking at it either way.</p>
+
 <p>For about a week after that, I experimented with changing fonts. I did not like any typeface, but I also did not want to use a font that I could not make public on GitHub. I had posted videos and photos, and when someone said, “If Korean looked like that, I would want to try it too,” I could not tell them to make their own header file and use it themselves. That was how I found DungGeunMo, but it differed too much from the English font, so I wandered around trying to find a thin typeface that would match. The reason I began thinking I should just stop using Gemini was that, in fonts too, as in other parts, it kept repeating itself: maybe this font would be better, maybe it should search more, and so on. Several times, characters disappeared, Korean would not display at all, or even nothing appeared on the screen except the horizontal line of the status bar. But when I got angry, rolled things back, and made the font again, it would suddenly say it had found a solution. That solution, I think, was to use DungGeunMo, and it must have said that three or four times.</p>
+
 <p>So in the end, I thought that to take on a larger project, I would need to find another way. Just then, my wife said, “I hear Claude is getting popular these days, and they say Claude was specialized for coding from the start.” When I searched online, many people were already using Claude and Codex. I had heard of Codex for the first time then. I had something to do outside, and ended up with an hour or two of waiting time, so I read blog posts closely. They said Claude could be installed in Visual Studio Code. They even said Codex could not be used on mobile, but could be connected to Visual Studio Code. It can be used on mobile now, but the PC-installed version has to act as the server. If it could only be used on a PC, I thought connecting it would be better. As it happened, when I was struggling with Gemini over file separation, builds took too long to test, so to shorten build time I had already moved the existing Arduino code into Visual Studio Code and reached the stage where it built and uploaded properly.</p>
+
 <p>Because file separation attempts kept failing, I half-doubted Gemini while installing and configuring things as it instructed. But the same work that had been done in the Arduino IDE really took only about one-third of the time in Visual Studio Code. In the past, if Gemini gave me strange code, it took almost five minutes just to check the error. In the new environment, it ended in about 80 seconds. It explained what kind of difference caused that, but I was not interested in the reason then, and I am still not interested enough to go that far now. My only thought is that I should simply use Visual Studio Code from now on. Come to think of it, there was also a Gemini extension library, but I did not use it. I do not know why, but I remember closing the recommendation even though it appeared. If I had used that extension, I might have used Gemini for just a little longer.</p>
+
 <p>After that - after one day of thinking - I paid for both Claude and Codex, because I could not decide which of the two was superior.</p>
+
 <p>And then, quite literally, a new chapter opened.</p>
+
 <hr />
+
 <p>Sometimes I play keyboard videos because I feel drawn to the sound of typing. I had wondered what the sound of my own writing would be like, but I hesitated because recording might interfere with writing. At last, the temptation of the title “writing with the firmware I made” was too strong, so I tried it.</p>
+
 <p>Writing video for “The Last Assignment with Gemini”:</p>
-<p><a href="https://youtu.be/3mNHwjTNewM?si=RYrvf8Xn0M5QEQ9i">https://youtu.be/3mNHwjTNewM?si=RYrvf8Xn0M5QEQ9i</a></p>
+
+<p>https://youtu.be/3mNHwjTNewM?si=RYrvf8Xn0M5QEQ9i</p>
+
 <hr />
+
 <p>Korean original: <a href="https://brunch.co.kr/@rup-l/415">제미나이와의 마지막 과제</a></p>]]></content><author><name>Ize Studio</name></author><category term="Projects" /><category term="project" /><category term="writing-tools" /><category term="translation" /><category term="brunch" /><category term="zerowriter" /><category term="ink" /><category term="firmware" /><category term="korean" /><category term="ai" /><category term="gemini" /><category term="claude" /><category term="codex" /><category term="vscode" /><summary type="html"><![CDATA[Gemini had, in its own way, built the program quite meticulously. In a single C-language file, it had made the skeleton of a program that could write Korean, English, German, French, Turkish, and Montenegrin. As header files, there was little more than an engine for composing Korean jamo. So at the time, everything consisted of three files: one Arduino *.ino file that served as the main file, one header file containing the Korean font, and one header file for the Korean composition engine.]]></summary></entry><entry xml:lang="en"><title type="html">Fire, and Three Spaces</title><link href="https://ize-studio.github.io/posts/essays/fire-and-three-spaces.html" rel="alternate" type="text/html" title="Fire, and Three Spaces" /><published>2026-06-26T00:00:00+09:00</published><updated>2026-06-26T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/essays/fire-and-three-spaces</id><content type="html" xml:base="https://ize-studio.github.io/posts/essays/fire-and-three-spaces.html"><![CDATA[<p>A dream story.</p>
+
 <p>There is a nine-story residential-commercial building between apartment complexes. Before the apartments were built, it stood in the middle of an empty lot and was the tallest building in the area. But after the apartment complexes came in, it no longer felt like such a special building. Still, as old buildings often do, it had a wide site around it, so when seen from the apartment complex side before crossing the road, it did have a subtle sense of presence.</p>
+
 <p>I had only ever been to the jjimjilbang and bowling alley in the basement, so I was curious what the apartments above looked like. There was a separate elevator for residents, and if I took that elevator, going up to the ninth floor would not have been a problem. But because I felt guilty about looking around a space where people lived, I had never actually tried.</p>
+
 <p>After becoming a college student, I decided to gather my courage and go up. I thought I could simply get off on the ninth floor and walk down the stairs. First, I bought an ice cream from the supermarket in the basement, ate it, and got into the elevator marked for residents only. When I pressed the ninth floor, the elevator began to move slowly. Literally slowly. It seemed to take about four or five seconds per floor. I was afraid someone might get in on the way up to the ninth floor and say, “Huh? I have not seen you before.” Fortunately, no one got on, and I reached the ninth floor alone.</p>
+
 <p>The apartments were corridor-style. There were seven homes on one floor, and only one elevator. If the elevator had to be replaced or repaired, people would have to walk, but I thought perhaps it was not too bad since it was only nine floors, and I slowly came down the stairs. Through the stairwell window, I could see the apartment where I lived. Around the seventh floor, there was a box on the stairs. I did not know what was inside, but it was covered with newspaper, and a plastic bowl had been placed on top of it. Instinctively, I thought it must be farm produce, but there was no way to know. Then, from somewhere, a sharp, acrid smell began to drift in. I wondered what was happening, and suddenly smoke appeared outside the window. The smoke was so thick that the apartment complex I had seen just a moment earlier on the right was no longer visible at all. A moment later, the fire alarm began to ring. Without realizing it, I ran back up to the ninth floor, and because the door of one apartment was open, I went in out of curiosity.</p>
+
 <p>“Knock, knock, knock.”</p>
+
 <p>The door was open, so I had almost peered inside, but I could not simply walk in, so I knocked. All the room doors were closed. Then, from behind what seemed to be the bedroom door, I heard a woman’s voice.</p>
+
 <p>“Just take it. There is money under the rice cooker.”</p>
+
 <p>“No, that is not why I came. There is a fire. Did you not hear?”</p>
+
 <p>“That is why I opened all the windows. So bad air or smoke can come in and then go back out.”</p>
+
 <p>“I understand. But the smoke was black before, and now it is turning white, so I think the fire is already being put out.”</p>
+
 <p>“If you have no business here, please leave. This is a home where people live, not a place to sightsee.”</p>
+
 <p>“I am sorry.”</p>
+
 <p>It seemed there were more people like me, people who had come to look around, than I had expected. Since the apartment was beside the stairs and the door was often left open, I thought she must be bothered by people quite a lot.</p>
+
 <p>When I had come down about four floors, I saw a stream of water outside the window. The fire seemed to be on the fifth floor. I remembered that there had once been a fire in the basement jjimjilbang, and at that time all the residents had run down the stairs to evacuate. It had been raining, so a nearby elementary school had quickly lent them tents, which were set up in the parking lot. It had been sad to see elderly people and children standing together beneath a tent that said “Happy Sports Day.” Fortunately, a lot of time had passed since then, and compared with back then, the fire trucks had arrived very quickly. It seemed the fire was already almost out.</p>
+
 <p>The next moment, I was walking inside the apartment complex. I heard a faint ringing sound in the distance and turned around. Smoke was pouring out of the middle of the bowling alley building. Since it was pitch-black smoke, the fire seemed to have spread to some extent. The ringing sound was probably the fire alarm. Apartment residents opened their windows one by one and looked out, and people walking like me, as well as people in the playground, stood up and watched.</p>
+
 <p>“Shouldn’t someone report it?”</p>
+
 <p>Someone said that, but while I was thinking, if they were going to say that, why did they not report it themselves, two fire trucks had already arrived. Firefighters got out of the trucks, two of them went inside, and the rest operated the equipment and sprayed water. Maybe they had decided to shoot once, and if the glass broke, keep spraying, and if it did not break, have the people who went in first open the window. The stream of water went straight through to the exact spot in one clean shot. The window from which the smoke was coming out was very narrow, so I had assumed they would break the glass, but the water stream went precisely inside. When the firefighters who had gone up opened other windows too, the stream of water moved back and forth, spraying evenly. Thankfully, after a short while, white smoke came out instead of black smoke.</p>
+
 <p>That night - actually, there is no middle. I have no memory of coming out of the building, I do not know why I have memories both inside and outside the building when the fire happened, and I do not know why it was suddenly night - the news reported that there had been a fire, that firefighters had gone in and sprayed water and extinguishers, and that drugs had been found in the apartment. It was one night’s dream, but it contained too many stories. In dreams, everything makes sense. Everything feels natural, and if something does not make sense, it feels like my fault. But after waking from a dream, I realize that what did not make sense was not my fault, and I come to think that things I had thought were natural may not have been natural at all. The first thought I had after waking was this: perhaps the apartment with the open door also had a reason why it had to leave the door open, and perhaps there had been drugs inside that box on the stairs too.</p>
+
 <hr />
+
 <p>Korean original: <a href="https://brunch.co.kr/@rup-l/416">화재, 그리고 세 개의 공간</a></p>]]></content><author><name>Ize Studio</name></author><category term="Essays" /><category term="essay" /><category term="translation" /><category term="brunch" /><category term="dream" /><category term="dream-journal" /><category term="apartment" /><category term="fire" /><summary type="html"><![CDATA[A dream story.]]></summary></entry><entry xml:lang="en"><title type="html">Making Hangul Type</title><link href="https://ize-studio.github.io/posts/projects/making-hangul-type.html" rel="alternate" type="text/html" title="Making Hangul Type" /><published>2026-06-22T00:00:00+09:00</published><updated>2026-06-22T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/projects/making-hangul-type</id><content type="html" xml:base="https://ize-studio.github.io/posts/projects/making-hangul-type.html"><![CDATA[<p>Before talking about the thought that I should make multilingual input a reality, it seems right to first tell the story of implementing Korean. That is because realizing that what had first looked impossible for me was only one gateway made me want to try things beyond Korean as well. If implementing only Korean and English input had taken weeks of time and more than an hour or two of effort each day, as I had first imagined, I would not have dared to dream of anything beyond that. There is a great difference between thinking, even if it is hard, “This is doable,” and merely wishing that I had the environment or talent to make it doable. It creates the difference between whether one begins or not, a situation of either 0 or 100.</p>
+
 <p>If there is an operating system like Windows, macOS, or Linux, one can simply use the language packs provided by that operating system. That is why it did not take so much time on the Raspberry Pi-based Ize Ribbon. But in firmware that had to be built up from the beginning, the environment was a little different. I did not know that at the time, but I learned it one step at a time.</p>
+
 <p>First, I did not know how keyboard input was applied in the code. I had to test it. Second, there was no font. Third, in Korean, the character code differs depending on whether a syllable has a final consonant.</p>
+
 <p>These were all gateways I came to know only after making firmware. Before that, I thought every language already had something like a common language pack, and that I would only have to choose Korean as one does in Windows or macOS. I thought that if I simply pressed a key on the keyboard, the character would appear on its own. It was also then that I first learned that I had to match the signal coming from the keyboard with the character, one by one. At the time, I was simply following Gemini’s instructions, doing what it said should be done this way or that way, like back in my university days when I looked at an embedded Linux book and blindly typed commands without knowing what they meant. So even as I was putting things in, I thought, “I have to go through all these steps? This feels like making the whole thing from scratch.”</p>
+
 <p>And really, that was what I was doing. I was making it from scratch.</p>
+
 <p>What surprised me most was the scope of that “from scratch.” According to Gemini, putting in ASCII codes was not difficult, but the screen could not display them because it did not know the shapes of the characters. Does that make sense? Until then, I had thought that when letters were entered into a computer through a keyboard, the computer displayed those letters. But even if I entered the character code, I had to tell it what that code was supposed to look like. If I entered “giyeok,” I had to tell it that the shape was “ㄱ.” I had to tell it all of that for more than ten thousand characters.</p>
+
 <p>“Then do it. Am I going to do that myself? Gemini will.”</p>
+
 <p>That was the thought I started with. What I was thinking at the time was that instead of putting in every character shape according to each character code, I would only put in the Korean jamo and have the screen display them gathered together, like a typewriter. If it had displayed them that way, it probably would have looked truly typewriter-like, with a separate line left for final consonants. But Gemini said most Hangul automata were already known on the internet, and that the process of combining codes - in other words, how “ㄱ” and “ㅏ” meet to make “가” - was already easy to implement. To be honest, I did not understand what it meant, but since it said it was possible, I simply proceeded in that direction.</p>
+
 <p>In other areas, if something did not work, I would go around it, try again, or, if that too failed, give up by calling it an AI limitation and think up a new idea myself. But for Korean, I told Gemini to do whatever it wanted, and I think it was completed in about four hours. I started after work and finished before going to bed that night.</p>
+
 <p>I checked that pressing Shift produced “ㄲ” and “ㅉ” and the like, but I also saw that letters without double-consonant versions would not input at all while Shift was held down. When Caps Lock was on, only double consonants were typed. When Caps Lock was on and I pressed number keys, symbols such as $ and % appeared, so I made Caps Lock ignored, only to see that even when I pressed Shift, the special characters above the number keys no longer entered.</p>
+
 <p>For the rest of the weekend, I continued this kind of debugging that was not quite debugging. Since the program was not crashing or producing errors, it may not have been the kind of thing properly called debugging. Still, if the device behaved differently from what one expected while writing, then it was something that had to be fixed.</p>
+
 <p>Because I wanted the writing to begin from the bottom line, I asked it not to start at the top, but to calculate the area of the screen, the height of one line of text, and the space between lines and letters, and then move the starting point down to the bottom line. This may have been the biggest threshold. The hardships that came later were real hardships, but this was simply the threshold of whether I would keep going or not. Since the code that wrote from the top was backed up anyway, I could have stopped there and simply used it. But the feeling that it was almost working, yet not quite, made me spend the whole weekend clinging to it.</p>
+
 <p>In fact, the Hangul composition work itself was all finished there. The function that composed Hangul, receiving “ㄱ,” “ㅏ,” and “ㄱ,” and then, if the next input was a space or a consonant, replacing them with the syllable “각” and discarding the old input, was working normally. Now the problem was maintaining the characters that had been made that way. More than the internal operation itself, what the user saw on the screen had become more important. No matter how correctly the internal computation proceeded, the fact that even one character was not visible had become the more important issue.</p>
+
 <hr />
+
 <p>Korean original: <a href="https://brunch.co.kr/@rup-l/414">한글 활자 만들기</a></p>]]></content><author><name>Ize Studio</name></author><category term="Projects" /><category term="project" /><category term="writing-tools" /><category term="translation" /><category term="brunch" /><category term="zerowriter" /><category term="ink" /><category term="firmware" /><category term="korean" /><category term="hangul" /><category term="ime" /><category term="font" /><summary type="html"><![CDATA[Before talking about the thought that I should make multilingual input a reality, it seems right to first tell the story of implementing Korean. That is because realizing that what had first looked impossible for me was only one gateway made me want to try things beyond Korean as well. If implementing only Korean and English input had taken weeks of time and more than an hour or two of effort each day, as I had first imagined, I would not have dared to dream of anything beyond that. There is a great difference between thinking, even if it is hard, “This is doable,” and merely wishing that I had the environment or talent to make it doable. It creates the difference between whether one begins or not, a situation of either 0 or 100.]]></summary></entry><entry xml:lang="en"><title type="html">First Tool, First Debugging</title><link href="https://ize-studio.github.io/posts/projects/first-tool-first-debugging.html" rel="alternate" type="text/html" title="First Tool, First Debugging" /><published>2026-06-15T00:00:00+09:00</published><updated>2026-06-15T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/projects/first-tool-first-debugging</id><content type="html" xml:base="https://ize-studio.github.io/posts/projects/first-tool-first-debugging.html"><![CDATA[<p>The first debugging was closer to practicing how to use the software than to debugging. Since I had never used Arduino itself before, everything was unfamiliar to me, starting with the software menus. I even had to set which hardware the code I was making would run on. I had thought of the Inkplate only as something for the display, so it did not make sense to me that I had to choose Inkplate, or that in order to choose it, I first had to download the corresponding library one by one. Not only in software, but in fact in almost every field whose background I have never experienced, there are many things one has no choice but to memorize first under the name of “that is just how it is.” Even so, as someone whose only brief encounters with dedicated software had been the iPhone and Android development environments, it felt a little strange that something called general-purpose would still have a dedicated development tool. But even then, if I had pushed a little harder and said I would do it in Visual Studio Code, Gemini would probably have explained it to me. Instead, perhaps because I simply thought, “I guess that is how it is,” I floundered around and wandered through this menu and that menu as practice.</p>
+
 <p>After work, I would come home and describe the function I wanted to make. Gemini would turn that function into code, and I would paste it in again, modify variables, build it, upload it, and test it. I repeated that process.</p>
+
 <p>The conclusion was that the screen turning partly black on the first day had happened because I had selected the wrong hardware. Gemini searched the internet on its own and brought back the hardware specifications, but detailed specifications, especially the kind that have to be found through experience, only dragged things out and did not solve anything. Still, that level of search speed itself was a performance I had not imagined, so at first I was very satisfied.</p>
+
 <p>The simple function of using Korean alone was actually completed in four days. I made it possible to use both English and Korean and posted it on Reddit, and the response was fairly good. I do not know whether it was really good, but to me it was a response I had not expected at all, and I think that made me wonder whether I should go a little further.</p>
+
 <p>If I had changed my mind then and said, since I was going to use it alone anyway, that this was only for Koreans who might otherwise throw away the machine because Korean did not work for them, and that they should at least use it this way, then the conclusion might have been bland but clean. The Control-Space function for switching between Korean and English was fine, and the fact that text files were saved to the SD card was similar to the original ZeroWriter firmware anyway. The reason I ran around for two months - or, to be precise, about one month and ten days, roughly thirty-eight days - was mainly that after expanding the languages and preparing to show it off, I finally began noticing the bugs that had to be fixed.</p>
+
 <p>Honestly, even after implementing Korean, the device was usable for writing. The typing speed was acceptable, and I bought switches and keycaps and replaced them. But because it had happened faster than expected, I did not realize that I had greatly overestimated Gemini. On top of that, the process of receiving code in the chat window, copying and using it, then copying the terminal window back into the chat when an error occurred and waiting for the result was inefficient. And although I did not know it then, taking nearly five minutes to compile and upload does not make sense. Was it really only five minutes? Still, with a Korean-only device there was not much to think about, and even when compiled as firmware, most of the size was taken up by the font, so perhaps it did not take quite that long back then.</p>
+
 <p>At first, I became just a little more ambitious from there. I decided to implement five languages with their local keyboard layouts: English, German, French, Turkish, Montenegrin, and Korean. I also wanted to emphasize Montenegrin, so I asked Gemini to suggest a good word in Montenegrin. After a brief internet search, Gemini suggested Ize, saying it meant “wisdom” in Montenegrin. That was how the firmware name became Ize.</p>
+
 <p>I expanded it to five languages and made all the code public on GitHub. Around that time, the ZeroWriter team put my GitHub link on the crowdfunding page and introduced it as an example of the kind of open source ecosystem they had intended to create from the beginning by going open source. I already thought the response had been better than expected, and once they introduced it, of course I could not be satisfied with just those five languages. The next step, naturally enough, could only be to move from a machine I used alone toward firmware for everyone outside the English-speaking world, could it not?</p>
+
 <hr />
+
 <p>Korean original: <a href="https://brunch.co.kr/@rup-l/413">첫 도구 첫 디버깅</a></p>]]></content><author><name>Ize Studio</name></author><category term="Projects" /><category term="project" /><category term="writing-tools" /><category term="translation" /><category term="brunch" /><category term="zerowriter" /><category term="ink" /><category term="firmware" /><category term="korean" /><category term="ai" /><category term="arduino" /><category term="software" /><summary type="html"><![CDATA[The first debugging was closer to practicing how to use the software than to debugging. Since I had never used Arduino itself before, everything was unfamiliar to me, starting with the software menus. I even had to set which hardware the code I was making would run on. I had thought of the Inkplate only as something for the display, so it did not make sense to me that I had to choose Inkplate, or that in order to choose it, I first had to download the corresponding library one by one. Not only in software, but in fact in almost every field whose background I have never experienced, there are many things one has no choice but to memorize first under the name of “that is just how it is.” Even so, as someone whose only brief encounters with dedicated software had been the iPhone and Android development environments, it felt a little strange that something called general-purpose would still have a dedicated development tool. But even then, if I had pushed a little harder and said I would do it in Visual Studio Code, Gemini would probably have explained it to me. Instead, perhaps because I simply thought, “I guess that is how it is,” I floundered around and wandered through this menu and that menu as practice.]]></summary></entry><entry><title type="html">Writing Dialogue</title><link href="https://ize-studio.github.io/posts/essays/writing-dialogue.html" rel="alternate" type="text/html" title="Writing Dialogue" /><published>2026-06-12T00:00:00+09:00</published><updated>2026-06-12T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/essays/writing-dialogue</id><content type="html" xml:base="https://ize-studio.github.io/posts/essays/writing-dialogue.html"><![CDATA[<p>Write dialogue.</p>
+
 <p>“Hey, did something happen today? Why does the mood feel like this?”</p>
+
 <p>I meant to write whatever came to mind, but why did I end up writing a sentence that feels abrupt and bewildering even to me? They say that sometimes something from the unconscious world puts on the mask of randomness and gets caught in the net. If that is true, perhaps it is not entirely useless to think about what caused that sentence.</p>
+
 <p>On the other hand, if the cause of that sentence is not in me, but purely in the force exerted inside the unconscious world, or, if force is not the right word, in its own internal dynamics, then whatever I guess may be wrong.</p>
+
 <p>The mood is not good, so it feels as if something happened today. Why? In truth, the reason is unknowable. Unless someone tells me, I can never guess it. Otherwise I would not have asked the question. I would have asked whether it was because of this or that, not why.</p>
+
 <p>What was my subconscious trying to tell me? Did it simply want to ask why I touched it, like a fish caught in a net and pulled up? If so, this falls into circular logic. The reason I pulled it up was that I wanted to hear a story. The story that was pulled up, in turn, tells me that what it ultimately wants from me is a story called the reason for something. Yes, let me be honest. I wanted to hear a story.</p>
+
 <p>What happened? Yes, I wanted to hear your story. That is the whole reason. So stop asking questions now and tell me the story. What about the mood? Is the mood bad? Does it seem as if something happened? Why do you think so? Why does the mood look bad? Did you simply dislike the expression on my face, the one that was expecting a story from you?</p>
+
 <p>I want to hear a story. Not a story I can commonly see and hear in life, and not something that has nothing to do with me, like an event happening at the far end of the universe. I want to hear the story that is happening inside me, so close and yet unknown to me. That is why I listen to dreams. But I know very well that relying on dreams will lead to nothing. So please speak. My unconscious, please trust me and speak.</p>
+
 <p>Yes. I am wary of my unconscious. Like a blackout after drinking, I am negative toward the self I do not know. I want to stop the unconscious from bursting out in any way I can. But that only means I am wary of it coming outside me without my knowing. I truly want to know what shape it has when it is not doing something with my body in ordinary life, but exists purely as thought, as a state of reflection, as when I am lost in thought. And yet, once I come to know it, I do not know what I would do with that knowledge. I do not know what will come out. The world I do not know is this deep. No one knows whether what comes out will be what I call a religiously supreme state, a joyful state like the realization of all the principles of the world, or the emptiness of absolute nothingness. It may even differ from person to person. A situation may arrive that wraps around me completely like truth, yet differs from the truth of others, like the premise of an absolute religious war. What should I do then? Since not everyone can overhear such a story, should I simply insist that my words are the truth?</p>
+
 <p>Yes. The great premise of everything is deceiving everyone.</p>
+
 <p>The premise that such a state must exist.</p>
+
 <p>Perhaps what we call the unconscious is only something like an illusion produced when the realm of instinct invades the realm of rational logic. Like when a dog presses a calculator and numbers appear on the screen, numbers the dog does not understand but that we can read, even though they have not the slightest connection to the dog.</p>
+
 <p>Now, back to the starting point. I like stories like this. Stories in which one walks vigorously, keeps moving without rest on a round planet like the Earth, and finally returns to the same place. If I have walked this long only to come back to where I began, then surely this must be a place like the Little Prince’s planet, somewhere one can visit only in imagination.</p>]]></content><author><name>Ize Studio</name></author><category term="Essays" /><category term="essay" /><category term="translation" /><category term="writing" /><category term="unconscious" /><category term="dreams" /><summary type="html"><![CDATA[Write dialogue.]]></summary></entry><entry xml:lang="en"><title type="html">It Was Not the World of Light, but the Baptism of Light</title><link href="https://ize-studio.github.io/posts/projects/it-was-not-the-world-of-light-but-the-baptism-of-light.html" rel="alternate" type="text/html" title="It Was Not the World of Light, but the Baptism of Light" /><published>2026-06-08T00:00:00+09:00</published><updated>2026-06-08T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/projects/it-was-not-the-world-of-light-but-the-baptism-of-light</id><content type="html" xml:base="https://ize-studio.github.io/posts/projects/it-was-not-the-world-of-light-but-the-baptism-of-light.html"><![CDATA[<p>Subtitle: Before I Could Write Korean on the ZeroWriter Ink</p>
+
 <p>It was the day before, the day I was reading <em>Leaves of Grass</em>.</p>
+
 <p>I opened the book with some expectation because it was said to be the only Korean translation available in this country, but from the beginning, difficult sentences kept appearing, sentences that made me wonder whether the book would really have been praised so highly if it had been written like this from the start. Still, I could let that pass. Perhaps it was simply that kind of book. But when I reached the phrase “received the world of light,” I could not stand it any longer.</p>
+
 <p>I searched to see whether the original text could be read online. Since it was an old book, the foundation had apparently made all of the books available. The files were easy to find, so I chose one edition, opened it on my phone, enlarged it, and began comparing the words. And when I actually reached the passage I had been reading, I had no choice but to conclude that the phrase should have been not “the world of light” but “the baptism of light.” I downloaded the original text so that next time I could compare it directly as I read, instead of only wondering about it.</p>
+
 <p>The next day, I became exhausted from going back and forth between the book and the PDF file, and eventually ordered a copy of the original. There was one being sold at an online bookstore for 7,000 won. While waiting for the original to arrive, I began reading another book. It was just after that that I found out the ZeroWriter Ink had arrived at my house.</p>
+
 <p>It was a crowdfunded product, but the box felt as if it had been properly packaged. What I am about to tell is a story about a tool for writing. However, unlike the advertisement from when the funding campaign began, the tool was not suitable for writing in every language. The website said that most Latin-based characters could currently be written, but it also said that languages such as Korean and Japanese would be supported in the next funding campaign.</p>
+
 <p>Then what about this machine?</p>
+
 <p>Still, it was not something I had received for free, nor was it something I had bought for twenty or thirty thousand won. I decided to try using it somehow. The first thought that came to me was to download the source code from the website and slightly modify it so that it would support Korean. I did not know much, but if I brought AI along with me, would something not come out of it?</p>
+
 <p>In truth, I do not know programming well enough to vaguely think, “Would something not come out of it?” I can barely write Python code. Of course, I can do simple calculations or make the mouse click automatically. So if skill were measured from 0 to 100, I would not be at 0. Of course, that does not mean I would be anywhere near 100. I would not even be at 10.</p>
+
 <p>But soon I learned that, contrary to the maker’s promise, even the code had not yet been released. It was open source, but its release had been delayed for various reasons. In the end, my hope of “slightly” changing something and writing with it disappeared.</p>
+
 <p>But I was using Gemini. And then a small desire arose. That choice at that moment was the beginning of all this. Starting something modest with AI. Writing Korean on the ZeroWriter Ink. Above all, when I gave it the specifications, it immediately told me the hardware standards and coding language, so naturally I thought that if it was that much of an expert, it would not take long.</p>
+
 <p>At the time, I did not think very seriously about coding with AI. So I went about it in a truly ignorant way. In fact, putting Korean into the machine itself was not that difficult. I did not even use VS Code. I simply opened the Arduino IDE, did as I was told, and asked Gemini:</p>
+
 <p>“What should I do first?”</p>
+
 <p>Gemini looked up the hardware specifications of the ZeroWriter Ink and told me to set this and that as the basic configuration. One quarter of the left side of the screen turned black. Then it began blinking endlessly.</p>
+
 <p>People who have programmed before may laugh. At the time, I did not even know what a serial monitor was. It was only a month ago, but I have learned a lot since then. Startled, I quickly turned the machine off and thought for a moment.</p>
+
 <p>“Should I ask Gemini about this situation and debug it, or should I quickly put the stock firmware back in and at least make it work in English?”</p>
+
 <p>But this was literally the extreme of black-and-white thinking. It was the moment when I had to decide between making a machine I could use right away, and entering a period of waiting that might never lead to anything I could use.</p>
+
 <p>Only the next product might support Korean, and this product might never support it at all. Crowdfunding always contains that possibility. People do not fund things because they are foolish. They fund them even while knowing that such a possibility exists.</p>
+
 <p>In the end, I chose debugging.</p>
+
 <hr />
+
 <p>Korean original: <a href="https://brunch.co.kr/@rup-l/411">빛의 세계가 아니라 빛의 세례였다</a></p>]]></content><author><name>Ize Studio</name></author><category term="Projects" /><category term="project" /><category term="writing-tools" /><category term="translation" /><category term="brunch" /><category term="zerowriter" /><category term="ink" /><category term="firmware" /><category term="korean" /><category term="ai" /><summary type="html"><![CDATA[Subtitle: Before I Could Write Korean on the ZeroWriter Ink]]></summary></entry><entry xml:lang="en"><title type="html">The Little One</title><link href="https://ize-studio.github.io/posts/fiction/the-little-one.html" rel="alternate" type="text/html" title="The Little One" /><published>2024-05-02T00:00:00+09:00</published><updated>2024-05-02T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/fiction/the-little-one</id><content type="html" xml:base="https://ize-studio.github.io/posts/fiction/the-little-one.html"><![CDATA[<p>A little one, black and square, lives with its friends. No one knows since when, but around the time the little one became aware of its own existence, all its friends too had vaguely realized that they were some kind of beings. For example: that they were not all one together, but individuals; that although they were all the same square shape, their expressions and ways of feeling were different; and that since they were not beings that particularly needed to consume something or come to understand anything, simply remaining still like this was enough to feel satisfied. They were all pressed together in a narrow space, but since there was no particular need to move, as long as “this present state” was maintained, no one had any complaints, and, as expected, no one expressed anything either.</p>
+
 <p>Then one day, the world shook. I mean it shook physically. The little ones lying at the very bottom began making a racket. Even those who were not necessarily at the bottom, the ones who disliked touching other little ones, screamed wildly at the other little ones scratching against them. Then, when the shaking lessened, they too quickly grew quiet and sank at once back into peaceful satisfaction. But that was not the end. A moment later, light suddenly came in. The black little ones realized that although they were black, they were not the complete black they had perceived in the dark, but closer to a somewhat dark gray. And what they had all thought were expressions were actually patterns of deep black. A little while later, they realized that what they had believed was their gathering together was not really a gathering at all. It was because they were trapped inside a transparent plastic bag. Two enormous hands tore the plastic open all at once. After tearing it, the hands turned it upside down, shook it, and poured the little ones inside onto the floor. The little ones once again rubbed against one another and let out every kind of scream. After only a few seconds, everything grew quiet again in every direction. Apart from the little ones, no one made any sound.</p>
+
 <p>A little later, a large board appeared beside the little ones. That board was placed together with another board, and as they overlapped there came a clicking sound, after which it joined with another board again. Then another board that made no sound was layered on top, and once again, with a clicking sound, another side was fitted on. After it was joined with something else that was flat but not a board, sixteen screws were driven into the four corners and the spaces between them. The little ones instinctively knew what it was. If they had not been little ones, no one, despite having been born only a short time ago, would have felt the desire to rush toward it at the first sight of it.</p>
+
 <p>When the board was turned over, countless raised and hollow parts appeared. The chosen little ones took those places one by one. Little Ctrl had been chosen and wanted to go in near the right side of the spacebar, but apparently there had been three Ctrls among the little ones together. Two were chosen and fitted in, and he was put back into the plastic bag.</p>
+
 <p>Life inside the plastic bag was very peaceful. He did envy the chosen little ones, but that was only instinct, and this place was not bad either. Everyone there was a little one in the same situation. Nothing happened, but in the scenery where nothing happened, they enjoyed a quiet peace. Like this, they felt only a sense of sameness with one another, and there was nothing to fight about.</p>
+
 <p>Then one day, after passing through a world of only things, so quiet that he honestly could not know how much time had gone by, the plastic bag stirred again. The other little ones grew irritated and screamed again as their bodies touched one another. A hand was rummaging through the middle of the plastic bag. Too frightened to say anything to the hand, they only shouted at the other little ones who touched their bodies. Then little Ctrl realized that he had been chosen. The moment the finger that had been stirring past him grasped him, no one could scream at him. The plastic bag sank back into darkness, but little Ctrl did not see that darkness.</p>
+
 <p>Little Ctrl saw the keyboard. A screwdriver had fallen there. It was the screwdriver he had seen when the screws were being tightened into the keyboard. And the Ctrl little one to the left of the spacebar was horribly shattered. The situation was clear. The screwdriver had fallen, hit Ctrl, and the poor Ctrl had broken just like that.</p>
+
 <p>Whether it was unfortunate or fortunate, the Ctrl little one seemed to have lost consciousness the moment he broke and never woken up. The other little ones waved when they saw Ctrl being changed, but Ctrl did not move at all. Little Ctrl felt sorry, but as he realized that he was being chosen and taken to the keyboard, he grew more and more excited.</p>
+
 <p>Click.</p>
+
 <p>Just as he thought he had touched the keyboard, he became part of it. He thought it was less of a big deal than he had expected. After all, this too was a world of things. Sunlight came in and went out, the lights turned on and off, and now that there was no chance at all of his body touching the other little ones, he wondered whether he had sunk even deeper into the world of things than when he had been in the plastic bag.</p>
+
 <p>It was a misunderstanding. He thought the two states would be the same only because he had never experienced either a state almost like existing by oneself, or a state of being part of something.</p>
+
 <p>Five days passed. He knows that five days have passed. Ctrl is no longer a little one. He does not feel like a little one anymore. The same is true of the other keys on the keyboard. They are keys on a key-board, not little ones. The little ones in the plastic bag were wasting the time of waiting, with no hope, only possibility, thinking of it as their own peaceful time, not knowing when something might come. By the time they could be used again, they would already have hardened, decayed, and been thrown away. They would simply remain in that state and die. Even so, they believed that the absence of bumping into one another and screaming was the most peaceful state. But the moment he became part of the keyboard, the world turned over all at once. Countless worlds passed through the keyboard. Countless sentences passed through and became worlds. Worlds passed over the keyboard, and worlds that had not existed were made through the keyboard. Not as individual keys, but as one object called a keyboard, made by keys gathered together, they created a place and a use for themselves within the natural world. Being able to have only peace by oneself was possible only because one had no use alone. The little ones do not know this. On the keyboard, he knows how free this present state is. He is not bound and deprived of freedom. Gathered together, they have formed one thing and become something.</p>
+
 <p>Unlike the little ones, who are in the same state as something buried underground, rejecting all stimulation from outside, while the keyboard is being used, all those keys become part of a human being. They become the head and hands that let the world coming out of a human mind flow into the larger world, and that allow beautiful information coming in from the world to be arranged by a human being in light of their own experience. The experience of becoming part of a living being would itself be beautiful, but above all, the reason the little one instinctively felt joy and excitement when chosen was probably that expanding the ability of one human, one living being, was the little one’s fundamental reason for existence, the purpose for which it had been made.</p>
+
 <p>The keyboard was used for about seven years before its owner dropped it while moving, and it broke into two pieces, ending its life. The keys on it too, once the keyboard’s purpose disappeared, lost the goal of their lives and all returned to inanimate objects. When they returned to inanimate objects, the owner threw away the little ones in the plastic bag as well. The Ctrl key wanted to share with someone the rare experience of not being chosen and then being chosen again, but as part of the keyboard, he could not. Whenever the owner had occasion to press him, he instinctively poured that feeling into the touch with all his strength. At first, the owner did not understand. But years later, while using another keyboard, he suddenly realized that there had been a strange thrill in breaking a key on the new keyboard and replacing it. He became absorbed in wondering why he had felt joy, then saw the little one’s story in a dream and decided to write it. There was also a spacebar inside the plastic bag, and because the spacebar had such a wide surface of contact, its mouth was as big as the key itself. It was always ready to scream whenever the plastic bag shook even a little. But because screaming had become the purpose of its life, it instead felt peace when it became useless. And at the final moment of disposal, it thought, “This too was a good life.”</p>
+
 <hr />
+
 <p>Korean original: <a href="https://brunch.co.kr/@rup-l/30">꼬마</a></p>]]></content><author><name>Ize Studio</name></author><category term="Fiction" /><category term="fiction" /><category term="short-fiction" /><category term="translation" /><category term="brunch" /><category term="keyboard" /><category term="existence" /><summary type="html"><![CDATA[A little one, black and square, lives with its friends. No one knows since when, but around the time the little one became aware of its own existence, all its friends too had vaguely realized that they were some kind of beings. For example: that they were not all one together, but individuals; that although they were all the same square shape, their expressions and ways of feeling were different; and that since they were not beings that particularly needed to consume something or come to understand anything, simply remaining still like this was enough to feel satisfied. They were all pressed together in a narrow space, but since there was no particular need to move, as long as “this present state” was maintained, no one had any complaints, and, as expected, no one expressed anything either.]]></summary></entry><entry xml:lang="en"><title type="html">Grandhill Princess</title><link href="https://ize-studio.github.io/posts/fiction/grandhill-princess.html" rel="alternate" type="text/html" title="Grandhill Princess" /><published>2024-04-28T00:00:00+09:00</published><updated>2024-04-28T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/fiction/grandhill-princess</id><content type="html" xml:base="https://ize-studio.github.io/posts/fiction/grandhill-princess.html"><![CDATA[<p>Subtitle: The Sugar Princess of the Apple Country</p>
+
 <p>Once upon a time, there was a country called Grandhill. Grandhill was also called the Apple Country. No, it would be more accurate to say that the name Grandhill appeared only in official documents, and that all neighboring countries called it the Apple Country. Anyone could understand at once why the country was called Apple: the apples grown there were more delicious than those of any other country. In fact, the surrounding countries grew a great deal of wheat, but this country had many mountains, so it could not grow crops that required flat land. Instead, it exchanged various fruits for rice, other grains, and other fruits.</p>
+
 <p>The Apple Country did grow many kinds of fruit, but the greatest achievement belonged to the late king, who had succeeded in bringing out sweetness in apples in particular. King Zerenbulin, who was even known in neighboring countries as the Apple King, planted dozens of apple trees in the palace courtyard and spent his life conducting different experiments on each tree. At last, he succeeded in producing delicious apples, and ordered that all apples in the country be grown according to his secret method.</p>
+
 <p>At first, there seemed to be little effect. Farmers had to follow strict instructions with the same income, so they did so with tears in their eyes. The amount of apples produced did not seem to change much, nor did the taste. But one year after the king died and Zerenbulin II ascended the throne, everything changed.</p>
+
 <p>When Zerenbulin II came to the throne, the farmers tried to break the late king’s instructions. The royal family also needed to suppress such attempts. Apples were only the beginning; no one knew what royal rules they might try to change next. After countless deliberations, the royal court decided that since the matter had begun with apples, it should end with apples. If that failed, they would ultimately have to use force. So they announced a plan to receive apples from each farmland, choose representatives, and grant various privileges.</p>
+
 <p>On the day of the ceremony commemorating the third year of Zerenbulin II’s reign, a contest of sixty apple varieties from all over the country was held in the palace courtyard. Representatives from sixty farmlands gathered for the tasting, and each ate and evaluated apples from other regions. And then the farmer representatives who had gathered to evaluate them realized how delicious their country’s apples had become, and how evenly the quality had risen.</p>
+
 <p>After more than four hours of discussion, the farmers decided to submit a statement to the royal court instead of an evaluation sheet. The statement consisted of three parts: that they would take responsibility for blocking resistance against Zerenbulin I, that they would pledge absolute loyalty to the royal house after Zerenbulin II, and that, when it came to apple cultivation, the royal court must take responsibility for preventing the secrets from being leaked to neighboring countries. In this way, the Apple Country became a country specialized in apples in name and reality.</p>
+
 <p>At that time, transportation was limited, and the population was not large, so one country was about the size of a city today. In an area the size of one country, there could be dozens or hundreds of countries. After walking for several days, one would reach a neighboring country. That made it difficult to keep secrets. So the farmers demanded that, although they would keep secrets among themselves, the country should punish traitors where their own efforts were not enough.</p>
+
 <p>The royal court designated apples as the country’s specialty product and mascot. Not only apple trees, but even apples themselves, could no longer leave the country except in boxes sealed with paper bearing the royal crest. This became the symbol of Grandhill’s apples among neighboring countries, and the country could export less than half the quantity of apples it had exported before and still import enough wheat to feed the entire population for years.</p>
+
 <p>But Zerenbulin II had no queen. His daughter was being raised by maids, but the queen had died long ago, and the country hastily revised its system so that a daughter too could inherit the throne if designated by the royal family. Still, they hoped he would take a new queen and have a son.</p>
+
 <p>In the eighth year of Zerenbulin II’s reign, when the princess was twelve, he decided to take a queen. She was the eldest daughter of the Pine Mountain family, which owned the largest apple orchard. She was a woman whom everyone considered fit to be queen, full not only of knowledge about apples but also of cultivation. Her refinement did not show itself as learned knowledge, but through actions guided by wisdom; her concern for others came out as manners. Of course, she was beautiful too, but the king found it especially desirable that she would not require separate court education. Court education was then in the middle of being reorganized for the princess’s education as a ruler, amid endless debates, and the king wanted to avoid anything that might prolong those debates.</p>
+
 <p>After coming by palanquin from the Pine Mountain house, she went through the wedding and then the queen’s investiture, two separate ceremonies lasting six hours in total. Only after that could the queen meet the princess. The only things she had brought from home were a few cosmetics and an empty picture frame. After hanging the empty frame on the wall and placing her cosmetics on the dressing table, the queen sent a maid to call the princess.</p>
+
 <p>Knock, knock.</p>
+
 <p>The princess had come.</p>
+
 <p>“Come in.”</p>
+
 <p>The princess opened the door and entered. For a twelve-year-old girl, she was far too fat, and her face was covered in acne. The queen, feeling affection for the daughter she had gained for the first time, called her close and hugged her tightly. Then she told the princess to call her mother now. Since she came from commoner stock, the princess did not have to call her by such stiff court titles, she said.</p>
+
 <p>But the sulking princess barely answered, then took out a pouch, opened it, and put a sugar cube into her mouth. The queen instantly realized that the princess had so much acne because she ate too much sugar. She said, “It seems you are eating too much sugar. Give me that pouch now, and let us reduce it little by little. You have sugar in your room too, don’t you?” and took the pouch away. Then the princess, rudely, shouted, “You witch!” and ran out of the room.</p>
+
 <p>But the queen cared for her daughter and had already made up her mind to make her beautiful so that she would be loved by the people. She called a painter and had him paint a portrait of the princess without acne, then placed it in the empty frame she had brought and hung it up. She had intended to put in a family portrait with the king, but her pity for the princess was too great.</p>
+
 <p>One day, seeing that the acne had disappeared much more than before, the queen realized that if the princess completely gave up sugar, she would become truly beautiful. If simply reducing it a little had made her that pretty, then surely it was so. So she went to the princess’s room and found all the sugar the princess had hidden in her desk, drawers, shelves, and wardrobe. She put it all in a container and ordered it placed in the kitchen. But not everyone approved of this forced method. The kitchen maids were on the princess’s side too.</p>
+
 <p>“Your Majesty, it is presumptuous of us to say this, but taking away what the princess likes in such a forceful way seems very bad at this adolescent age. Continuing to reduce it little by little, as you have been doing, may require patience, but is patience not something adults should have a little more of? Our princess likes sugar cubes, especially white sugar cubes, so much that her nickname is even Princess White Sugar, Princess Snow Sugar. If you try to make her quit sugar all at once, we cannot imagine how great her resistance will be. If worry comes to the royal house, it becomes worry for the country. Please reconsider.”</p>
+
 <p>But such a plea could not shake the queen. Above all, the princess’s education was the queen’s foremost duty, for she firmly believed that even if she bore a prince, it would be right to place the princess on the throne first.</p>
+
 <p>That evening, after dinner and tea time had ended, screams echoed through the palace. The princess was screaming and tearing her room apart. As she cried and screamed, rummaging through every drawer and shelf as if ripping them apart, she was like a fierce cat. When the queen, startled by the screams, reached the princess’s door, she found the maids too frightened to step inside, and the princess striking a window with a chair in an attempt to break it. Unable to bear it, the queen shouted:</p>
+
 <p>“What are you doing!”</p>
+
 <p>The princess only glared at her and kept striking the window without answering. The queen said sternly:</p>
+
 <p>“That is enough. Stop now and sleep. Sleep, and we will talk after you wake.”</p>
+
 <p>But the princess said:</p>
+
 <p>“You came to the palace to kill me, didn’t you? You demon!”</p>
+
 <p>And she kept striking the window. At last, with an ear-splitting crash, the window collapsed. The princess, still not changed into her nightclothes, ran straight outside. Her room was on the third floor, but because the building was built on a hill, it only looked like the third floor from the front; from the princess’s room, it was only a little higher than the first floor.</p>
+
 <p>“Come back here!”</p>
+
 <p>The queen shouted, but it was already too late. By the time the queen jumped down through the window after her, the princess had disappeared into the forest. The queen thought she had probably climbed over the wall in the woods. Hearing the screams, all the guards had rushed toward the building, so none of them had seen the princess.</p>
+
 <p>The queen thought the princess would appear the next morning. She was ill-mannered, but not wicked, so the queen thought she would apologize. But even on the third day, the princess did not appear.</p>
+
 <p>Worried, the queen called a hunter she knew through the Pine Mountain family. The hunter was famous for knowing every forest in the country, so she thought he would easily find the princess.</p>
+
 <p>Two or three hours after the maid sent by the queen arrived at Pine Mountain, the hunter came there to sell game. As he was leaving after receiving his money, the maid called him.</p>
+
 <p>“You there.”</p>
+
 <p>“Do you mean me?”</p>
+
 <p>“The queen is looking for you.”</p>
+
 <p>“Is it because the princess is said to have disappeared?”</p>
+
 <p>“It is. Say nothing and follow me.”</p>
+
 <p>“Understood.”</p>
+
 <p>At the palace entrance, the hunter laid down his bow, arrows, and knife. Even the fur decorations were inspected one by one, so he was delayed several hours longer than the queen had expected. When at last he followed the maid into the queen’s room, the queen was standing before her dressing table. Missing the princess, she looked at the framed portrait and said to herself:</p>
+
 <p>“Who is the fairest in the world? Of course, Snow Sugar is.”</p>
+
 <p>Then the maid said:</p>
+
 <p>“Your Majesty, I will bring in the hunter.”</p>
+
 <p>The hunter paid little attention to anything else and asked directly:</p>
+
 <p>“Your Majesty, am I to find the princess?”</p>
+
 <p>“Yes. You need only find where she is. I will reward you generously.”</p>
+
 <p>“Understood. Where should I send word when I find her?”</p>
+
 <p>“Send word to the Pine Mountain house. That will be enough.”</p>
+
 <p>“Yes, Your Majesty. I will take my leave.”</p>
+
 <p>At the time the hunter left the queen’s room, the princess was in a hut in the mountains. It was the home of someone who cared for people injured while cutting trees. Inside were five or six people lying down with missing arms or legs. There were also five or six others who had come after hearing rumors of the healer’s skill. The healer and his maid were so busy they could hardly look up. They examined the patients, gathered herbs, or brewed the herbs they had. Then they saw the princess standing silently inside the hut. The healer did not yet know the princess had left the palace, and because her lace-trimmed clothes had already become dirty from wandering through the mountains, he did not think she was a princess or someone of high status. He said:</p>
+
 <p>“Child, come here and hold this piece of cloth.”</p>
+
 <p>The princess opened her eyes wide and shouted:</p>
+
 <p>“You fool, do you want to die?”</p>
+
 <p>The healer was briefly startled and could say nothing. Then he said to the maid:</p>
+
 <p>“She seems to be a child with something wrong in her head. Take her to the kitchen and give her one pill.”</p>
+
 <p>The pill in the kitchen was a sugar cube. Sometimes, when people with disturbed minds or wild dogs came, they would give them a sugar cube and then drive them away once their mood improved a little.</p>
+
 <p>After eating the sugar cube, the princess quickly felt better. Smiling, she looked around, and when the healer told her to hold something, she held it; when he told her to press, she pressed, helping with the treatment.</p>
+
 <p>By evening, although the food tasted bad, the sugar cubes were delicious, so she was able to sleep well. She could not eat as many sugar cubes as she wanted, but the healer had honestly told her that this was a remote place and there were not many sugar cubes, so she had to eat them sparingly, but he would let her have them all to herself, so she need not worry.</p>
+
 <p>Before even entering the mountains, the hunter heard from people nearby that a pockmarked girl in lace-trimmed clothes had appeared at the healer’s hut. Thinking it might be the princess, the hunter went to the Pine Mountain house first and reported it before going to see for himself. Until he was told to go and confirm it, he decided not to cause trouble needlessly.</p>
+
 <p>Just as the hunter was cleaning a rabbit and a deer he had caught, the queen’s maid came and delivered a message.</p>
+
 <p>“The queen says there is something she wants to confirm. There is no need for you to go back and see. After she confirms it, she will probably go herself. Time is urgent, so do not waste time over clothes. Come now.”</p>
+
 <p>The hunter thought that since blood had splattered on him while he cleaned the rabbit and deer, this was somewhat too much, but the maid’s expression was so stern that he followed immediately.</p>
+
 <p>The queen asked about the princess’s appearance and clothes. When the hunter described her in such detail that the princess seemed to be before her eyes, he shouted:</p>
+
 <p>“That is right. It seems to be the princess. There is no doubt!”</p>
+
 <p>The queen immediately told the maid to prepare for an outing. Since it was the mountains, she could not take a palanquin, but the same guards had to be maintained. Hearing that it would take about ten minutes for the guards to gather in front of the palace, the queen said, “I will be down within that time, so go ahead and prepare.” Thinking it might take time to persuade the princess, she removed the princess’s portrait from the wall and placed it in a bag. In its place, she hung the mirror that had originally been there.</p>
+
 <p>At that time, strange movements were taking place at the Pine Mountain house. Because maids from the palace kept coming and going, rumors spread nearby that the palace might be giving special favors to Pine Mountain apples. All apples in Grandhill were supposed to be gathered equally, judged equally, packed according to grade, and exported. But rumors said that Pine Mountain apples might be receiving a preliminary screening. Of course, it was all speculation, but because the maid could not speak about the princess’s escape, there was no rebuttal.</p>
+
 <p>Then, in Goldstream, a servant was caught trying to smuggle an apple branch across the border. What threw the whole country into turmoil was that, while being arrested, he shouted at the top of his lungs, “Of course I would do this, when they buy Pine Mountain apples at such high prices and buy ours for scraps!” It was a story that did not exist at all. He was later found to have lied and was executed, but by then it was already too late.</p>
+
 <p>The rumor that Pine Mountain was receiving special favors spread rapidly throughout Grandhill. Along with it spread the rumor that Zerenbulin II would never have done such a thing, and that the queen must have seduced him into it.</p>
+
 <p>The queen arrived at the healer’s hut and met the princess. The treatment room had been cleared, and the patients were resting under a tent bearing the royal crest, eating porridge hastily prepared by the royal household. Sitting across from the princess in the treatment room, the queen said:</p>
+
 <p>“Princess, keep your dignity. What is the meaning of this?”</p>
+
 <p>“You told me to call you mother instead of Your Majesty, didn’t you? You acted friendly, and now you try to tame me with food? Am I an animal?”</p>
+
 <p>“I am not taming you. I am educating you. You will one day receive and rule this country. If so, this Apple Country may become not an apple country for you, but a poisoned apple.”</p>
+
 <p>“So now you are cursing me to eat a poisoned apple. You start a quarrel first, and instead of apologizing, you threaten me too?”</p>
+
 <p>“You may not want to hear it, but there is no help for that. You began your education as a ruler late, so this may be expected. But once you take the throne, your ministers too will say many things you do not want to hear. You cannot run out of the palace each time, can you?”</p>
+
 <p>“I did not leave because of ministers. I left because of you! You were trying to feed me a poisoned apple!”</p>
+
 <p>After shouting as much as she could, the princess returned to the palace. Because it was a mountain where she had often played as a child, she knew the way from there to the palace well. It had taken the queen and her procession three hours to reach the hut, but the princess reached the palace in one.</p>
+
 <p>When she escaped, she had climbed over the wall. When she returned, she entered proudly through the main gate. Seeing the princess with her dirty face and frayed dress, the people and the guards were all speechless. When everyone began whispering, the princess shouted:</p>
+
 <p>“Do not whisper behind my back! Is the royal family so ridiculous? It must be ridiculous when the queen tells the princess to eat a poisoned apple!”</p>
+
 <p>After saying that, the princess went into the palace, and the people were shaken. Rumors began to spread that the queen had blocked the king’s eyes and ears to give favors to the Pine Mountain house, and not only that, but had tried to kill the princess and pass the throne to her own child.</p>
+
 <p>Two days later, the king summoned a council. In the court where the king and ministers gathered, the queen and princess also sat. At the end, all the servants and maids who worked in the palace gathered as well. Amid the tense atmosphere, the king opened his mouth.</p>
+
 <p>“I hear everyone has a great deal to say. Speak.”</p>
+
 <p>Brown Pleasde, the oldest among the ministers, spoke.</p>
+
 <p>“The reason I still assist the royal house at this age is that the royal house values my opinion and will not let me go. In gratitude for such high regard, I cannot help but speak. Among the people, words that should never exist are now flying wildly. Since Her Majesty the queen of the Pine Mountain house stands at the center of all those rumors, Your Majesty must clarify the matter and end everything today.”</p>
+
 <p>“I have heard the rumors roughly. The ministers must know that the princess left the palace. It was because of that that a maid went in and out of Pine Mountain. But the royal house cannot run around everywhere so crudely, can it? Let us understand it that way and settle the matter here.”</p>
+
 <p>“Your Majesty, this is not a matter that can be calmed so easily. They say that Her Majesty practices sorcery. That part does not vanish simply because we say it is not so. If it is false, we must root it out and find the person who said such a thing, and make an example of them.”</p>
+
 <p>“That is the first I have heard of such a story. Who first said it?”</p>
+
 <p>At that moment, one of the servants stepped forward hesitantly.</p>
+
 <p>“Your Majesty, I think the story I told may have spread.”</p>
+
 <p>“What did you say that led to talk of the queen practicing sorcery?”</p>
+
 <p>The king was beginning to grow angry. The gentle expression he had worn at first was gone, and now the corners of his eyes were rising. Trembling with fear, the servant spoke.</p>
+
 <p>“Some time after the princess disappeared, I was passing before the queen’s room while carrying luggage. A hunter had come to see the queen, and the door was open. Her Majesty asked the mirror who was the fairest in the world, and a woman’s voice from the mirror answered, Snow Sugar Princess. Wondering who it was, I dared to lift my face and look inside, and the mirror was showing the princess’s face. I was so frightened that I barely managed to carry away the luggage and ran.”</p>
+
 <p>“Where was that mirror?”</p>
+
 <p>“It was hanging on the pillar beside the dressing table.”</p>
+
 <p>“Wasn’t the princess’s portrait hanging there? I believe I heard so last time.”</p>
+
 <p>The queen thought, Ah, and answered:</p>
+
 <p>“That is true, but when I went to see the princess, I took it down, so now a mirror is hanging there.”</p>
+
 <p>“Why did you take down the princess’s picture when you went to see the princess?”</p>
+
 <p>“I thought meeting the princess might take a long time. I took it down so I could look at it if I missed her.”</p>
+
 <p>Then a young minister cut in.</p>
+
 <p>“Your Majesty, perhaps the picture was never hanging there at all. I worry that Her Majesty the queen is now making trouble for herself.”</p>
+
 <p>The queen said:</p>
+
 <p>“I do not see anything wrong with looking at the picture and saying that the princess is the fairest in the world.”</p>
+
 <p>At that, Brown Pleasde said:</p>
+
 <p>“No. The rumor is that Her Majesty called the hunter after hearing that the princess was the fairest in the world.”</p>
+
 <p>The queen said:</p>
+
 <p>“Is that a rumor going around, or is that what you think?”</p>
+
 <p>Brown Pleasde was startled and said:</p>
+
 <p>“I merely wish for the present commotion to end as a commotion. The whole country is terribly divided.”</p>
+
 <p>The king said:</p>
+
 <p>“No, whether she spoke to a mirror or to a picture, what is there to divide over?”</p>
+
 <p>“Your Majesty, it is not so simple. The story the people have accepted is, to put it simply, this: the princess left the palace to escape the queen; the queen heard from the mirror that the princess was the fairest in the world, became agitated, and called a hunter to find the princess; and the hunter came covered in blood and tried to deceive the queen by saying the princess had died, so that she would feel safe. Then, when the queen learned the princess was alive, she personally went to the hut and forced her to eat a poisoned apple.”</p>
+
 <p>The queen, stunned, said:</p>
+
 <p>“Feed her a poisoned apple?”</p>
+
 <p>Then the princess said:</p>
+
 <p>“She only cursed me by saying I would eat a poisoned apple. She did not feed me one. I am not someone who would eat it anyway.”</p>
+
 <p>At that, all the ministers began murmuring.</p>
+
 <p>“Your Majesty, testimony has come from the princess’s own mouth that the queen is a sorceress who casts curses. You must choose one of two things: punish the princess for lying, or punish the queen for sorcery.”</p>
+
 <p>That night, the queen entered the king’s bedchamber. In tears, she said:</p>
+
 <p>“My education has gone astray, so Your Majesty must not feel burdened. The princess is already of royal blood, so she must inherit the throne. All things flow as they must flow. Whether it falls on me or on the country, what must fall must fall. Tomorrow, I will receive poison.”</p>
+
 <p>The next day, the king, his eyes swollen from crying, announced the decree ordering the queen to drink poison. The queen was deposed and sent to Pine Mountain, but people had gathered and surrounded every gate, shouting, so she could not enter. With no choice, the queen went to the private house of a maid and received the poison in the yard.</p>
+
 <p>At Pine Mountain, the main gate finally collapsed, and people surged in and set everything on fire. In this way, not only the house but the apple orchard too was ruined. But it did not end with Pine Mountain. Because of the selfishness of minor and middle families who expected that if apple production fell, apple prices would rise worldwide, all the houses that had been centers of apple production became targets of attack in turn. At last, the four families that had been the centers of apple production fled the country, went to a distant country near the sea, and planted apple orchards again. A few years later, with the knowledge they possessed, delicious apples began to grow, and they started selling them under the name Sunnyport. Grandhill’s apples maintained high prices for a while, but at last they were pushed aside by Sunnyport, and even the name Apple Country disappeared. Having staked everything on apples, the country could not maintain its superiority in apples. It grew poorer and poorer, and finally fell, absorbed by a neighboring country. Zerenbulin II signed the abdication document in the year the princess turned twenty, and two months later, unable to overcome illness brought on by rage and grief, he closed his eyes.</p>
+
 <hr />
+
 <p>Korean original: <a href="https://brunch.co.kr/@rup-l/14">Grandhill Princess</a></p>]]></content><author><name>Ize Studio</name></author><category term="Fiction" /><category term="fiction" /><category term="short-fiction" /><category term="translation" /><category term="brunch" /><category term="fairy-tale" /><category term="apple" /><category term="princess" /><summary type="html"><![CDATA[Subtitle: The Sugar Princess of the Apple Country]]></summary></entry><entry xml:lang="en"><title type="html">Train Journey and the Nomadic People (1)</title><link href="https://ize-studio.github.io/posts/essays/train-journey-and-the-nomadic-people-1.html" rel="alternate" type="text/html" title="Train Journey and the Nomadic People (1)" /><published>2024-04-28T00:00:00+09:00</published><updated>2024-04-28T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/essays/train-journey-and-the-nomadic-people-1</id><content type="html" xml:base="https://ize-studio.github.io/posts/essays/train-journey-and-the-nomadic-people-1.html"><![CDATA[<p>I was on a train, going somewhere. It was a boring trip, so I had been reading a book and fell asleep. The seats on the train had an arrangement I had never seen before. Like a cafe by a window, they were arranged so that passengers sat facing outside, and a table was fixed right in front of the window. The seats were divided two by two, so one could go to the restroom without asking the person beside them to move. And behind each seat there was again another table and seat. So if one looked at the train from above, there was a center aisle, and seats divided in twos with their backs to the aisle, and a table in front of them. That table touched the backrest of another seat, and in front of those seats there was another table attached to the window.</p>
+
 <p>In that dream of travel, I do not actually remember my destination. What I remember are only the dreams I had during that long-distance trip, after falling asleep. I do not think I was really reading a book. I think I was just blankly looking out the window and then fell asleep. Behind me sat an elderly couple. The two of them sat behind me, and their two children sat behind the seat next to mine. Beside me was a man in a suit, and because he kept going back and forth toward the entrance, it seemed he had someone to contact.</p>
+
 <p>I remember two dreams. The first and the second were connected. When I woke from the first dream, I was crying so hard that the couple behind me were startled and gave me water and a handkerchief. The first dream was as follows.</p>
+
 <p>I was born as one of a hunting people. The place was like a desert, but the land was entirely red. There was also a large mountain, but because it was very cold if one climbed it, no one thought of crossing it. Someone once said that long ago, a person who had come from somewhere else had crossed the mountain and returned, but it was a very old story, and not related to food, so no one cared. According to that story, beyond the mountain was a vast water whose far side could not be seen. And that water tasted salty like blood. So we decided to call the place beyond the mountain the blood vessel of the earth. But it was only a metaphor, and no one actually thought such water would be there if we crossed.</p>
+
 <p>We lived by setting up tents below the mountain and moving along it. There were two or three thousand of us, and even with our tents, it took several years to go all the way around the foot of the mountain, so we occupied a very wide space. About two hours by horse from the places where we usually pitched our tents, toward the opposite side of the mountain, animals lived. Somehow those animals seemed to be increasing little by little. So we did not overhunt; we simply lived while maintaining a state in which nothing was lacking. If one went about an hour farther from the hunting grounds, a river flowed. From time to time there were movements to pitch tents along the river from the beginning. Even now, young people sometimes ask why we do not do that. I explain to them, just as I heard when I was young: we have to leave places with water to the animals if we want enough to hunt. If the animals, because of us, begin wandering in all directions in search of water, the ones in places without water will die, and their numbers will decrease. Then even if we hunt the same way, the amount will grow smaller and smaller, and someday we too may starve.</p>
+
 <p>My son was one of those who asked such things. Worse, he did not listen to me very well. He seemed to accept what I said, but he always seemed to be thinking of something else. He followed when we went hunting, but he never actively took part in the hunt, and only barely managed the chores that came with it.</p>
+
 <p>One night, he went out alone. He moved after everyone had fallen asleep, so I never imagined he would leave, even as I arranged things so the fire would not go out and lay down. I did not know when he had gone out. In the morning, I was puzzled to see that he was not in his small hut. Until then, I was not thinking that something had gone wrong. I was only worried that he was too passive. But the place he had gone was not far away. It was the mountain right behind us. He was sitting on a protruding rock in a place plainly visible from below. He sat there with his head tilted blankly, eyes open, as if looking down or looking ahead. I climbed up with the other young men and hurriedly brought him down. He said:</p>
+
 <p>“Father, this is not real. I am not your son either.”</p>
+
 <p>“What are you talking about?”</p>
+
 <p>“I heard a voice.”</p>
+
 <p>“What voice?”</p>
+
 <p>“An unknown voice, one I had never heard before.”</p>
+
 <p>“Where?”</p>
+
 <p>“While I was sleeping.”</p>
+
 <p>“That was a dream.”</p>
+
 <p>“No. I came up here to keep listening. When I came up here, I could hear the voice better.”</p>
+
 <p>“What did it say?”</p>
+
 <p>Then tears fell from the child’s eyes. He did not say a word, and he did not eat any meat at all. On the third day, I boiled milk and gave it to him.</p>
+
 <p>“You can think whatever you want, but you have to be alive before you can think or not think. Eat this.”</p>
+
 <p>The child forced a smile, but did not try to get up.</p>
+
 <p>“Father, it was good.”</p>
+
 <p>“What was?”</p>
+
 <p>“Living with you. I learned hunting well too. I learned step by step, in my own way, but now there is no chance to use it.”</p>
+
 <p>“Why would there be no chance? Eat a lot, and then you have to go hunting again.”</p>
+
 <p>The child did not answer. He thought for a while, then silently began eating the boiled porridge. It was so sudden that I said nothing and simply watched him eat.</p>
+
 <p>“Father.”</p>
+
 <p>“Finish eating.”</p>
+
 <p>“After I finish, will you come with me?”</p>
+
 <p>“Where?”</p>
+
 <p>“That rock.”</p>
+
 <p>“All right, so eat quickly.”</p>
+
 <p>The child scraped the bowl clean. But his expression did not particularly change. I wiped the emptied bowl with sand and looked into the child’s tent again. The child was already preparing to go out. He even had his sandals on, as if going hunting.</p>
+
 <p>“Why are you putting on shoes?”</p>
+
 <p>“Father, we are going to the rock now. If you will not come with me, I have to go alone.”</p>
+
 <p>“All right. Go slowly. I will follow.”</p>
+
 <p>Because I had never gone there before, I prepared my hunting tools just in case and put on my sandals. When I came out, the child was passing the last tent. I thought there was no need to run, so I followed with quick steps, but I soon realized that had been a mistake. Once the mountain began, the slope limited how fast I could walk. It was also my first time going that far uphill, so I barely caught up with the child. I had thought it was a mountain like a treeless hill, but the slope was steeper than expected. Then, in front of a certain rock, the child suddenly disappeared.</p>
+
 <p>“Wait! I cannot see you!”</p>
+
 <p>Then the child poked his head out from behind the rock.</p>
+
 <p>“There is a path between here. If you come this way, you can see it. It is not hidden or anything.”</p>
+
 <p>When I went closer, there truly was an unnatural path between the rocks, as if someone had cut it so that people could pass through. When I entered through it, the rock where the child had been sitting appeared. The child, standing beside it, sat on the rock again. It was the same posture I had seen from the tents that morning.</p>
+
 <p>“Father, sit like this too.”</p>
+
 <p>The child was serious, so I sat beside him. Nothing happened. The tents below could be seen at a glance, and it was magnificent. I thought it would be much more beautiful at night, when fires were lit.</p>
+
 <p>“Father, do you not hear anything?”</p>
+
 <p>I heard nothing. Not the wind, not the voices of people talking down by the tents. I listened carefully, wondering if there was a sound from the mountain, but there was only silence. In fact, even the sound of putting down my tools had not been very loud. It was a day when we were not going hunting, so if anyone in the village came out of their tent, they would have seen us. But everyone was probably inside their tents cooking, eating, and lying down to rest.</p>
+
 <p>“Father, I can hear it.”</p>
+
 <p>“What can you hear?”</p>
+
 <p>“Father, if I talk about something like this, you probably will not know, will you?”</p>
+
 <p>“What is it? I have to hear it before I can even know what you are talking about.”</p>
+
 <p>The child hesitated for a while, then lifted his head and asked:</p>
+
 <p>“Father, do you know the word train?”</p>
+
 <p>“No. What is that?”</p>
+
 <p>“I do not know. Then do you know what it is when the number twenty beeps?”</p>
+
 <p>“No…”</p>
+
 <p>“Even if I grow up and become the greatest hunter in our village, it will be no use.”</p>
+
 <p>“What does that mean?”</p>
+
 <p>“When you die, Father, everything will disappear.”</p>
+
 <p>“Are you saying that if I die, you will die too? If you take a woman and have a child, thoughts like that will disappear.”</p>
+
 <p>“It is not dying. Even before that, if Father makes up his mind, our whole village will disappear. This mountain too. The other people have no choice. Father can do everything as he wishes. But I suppose even that is not something Father chooses.”</p>
+
 <p>I cried. My child had gone completely mad. Seeing my tears, the child said:</p>
+
 <p>“Father, please try to understand what I am saying. Or at least remember me. You will not remember my face, but remember me, even as the hunter who caught the voice instead of you.”</p>
+
 <p>“What does it mean to have caught the voice?”</p>
+
 <p>“It is a voice you were supposed to hear. I was not supposed to hear it.”</p>
+
 <p>I could not imagine that someone, beyond the degree of being mad, could say with such seriousness things even he himself did not understand. Then I thought all of this had happened because of this rock.</p>
+
 <p>“You seem to have become strange after coming here. Why did you come here at night? I should tell the people to destroy this rock.”</p>
+
 <p>“No. Whenever I was alone, I kept hearing something. A humming sound kept ringing near my ears, and I could not focus on anything. But now one voice is especially loud, so it is easy to make out. I could not understand what the voice was saying, so I came up here because I thought I might hear it in a quiet place. Since it was night, sound would travel far, and if it was a sound from the sky, this would be a place where I could hear it better.”</p>
+
 <p>“So could you hear it better here?”</p>
+
 <p>“No. It is the same. Whether I am in the tent or here.”</p>
+
 <p>“Then what is the voice saying?”</p>
+
 <p>“I can hear the words, but I do not know what they mean. It says train, and it keeps repeating the word ticket, but that is not why I am like this.”</p>
+
 <p>“What is it, then?”</p>
+
 <p>“It says Father should wake up and sit up.”</p>
+
 <p>I stood up on the spot and sat down again.</p>
+
 <p>“Then what?”</p>
+
 <p>“No, it does not mean stand up. It means wake from sleep.”</p>
+
 <p>“But I am not asleep. Child, why are you doing this?”</p>
+
 <p>“Father, listen carefully. Can you not hear it?”</p>
+
 <p>Tears kept flowing from my eyes without stopping. He was my only son, so I had worked hard to teach him to hunt, not wanting to hear that I had raised him wrongly. In that brief time, I wondered if perhaps I had been too harsh. But no matter how hard I thought, I could not find an answer. After that answerless moment passed, the child looked at my face with tears in his eyes.</p>
+
 <p>“I thought about it, and I think I probably intercepted it.”</p>
+
 <p>“What now?”</p>
+
 <p>“That sound is something Father has to hear.”</p>
+
 <p>Just as I was about to say, what kind of sound is it, and even if I hear it, if it is not words you can understand, I will not be able to understand it either, the child jumped down from the rock.</p>
+
 <p>Crying, I looked down and screamed. Hearing my voice, people began to poke their heads out of the tents one by one. A few walked from the tents toward the mountain and saw the child. People in the village began shouting and gathering. I looked at the sky and screamed. Then,</p>
+
 <p>I heard a voice.</p>
+
 <p>“You need to wake up. Please show your ticket.”</p>
+
 <p>When I opened my eyes, I saw a woman standing there with a troubled expression, checking tickets. Everyone around me was looking at me too. It was because I was still crying even after waking. The old man behind me gave me a handkerchief. Wiping my tears, I took the ticket from my pocket and handed it to the employee. She checked it and soon disappeared. It seemed mine was the only ticket left in our car.</p>
+
 <p>“I will not ask what happened, so catch your breath. If you start hyperventilating, it will be serious.”</p>
+
 <p>I said through tears:</p>
+
 <p>“My son died in my dream.”</p>
+
 <p>The woman beside him looked at me with pity. The old man asked:</p>
+
 <p>“You look young. Are you married? I thought you were a bachelor.”</p>
+
 <p>“I am not married. I had a son only in the dream. Not in real life.”</p>
+
 <p>“You mean you had a son who does not exist, only in a dream, and he died in the dream?”</p>
+
 <p>When I said yes, the old man looked slightly awkward and turned his eyes elsewhere. He may have wondered what kind of situation this was. But because I had cried so bitterly, he said that if I felt I needed to talk it out, I could explain anytime.</p>
+
 <p>“Thank you. I am sorry for making you worry.”</p>
+
 <p>“No, something else might be bothering you, and that is why you had such a dream. Rest. I will not talk to you.”</p>
+
 <p>I faced forward again and stared blankly out the window. Then the man in the suit returned to his seat. I felt his gaze on my face. He had probably seen me sobbing earlier, or heard about it. I pretended not to notice and fixed my eyes on the window. Trees flashed past like shadows.</p>
+
 <hr />
+
 <p>Korean original: <a href="https://brunch.co.kr/@rup-l/12">기차여행과 유목민족(1)</a></p>]]></content><author><name>Ize Studio</name></author><category term="Essays" /><category term="essay" /><category term="translation" /><category term="brunch" /><category term="dream" /><category term="dream-journal" /><category term="train" /><category term="nomads" /><summary type="html"><![CDATA[I was on a train, going somewhere. It was a boring trip, so I had been reading a book and fell asleep. The seats on the train had an arrangement I had never seen before. Like a cafe by a window, they were arranged so that passengers sat facing outside, and a table was fixed right in front of the window. The seats were divided two by two, so one could go to the restroom without asking the person beside them to move. And behind each seat there was again another table and seat. So if one looked at the train from above, there was a center aisle, and seats divided in twos with their backs to the aisle, and a table in front of them. That table touched the backrest of another seat, and in front of those seats there was another table attached to the window.]]></summary></entry><entry xml:lang="en"><title type="html">Train Journey and the Nomadic People (2)</title><link href="https://ize-studio.github.io/posts/essays/train-journey-and-the-nomadic-people-2.html" rel="alternate" type="text/html" title="Train Journey and the Nomadic People (2)" /><published>2024-04-28T00:00:00+09:00</published><updated>2024-04-28T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/essays/train-journey-and-the-nomadic-people-2</id><content type="html" xml:base="https://ize-studio.github.io/posts/essays/train-journey-and-the-nomadic-people-2.html"><![CDATA[<p>A little while later, I dreamed again. It seemed to be a continuation of the dream from earlier, but the time was different, and the dream did not last long. I was sitting in a tent with many people. In the center, an old man stood and was giving a loud speech. I did not know exactly what he was saying, but roughly, it was a request to help a good thing end well. I could not tell what help he wanted, or how he wanted it given. When the old man’s speech ended, people dragged him out. After driving him outside, another old man shouted something loudly, and the others responded. It seemed that, between the two opinions, this old man’s opinion suited the people’s tastes better. Then people rushed out in a crowd. I too, mixed among them, came outside without understanding why. Faces I did not know were mixed with faces I knew, and because everyone was running this way and that, I could not gather my thoughts. Thinking about it, this was a village where people traveled together until they died, so there should not have been any unfamiliar faces. Unable to understand what was going on, I decided to climb the rock that I had sometimes climbed after my son climbed it long ago and look down.</p>
+
 <p>If the mountain crossed both sides of the picture, the rock was located around the middle of the right side, so it could only be climbed when our village was passing that area. The tents had already gone once around and come to that position again. It seemed that meant that much time had passed since the child died.</p>
+
 <p>When I climbed the rock and looked down, I saw the old man from earlier waving his hands and leaving the village. Looking in the direction he was facing, I saw an enormous number of people walking toward us. Even if one counted our village’s women and children, they seemed to be less than thirty percent of that number. I had no idea what was about to happen. It did not seem like war; the people walking toward us moved too peacefully, and they did not seem to be holding anything. When I looked to the far left, part of the group was already entering the village. The unfamiliar faces I had seen must have been theirs. More and more people were coming from the left side of the village, and no matter how I looked at it, there seemed to be no way all of them could enter.</p>
+
 <p>Eventually, the people surrounded the village. Those who could enter had entered, and those who could not had arrived outside the village. A few familiar people I knew went inside and shouted something while waving their hands. About an hour passed, and at last the outsiders rose from where they had settled and began walking farther to the right. When all those people moved at once, it looked as if the whole village itself were moving. It took quite a long time for that many people to move. I still could not understand what was going on, and even if I tried to understand, it made no sense, so I simply went into my tent.</p>
+
 <p>“Oh my!”</p>
+
 <p>A woman stood naked in the middle of the tent. I knew her face. Already confused, I asked irritably what she was doing.</p>
+
 <p>“What are you doing in someone else’s tent?”</p>
+
 <p>In truth, knowing her face only meant that I felt I knew it. There was no way I should know her. But it seemed she really was someone the me inside the dream knew, for the woman hurriedly covered her chest and below, and said:</p>
+
 <p>“Your tent was moved back there, sir. You said you did not need it because you would use your son’s tent, and asked only to use the kitchen in front. How many times has this happened? What am I supposed to do if I cannot even meet a man because of you? Please leave.”</p>
+
 <p>Now the memories seemed about to return. Everything was confusing. I could not remember how to say sorry, so I waved my hand to show apology and came out. It had been my son’s tent, but I went into the place now called my tent and flopped down. My son’s bow and my bow lay together. My son’s bow had its string loosened, as if it had not been used. No, had I been in the middle of changing the string?</p>
+
 <p>As I was thinking about what this confusion was and how many years had passed since my son died, the entrance of the tent opened. Ah, Hasha. The woman’s name was Hasha. Hasha stuck her head inside.</p>
+
 <p>“They say we are leaving. Do you want to come?”</p>
+
 <p>“Where?”</p>
+
 <p>“Hunting. We agreed to teach the people who arrived today how to hunt.”</p>
+
 <p>I remembered nothing.</p>
+
 <p>“Do you know what the thing in the big tent earlier meant?”</p>
+
 <p>“Do you mean the grandfather who said that if our numbers are this large, the animals may decrease, so some people must go somewhere else? Or the grandfather who said that what nature has given us cannot turn against us, so we should hunt together and live together?”</p>
+
 <p>“The first one appeals to me.”</p>
+
 <p>“He said we should cross the mountain. He said the blood of the earth is not red.”</p>
+
 <p>“I thought that grandfather was waving at the new people earlier…”</p>
+
 <p>“Yes. He had suggested choosing equal numbers from our village and from the newcomers to cross the mountain, but they rejected that. So he told them to pitch their tents here.”</p>
+
 <p>“How did those people know about pitching tents?”</p>
+
 <p>“They are people who lived south of the river. But they say fire fell there. I do not really know what that means, but they said thunder sounded under the ground.”</p>
+
 <p>“Ah, there was an earthquake.”</p>
+
 <p>“What is an earthquake?”</p>
+
 <p>“No, sorry. So now they are going hunting?”</p>
+
 <p>“Yes. They say the habits of the animals in the south and here are different, so since coming over they have not succeeded in hunting even once. After we show them, they will probably build a new village over there and then hunt among themselves.”</p>
+
 <p>I see. I fell into thought for a while. In truth, since coming here, I had done nothing by my own will. I had simply let things happen as they happened, watched, and acted and spoken as things went.</p>
+
 <p>“I will not go hunting. Instead, I need to take some of Hasha’s meat.”</p>
+
 <p>“You can say in one breath that you are not going hunting but you will take meat? Where are you going?”</p>
+
 <p>“I am going to cross the mountain.”</p>
+
 <p>“Alone?”</p>
+
 <p>“I have to go alone. The people opposed it earlier too.”</p>
+
 <p>“I do not think there is any reason to stop you… If it is you, even if you suddenly say something like that to people, they will probably just accept it. It would be a little disappointing because you hunt a lot, but still.”</p>
+
 <p>“If there is plenty to hunt beyond the mountain, as that old man said, I will come back and tell you.”</p>
+
 <p>“All right. Then I have to go hunting, so I will leave now.”</p>
+
 <p>“Yes. I hope I can see you again as soon as possible.”</p>
+
 <p>“My body? You remember, don’t you?”</p>
+
 <p>“No. I meant I hope I can see the villagers again.”</p>
+
 <p>Hasha left with a sulky, mischievous expression. I watched as my hands tied the string on my son’s bow again by themselves. Then I took arrows together with my bow, fastened them at my waist, tied my sandal straps up to my calves, and tucked in a knife. Then I came out of the tent and headed toward the mountain behind the village. A few people saw me and said something, but I did not look at them.</p>
+
 <p>The path up the mountain was difficult, but the way to the rock from which my son had jumped was relatively flat. From there on, the rocks were jagged, and even finding places to put my feet took time. After climbing a little that way, it became noticeably cold. Because I was carrying meat, it was harder, and I must have sweated. It was good not to feel cold, but the pain in my legs was not good. My breath grew short. Even when I looked up, the mountaintop still continued above me. The higher I climbed, the colder it became. Although sweat was running, I felt cold in different parts of my body. Above all, the cold feeling in my nose was unfamiliar. The me outside the body was familiar with it, but the body was unfamiliar with it, so it kept sneezing.</p>
+
 <p>By the time the sun was about to set, I could see a stream. I wanted to see which way it flowed, but because of the shadows I could not. If I had climbed up to look every time our village moved, I would have seen the stream. Then there might have been times when we did not have to go far to fetch water. But now the village no longer needed to move, so if the outsiders fixed their tents and climbed the mountain behind them, they would soon find the water.</p>
+
 <p>I thought about making a fire, but I had not brought embers because I had not expected it to be that cold. Still, it was too cold simply to sleep. I considered climbing all night, but I was not sure how far I had come. Thinking about it, it seemed better to climb through the night and sleep in the shade when it was hot during the day.</p>
+
 <p>I drank two mouthfuls of stream water and tore off a little meat. I tore it into small pieces and stuck them beside my knife. Then I pulled out one piece at a time, chewed it, and climbed again. After walking for a long time, the village began to come into view from one end. Strictly speaking, what I saw was not the village, but the lights of the village. The fires inside the tents were softer, and the fires outside the tents were sharp red. I stood looking back for a while, and in a moment of blankness I realized I was sleepy, so I turned again and began climbing. I had chewed and swallowed all the meat I had torn, and I was climbing literally by habit. If there had been no guarantee that I could make it in a day, perhaps I should have found a place to pitch a tent along the way. I might have to come back later. But “have to come back” was a thought that made no sense. “Might want to come back” would be the accurate way to say it.</p>
+
 <p>As I thought that, the uphill path suddenly disappeared and became a downhill path. I was already dazed with sleep and out of my mind from the cold, and after struggling up a slope the whole time, I was startled when the slope vanished. About thirty steps down the slight decline, another uphill path began. It did not look very high, and behind it there did not seem to be any larger peak.</p>
+
 <p>The sky was growing brighter little by little. I could not feel any warmth. I had eaten even the meat I had torn while sitting down for a while. By now I had eaten half of the meat I had brought. If I ate more, I might lose strength on the way down. The last peak was steep. It looked as if the rock had been cut deliberately by something, and if I made even a small mistake, I would slip and fall. I clung to it as best I could and crawled sideways upward, then pushed my head out between the sharp peaks.</p>
+
 <p>There were trees. On the side I had climbed, there had been nothing but rocks, but beyond the mountain there were trees everywhere. I had no choice but to step onto the peak and stand, barely balancing in an unstable posture. Beyond the trees, I could see the land below the mountain. There seemed to be many trees with leaves unlike those on our side. And where the forest ended, a river like the one to the south flowed. And there was the sea.</p>
+
 <p>When I turned my head to the right, I saw that great river join the sea.</p>
+
 <p>“Then doesn’t our river go to the sea too?”</p>
+
 <p>Thinking that, I looked toward our village. The mountain continued toward the river, and the river passed between the mountains. Perhaps that was why we had never paid attention in that direction. There was probably sea beyond it too. To reach the sea, there was no need to climb this high mountain. We only had to follow the river. Then even our village would be less afraid. If the land became wider, there would be more animals, and then life would become better.</p>
+
 <p>Thinking this, my heart grew hurried with the desire to return to the village. And at the moment I thought my foot had slipped, I woke as if someone had struck the back of my head with a snap.</p>
+
 <p>The train was still running. But the atmosphere inside the train felt somehow unsettled. I turned around and saw the old man standing there with his luggage.</p>
+
 <p>“You did not seem to have brought separate luggage. The bag by your feet is all, right?”</p>
+
 <p>Still dazed, I looked around again.</p>
+
 <p>“We are here. You can get off now. Get ready. You were sleeping so well that I was wondering when to wake you, but you woke up on your own.”</p>
+
 <p>“Thank you.”</p>
+
 <p>I thought, what a thing, to have two dreams in a row that left me with lingering attachment. And just as the train announcement chime sounded to say we had arrived at the destination, I realized that the sound was my alarm. I soon woke from sleep.</p>
+
 <hr />
+
 <p>Korean original: <a href="https://brunch.co.kr/@rup-l/13">기차여행과 유목민족(2)</a></p>]]></content><author><name>Ize Studio</name></author><category term="Essays" /><category term="essay" /><category term="translation" /><category term="brunch" /><category term="dream" /><category term="dream-journal" /><category term="train" /><category term="nomads" /><category term="village" /><summary type="html"><![CDATA[A little while later, I dreamed again. It seemed to be a continuation of the dream from earlier, but the time was different, and the dream did not last long. I was sitting in a tent with many people. In the center, an old man stood and was giving a loud speech. I did not know exactly what he was saying, but roughly, it was a request to help a good thing end well. I could not tell what help he wanted, or how he wanted it given. When the old man’s speech ended, people dragged him out. After driving him outside, another old man shouted something loudly, and the others responded. It seemed that, between the two opinions, this old man’s opinion suited the people’s tastes better. Then people rushed out in a crowd. I too, mixed among them, came outside without understanding why. Faces I did not know were mixed with faces I knew, and because everyone was running this way and that, I could not gather my thoughts. Thinking about it, this was a village where people traveled together until they died, so there should not have been any unfamiliar faces. Unable to understand what was going on, I decided to climb the rock that I had sometimes climbed after my son climbed it long ago and look down.]]></summary></entry></feed>
