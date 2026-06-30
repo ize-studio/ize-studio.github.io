@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Last Assignment with Gemini | Ize Studio</title>
+    <meta name="description" content="Essays, fiction, and reading notes.">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Ize Studio" href="/feed.xml">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="/">Ize Studio</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/categories/">Categories</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      <article class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      
+      
+      June 29, 2026 &middot; Projects
+    </p>
+    <h1>The Last Assignment with Gemini</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Gemini had, in its own way, built the program quite meticulously. In a single C-language file, it had made the skeleton of a program that could write Korean, English, German, French, Turkish, and Montenegrin. As header files, there was little more than an engine for composing Korean jamo. So at the time, everything consisted of three files: one Arduino <code class="language-plaintext highlighter-rouge">*.ino</code> file that served as the main file, one header file containing the Korean font, and one header file for the Korean composition engine.</p>
+
+<p>As I wrote, problems popped up one by one, but even if the fixes were improvised each time, I somehow solved them. It was still a period when I naturally assumed that there were parts Gemini had simply failed to think of and apply. Sometimes, when a document went beyond 500 characters, the device almost froze. At other times, if I went back to the beginning of the text and returned, only the very bottom line of the screen would display normally from then on. Still, I looked through the functions in order, read Gemini’s explanations, and corrected them one by one.</p>
+
+<p>When everything was finished, when it had literally reached the point where I could say to other people, “Maybe this is complete enough,” I posted photos and videos of the screen on Reddit. That was also when I made the code public on GitHub. Since I knew nothing except that the code had been written in the Arduino IDE, I skipped all the environment details and simply uploaded those three files. That was the end of it. At that time, I probably had not even written a <code class="language-plaintext highlighter-rouge">README.md</code> file explaining the code. I only learned how to write one after connecting Codex and Claude to Visual Studio Code.</p>
+
+<p>At that point, I indulged one ambition. Later, I would set the new goal of every language in the world, but before that, back when I was still using only Gemini and the Arduino IDE, I could not set such a grand goal. It was something modest: since the main file was too large and the functions were concentrated there, I wanted to restructure it into more header files and a smaller main file, with the functions distributed by feature, so that I could study it step by step myself.</p>
+
+<p>The code as completed up to that point looked like this.</p>
+
+<ul>
+  <li>It could fill the screen from the bottom line upward and automatically wrap lines when the end of the screen was reached.</li>
+  <li>It could create text files.</li>
+  <li>It could save.</li>
+  <li>It could move the cursor with the arrow keys.</li>
+  <li>It could delete characters backward from the current cursor position with Backspace.</li>
+  <li>It could switch between Korean and foreign-language input with Control-Space.</li>
+  <li>It had a search function with Control-F.</li>
+  <li>It had a sleep function with Control-L.</li>
+  <li>It could move between words with Control and the arrow keys.</li>
+  <li>It could delete by word with Control-Backspace.</li>
+  <li>The menu allowed adjustment of font size, character spacing, sleep delay, and so on.</li>
+  <li>In the menu, Korean was fixed, and the remaining languages - English, French, German, Turkish, and Montenegrin - could be selected.</li>
+</ul>
+
+<p>I think there may have been network functions at that point, but I do not remember exactly. I do not know whether it was then or afterward, but there was a time when I enabled Bluetooth mode and made the device usable as an external Bluetooth keyboard. I also once made it act as a web server so that, in Wi-Fi mode, another device could connect to this device and view the writing. Since there was a <code class="language-plaintext highlighter-rouge">Network.h</code> file at that time, I think at least one of those functions must have been implemented. In any case, the fact that the program looked like that list meant that it had not been made from a plan from the beginning, but that I had attached those functions one by one in layers. So having the main code call and combine the functions while collecting the bodies of the functions by type meant, in effect, that I was now trying to design the overall structure once.</p>
+
+<p>But the conclusion was failure. When Gemini could not see the code, it got variable names, function names, and even function parameter names wrong all the time. Even when I uploaded files, it absolutely did not read them. It kept giving me wrong instructions, and when I told it there was no such variable, it only replied, “In general, functions with names like that are used that way, so I did not know.” In the end, after wasting about three days like that, I decided to give up on splitting the files. Uploading the whole file only made the credits drain faster; nothing changed. Whether I copied and pasted the code or uploaded the code file itself, it answered without looking at it either way.</p>
+
+<p>For about a week after that, I experimented with changing fonts. I did not like any typeface, but I also did not want to use a font that I could not make public on GitHub. I had posted videos and photos, and when someone said, “If Korean looked like that, I would want to try it too,” I could not tell them to make their own header file and use it themselves. That was how I found DungGeunMo, but it differed too much from the English font, so I wandered around trying to find a thin typeface that would match. The reason I began thinking I should just stop using Gemini was that, in fonts too, as in other parts, it kept repeating itself: maybe this font would be better, maybe it should search more, and so on. Several times, characters disappeared, Korean would not display at all, or even nothing appeared on the screen except the horizontal line of the status bar. But when I got angry, rolled things back, and made the font again, it would suddenly say it had found a solution. That solution, I think, was to use DungGeunMo, and it must have said that three or four times.</p>
+
+<p>So in the end, I thought that to take on a larger project, I would need to find another way. Just then, my wife said, “I hear Claude is getting popular these days, and they say Claude was specialized for coding from the start.” When I searched online, many people were already using Claude and Codex. I had heard of Codex for the first time then. I had something to do outside, and ended up with an hour or two of waiting time, so I read blog posts closely. They said Claude could be installed in Visual Studio Code. They even said Codex could not be used on mobile, but could be connected to Visual Studio Code. It can be used on mobile now, but the PC-installed version has to act as the server. If it could only be used on a PC, I thought connecting it would be better. As it happened, when I was struggling with Gemini over file separation, builds took too long to test, so to shorten build time I had already moved the existing Arduino code into Visual Studio Code and reached the stage where it built and uploaded properly.</p>
+
+<p>Because file separation attempts kept failing, I half-doubted Gemini while installing and configuring things as it instructed. But the same work that had been done in the Arduino IDE really took only about one-third of the time in Visual Studio Code. In the past, if Gemini gave me strange code, it took almost five minutes just to check the error. In the new environment, it ended in about 80 seconds. It explained what kind of difference caused that, but I was not interested in the reason then, and I am still not interested enough to go that far now. My only thought is that I should simply use Visual Studio Code from now on. Come to think of it, there was also a Gemini extension library, but I did not use it. I do not know why, but I remember closing the recommendation even though it appeared. If I had used that extension, I might have used Gemini for just a little longer.</p>
+
+<p>After that - after one day of thinking - I paid for both Claude and Codex, because I could not decide which of the two was superior.</p>
+
+<p>And then, quite literally, a new chapter opened.</p>
+
+<hr />
+
+<p>Sometimes I play keyboard videos because I feel drawn to the sound of typing. I had wondered what the sound of my own writing would be like, but I hesitated because recording might interfere with writing. At last, the temptation of the title “writing with the firmware I made” was too strong, so I tried it.</p>
+
+<p>Writing video for “The Last Assignment with Gemini”:</p>
+
+<p>https://youtu.be/3mNHwjTNewM?si=RYrvf8Xn0M5QEQ9i</p>
+
+<hr />
+
+<p>Korean original: <a href="https://brunch.co.kr/@rup-l/415">제미나이와의 마지막 과제</a></p>
+
+  </div>
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-projects" aria-label="Project repositories">
+        <p>Project repositories</p>
+        <a href="https://github.com/ize-studio/ize-compose">Ize Compose</a>
+        <a href="https://github.com/ize-studio/ize-compose/tree/emulator">Ize Compose Emulator</a>
+      </div>
+      <p class="site-notice">All writing on this site is original work by Ize Studio. No third-party writing is published here.</p>
+      <div class="site-support" aria-label="Support">
+        <img class="site-support-logo" src="https://storage.ko-fi.com/cdn/logomarkLogo.png" alt="Ko-fi">
+        <p>I build strange little writing tools.</p>
+        <p>If you enjoyed this project, coffee support is welcome.</p>
+        <p>Ko-fi: <a href="https://ko-fi.com/dievesa">https://ko-fi.com/dievesa</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
