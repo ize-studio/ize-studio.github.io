@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://ize-studio.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ize-studio.github.io/" rel="alternate" type="text/html" /><updated>2026-07-01T08:16:35+09:00</updated><id>https://ize-studio.github.io/feed.xml</id><title type="html">Ize Studio</title><subtitle>Essays, fiction, and reading notes.</subtitle><author><name>Ize Studio</name></author><entry xml:lang="en"><title type="html">The Last Assignment with Gemini</title><link href="https://ize-studio.github.io/posts/projects/the-last-assignment-with-gemini.html" rel="alternate" type="text/html" title="The Last Assignment with Gemini" /><published>2026-06-29T00:00:00+09:00</published><updated>2026-06-29T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/projects/the-last-assignment-with-gemini</id><content type="html" xml:base="https://ize-studio.github.io/posts/projects/the-last-assignment-with-gemini.html"><![CDATA[<p>Gemini had, in its own way, built the program quite meticulously. In a single C-language file, it had made the skeleton of a program that could write Korean, English, German, French, Turkish, and Montenegrin. As header files, there was little more than an engine for composing Korean jamo. So at the time, everything consisted of three files: one Arduino <code class="language-plaintext highlighter-rouge">*.ino</code> file that served as the main file, one header file containing the Korean font, and one header file for the Korean composition engine.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://ize-studio.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ize-studio.github.io/" rel="alternate" type="text/html" /><updated>2026-07-06T15:46:45+09:00</updated><id>https://ize-studio.github.io/feed.xml</id><title type="html">Ize Studio</title><subtitle>Essays, fiction, and reading notes.</subtitle><author><name>Ize Studio</name></author><entry xml:lang="en"><title type="html">A New Beginning, the Beginning of Collaboration</title><link href="https://ize-studio.github.io/posts/projects/a-new-beginning-the-beginning-of-collaboration.html" rel="alternate" type="text/html" title="A New Beginning, the Beginning of Collaboration" /><published>2026-07-06T00:00:00+09:00</published><updated>2026-07-06T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/projects/a-new-beginning-the-beginning-of-collaboration</id><content type="html" xml:base="https://ize-studio.github.io/posts/projects/a-new-beginning-the-beginning-of-collaboration.html"><![CDATA[<p>Gemini was actually already a presence I had naturally grown used to on mobile. This project itself began when I asked, “Hahaha, Gemini, should I try doing this once? Can you help me?” and Gemini replied, “Of course. I will do my best!” If I were told to start now, I know very well how reckless it is to begin simply because an AI says it will help. It speaks like a person, but it is not actually a person, so it has no concept at all of “this much has to be achieved for it to count as success in the common sense.” And when things do not go well, it ends with “I did not know it would be that much,” or “I thought about it wrong.”</p>
+
+<p>It was a Saturday when, after searching around, I decided to use Claude and Codex. I remember the date too, but I do not think I will ever forget the day of the week. That is because by Sunday afternoon, the very next day, I had reached the conclusion that I should never use Claude again. Of course, it is also true that thanks to Claude I made far more progress than I had reasonably expected.</p>
+
+<p>From what I had looked up, many people said Claude communicated well and understood concepts quickly, making it good for assigning work. Codex, on the other hand, supposedly had to be instructed very thoroughly, step by step, as if people from different fields were talking to each other, to the point where not even the smallest exception could be imagined. If you strayed even a little from that, many exhausting things could happen. But there were also opposing opinions. They said that while Codex struggled to understand vague instructions, once it understood, it kept moving forward heavily according to that standard. As I read that, thinking, “Isn’t that obvious?” I also read that Claude sometimes changed its own standard midway and wandered off to the side. There was another case I read that day and thought, “No way. That really makes no sense.” Someone had asked it to write a program, watched it run, was satisfied, and was about to put it into formal service, when only then Claude said it would not work, that in fact it had only been code that made it look as if it worked. The conclusion was that one should include in the instructions that Claude should do the work and Codex should check whether it was going properly. At the time, though, the idea of making one AI supervise another AI was merely interesting and not of much practical help.</p>
+
+<p>After thinking hard, as soon as I got home that afternoon, I paid for Claude and Codex and installed Codex. After reading the explanation on the website, Claude seemed like something I could install and use in a way similar to Gemini, but Codex felt very unfamiliar because the installed computer seemed to become Codex’s stage of activity.</p>
+
+<p>After installing it on the computer and finishing login, I think it asked whether I wanted to use it as a language model or a code model. Or maybe Claude asked that. My memory is hazy because I simply searched and followed along. In any case, I was already doing Arduino programming in VS Code, and there was a Codex extension for VS Code. If I installed it and granted permissions, it would modify, compile, and upload on its own. Above all, I thought that this way there would be no chance of it misreading the code. After looking around a little, I saw that Claude also had an extension. Gemini did too. I installed the Gemini extension as well, at least for the moment. In this way, the extensions for Claude and Codex settled into VS Code. Gemini was still serving only as a conversational partner that helped set ideas for the overall direction.</p>
+
+<p>The first thing I started with was reversing the status of English and Korean. I wanted to make it like a “general” program, where one selects one of English, French, German, Turkish, or Montenegrin and writes in it, then at any time while writing presses Control and Space together to switch into Korean. A Korean-centered form no longer helped anyone. Not even me.</p>
+
+<p>I first had Claude organize the languages. Since the same code was being viewed in the same environment, I could not let Codex handle the same file at the same time. So while Claude worked on reversing the status of English and Korean, I had Codex investigate formalized keyboard layouts for languages around the world.</p>
+
+<p>Claude worked in a more cluttered way than I expected. On one hand it was cluttered, but on the other, I liked that I could tell at a glance what it was doing. It changed everything that had been displayed in Korean when the menu was in Korean mode into English, and it narrowed the width of the taskbar little by little. Since it was touching the files directly, it clearly could not be compared with the language-model conversation method, where I had to explain things every time, in terms of accuracy and speed. But every time it did anything, a mistake appeared almost instantly, then it tested to find that mistake, and after countless reversals, I had some difficulty adapting. To be honest, I never adapted to it in the end.</p>
+
+<p>Codex was indeed heavy, just as I had read online. To find whether there were formalized keyboard layouts, it first checked the list of languages supported by most operating systems, then began searching for keyboards by language. I think the progress made that day was probably up to creating a language list in a language-specific header file, and moving the Korean composition function into the place below it where keyboard layouts were to be defined by language. For both Claude and Codex, that was about where the day’s credits ran out.</p>
+
+<hr />
+
+<p>Sometimes I play keyboard videos because I feel drawn to the sound of typing. I had wondered what the sound of my own writing would be like, but I hesitated because recording might interfere with writing. At last, the temptation of the title “writing with the firmware I made” was too strong, so I tried it.</p>
+
+<p>Writing video: <a href="https://youtu.be/Dso0-Tegrw8?si=wY6YcTg7rBgjCtUL">A New Beginning, the Beginning of Collaboration</a></p>
+
+<hr />
+
+<p>Korean original: <a href="https://brunch.co.kr/@rup-l/418">새로운 시작, 협업의 시작</a></p>]]></content><author><name>Ize Studio</name></author><category term="Projects" /><category term="project" /><category term="writing-tools" /><category term="translation" /><category term="brunch" /><category term="zerowriter" /><category term="ink" /><category term="firmware" /><category term="korean" /><category term="ai" /><category term="claude" /><category term="codex" /><category term="gemini" /><category term="vscode" /><category term="collaboration" /><summary type="html"><![CDATA[Gemini was actually already a presence I had naturally grown used to on mobile. This project itself began when I asked, “Hahaha, Gemini, should I try doing this once? Can you help me?” and Gemini replied, “Of course. I will do my best!” If I were told to start now, I know very well how reckless it is to begin simply because an AI says it will help. It speaks like a person, but it is not actually a person, so it has no concept at all of “this much has to be achieved for it to count as success in the common sense.” And when things do not go well, it ends with “I did not know it would be that much,” or “I thought about it wrong.”]]></summary></entry><entry xml:lang="en"><title type="html">The Last Assignment with Gemini</title><link href="https://ize-studio.github.io/posts/projects/the-last-assignment-with-gemini.html" rel="alternate" type="text/html" title="The Last Assignment with Gemini" /><published>2026-06-29T00:00:00+09:00</published><updated>2026-06-29T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/projects/the-last-assignment-with-gemini</id><content type="html" xml:base="https://ize-studio.github.io/posts/projects/the-last-assignment-with-gemini.html"><![CDATA[<p>Gemini had, in its own way, built the program quite meticulously. In a single C-language file, it had made the skeleton of a program that could write Korean, English, German, French, Turkish, and Montenegrin. As header files, there was little more than an engine for composing Korean jamo. So at the time, everything consisted of three files: one Arduino <code class="language-plaintext highlighter-rouge">*.ino</code> file that served as the main file, one header file containing the Korean font, and one header file for the Korean composition engine.</p>
 
 <p>As I wrote, problems popped up one by one, but even if the fixes were improvised each time, I somehow solved them. It was still a period when I naturally assumed that there were parts Gemini had simply failed to think of and apply. Sometimes, when a document went beyond 500 characters, the device almost froze. At other times, if I went back to the beginning of the text and returned, only the very bottom line of the screen would display normally from then on. Still, I looked through the functions in order, read Gemini’s explanations, and corrected them one by one.</p>
 
@@ -663,120 +689,4 @@
 
 <hr />
 
-<p>Korean original: <a href="https://brunch.co.kr/@rup-l/12">기차여행과 유목민족(1)</a></p>]]></content><author><name>Ize Studio</name></author><category term="Essays" /><category term="essay" /><category term="translation" /><category term="brunch" /><category term="dream" /><category term="dream-journal" /><category term="train" /><category term="nomads" /><summary type="html"><![CDATA[I was on a train, going somewhere. It was a boring trip, so I had been reading a book and fell asleep. The seats on the train had an arrangement I had never seen before. Like a cafe by a window, they were arranged so that passengers sat facing outside, and a table was fixed right in front of the window. The seats were divided two by two, so one could go to the restroom without asking the person beside them to move. And behind each seat there was again another table and seat. So if one looked at the train from above, there was a center aisle, and seats divided in twos with their backs to the aisle, and a table in front of them. That table touched the backrest of another seat, and in front of those seats there was another table attached to the window.]]></summary></entry><entry xml:lang="en"><title type="html">Train Journey and the Nomadic People (2)</title><link href="https://ize-studio.github.io/posts/essays/train-journey-and-the-nomadic-people-2.html" rel="alternate" type="text/html" title="Train Journey and the Nomadic People (2)" /><published>2024-04-28T00:00:00+09:00</published><updated>2024-04-28T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/essays/train-journey-and-the-nomadic-people-2</id><content type="html" xml:base="https://ize-studio.github.io/posts/essays/train-journey-and-the-nomadic-people-2.html"><![CDATA[<p>A little while later, I dreamed again. It seemed to be a continuation of the dream from earlier, but the time was different, and the dream did not last long. I was sitting in a tent with many people. In the center, an old man stood and was giving a loud speech. I did not know exactly what he was saying, but roughly, it was a request to help a good thing end well. I could not tell what help he wanted, or how he wanted it given. When the old man’s speech ended, people dragged him out. After driving him outside, another old man shouted something loudly, and the others responded. It seemed that, between the two opinions, this old man’s opinion suited the people’s tastes better. Then people rushed out in a crowd. I too, mixed among them, came outside without understanding why. Faces I did not know were mixed with faces I knew, and because everyone was running this way and that, I could not gather my thoughts. Thinking about it, this was a village where people traveled together until they died, so there should not have been any unfamiliar faces. Unable to understand what was going on, I decided to climb the rock that I had sometimes climbed after my son climbed it long ago and look down.</p>
-
-<p>If the mountain crossed both sides of the picture, the rock was located around the middle of the right side, so it could only be climbed when our village was passing that area. The tents had already gone once around and come to that position again. It seemed that meant that much time had passed since the child died.</p>
-
-<p>When I climbed the rock and looked down, I saw the old man from earlier waving his hands and leaving the village. Looking in the direction he was facing, I saw an enormous number of people walking toward us. Even if one counted our village’s women and children, they seemed to be less than thirty percent of that number. I had no idea what was about to happen. It did not seem like war; the people walking toward us moved too peacefully, and they did not seem to be holding anything. When I looked to the far left, part of the group was already entering the village. The unfamiliar faces I had seen must have been theirs. More and more people were coming from the left side of the village, and no matter how I looked at it, there seemed to be no way all of them could enter.</p>
-
-<p>Eventually, the people surrounded the village. Those who could enter had entered, and those who could not had arrived outside the village. A few familiar people I knew went inside and shouted something while waving their hands. About an hour passed, and at last the outsiders rose from where they had settled and began walking farther to the right. When all those people moved at once, it looked as if the whole village itself were moving. It took quite a long time for that many people to move. I still could not understand what was going on, and even if I tried to understand, it made no sense, so I simply went into my tent.</p>
-
-<p>“Oh my!”</p>
-
-<p>A woman stood naked in the middle of the tent. I knew her face. Already confused, I asked irritably what she was doing.</p>
-
-<p>“What are you doing in someone else’s tent?”</p>
-
-<p>In truth, knowing her face only meant that I felt I knew it. There was no way I should know her. But it seemed she really was someone the me inside the dream knew, for the woman hurriedly covered her chest and below, and said:</p>
-
-<p>“Your tent was moved back there, sir. You said you did not need it because you would use your son’s tent, and asked only to use the kitchen in front. How many times has this happened? What am I supposed to do if I cannot even meet a man because of you? Please leave.”</p>
-
-<p>Now the memories seemed about to return. Everything was confusing. I could not remember how to say sorry, so I waved my hand to show apology and came out. It had been my son’s tent, but I went into the place now called my tent and flopped down. My son’s bow and my bow lay together. My son’s bow had its string loosened, as if it had not been used. No, had I been in the middle of changing the string?</p>
-
-<p>As I was thinking about what this confusion was and how many years had passed since my son died, the entrance of the tent opened. Ah, Hasha. The woman’s name was Hasha. Hasha stuck her head inside.</p>
-
-<p>“They say we are leaving. Do you want to come?”</p>
-
-<p>“Where?”</p>
-
-<p>“Hunting. We agreed to teach the people who arrived today how to hunt.”</p>
-
-<p>I remembered nothing.</p>
-
-<p>“Do you know what the thing in the big tent earlier meant?”</p>
-
-<p>“Do you mean the grandfather who said that if our numbers are this large, the animals may decrease, so some people must go somewhere else? Or the grandfather who said that what nature has given us cannot turn against us, so we should hunt together and live together?”</p>
-
-<p>“The first one appeals to me.”</p>
-
-<p>“He said we should cross the mountain. He said the blood of the earth is not red.”</p>
-
-<p>“I thought that grandfather was waving at the new people earlier…”</p>
-
-<p>“Yes. He had suggested choosing equal numbers from our village and from the newcomers to cross the mountain, but they rejected that. So he told them to pitch their tents here.”</p>
-
-<p>“How did those people know about pitching tents?”</p>
-
-<p>“They are people who lived south of the river. But they say fire fell there. I do not really know what that means, but they said thunder sounded under the ground.”</p>
-
-<p>“Ah, there was an earthquake.”</p>
-
-<p>“What is an earthquake?”</p>
-
-<p>“No, sorry. So now they are going hunting?”</p>
-
-<p>“Yes. They say the habits of the animals in the south and here are different, so since coming over they have not succeeded in hunting even once. After we show them, they will probably build a new village over there and then hunt among themselves.”</p>
-
-<p>I see. I fell into thought for a while. In truth, since coming here, I had done nothing by my own will. I had simply let things happen as they happened, watched, and acted and spoken as things went.</p>
-
-<p>“I will not go hunting. Instead, I need to take some of Hasha’s meat.”</p>
-
-<p>“You can say in one breath that you are not going hunting but you will take meat? Where are you going?”</p>
-
-<p>“I am going to cross the mountain.”</p>
-
-<p>“Alone?”</p>
-
-<p>“I have to go alone. The people opposed it earlier too.”</p>
-
-<p>“I do not think there is any reason to stop you… If it is you, even if you suddenly say something like that to people, they will probably just accept it. It would be a little disappointing because you hunt a lot, but still.”</p>
-
-<p>“If there is plenty to hunt beyond the mountain, as that old man said, I will come back and tell you.”</p>
-
-<p>“All right. Then I have to go hunting, so I will leave now.”</p>
-
-<p>“Yes. I hope I can see you again as soon as possible.”</p>
-
-<p>“My body? You remember, don’t you?”</p>
-
-<p>“No. I meant I hope I can see the villagers again.”</p>
-
-<p>Hasha left with a sulky, mischievous expression. I watched as my hands tied the string on my son’s bow again by themselves. Then I took arrows together with my bow, fastened them at my waist, tied my sandal straps up to my calves, and tucked in a knife. Then I came out of the tent and headed toward the mountain behind the village. A few people saw me and said something, but I did not look at them.</p>
-
-<p>The path up the mountain was difficult, but the way to the rock from which my son had jumped was relatively flat. From there on, the rocks were jagged, and even finding places to put my feet took time. After climbing a little that way, it became noticeably cold. Because I was carrying meat, it was harder, and I must have sweated. It was good not to feel cold, but the pain in my legs was not good. My breath grew short. Even when I looked up, the mountaintop still continued above me. The higher I climbed, the colder it became. Although sweat was running, I felt cold in different parts of my body. Above all, the cold feeling in my nose was unfamiliar. The me outside the body was familiar with it, but the body was unfamiliar with it, so it kept sneezing.</p>
-
-<p>By the time the sun was about to set, I could see a stream. I wanted to see which way it flowed, but because of the shadows I could not. If I had climbed up to look every time our village moved, I would have seen the stream. Then there might have been times when we did not have to go far to fetch water. But now the village no longer needed to move, so if the outsiders fixed their tents and climbed the mountain behind them, they would soon find the water.</p>
-
-<p>I thought about making a fire, but I had not brought embers because I had not expected it to be that cold. Still, it was too cold simply to sleep. I considered climbing all night, but I was not sure how far I had come. Thinking about it, it seemed better to climb through the night and sleep in the shade when it was hot during the day.</p>
-
-<p>I drank two mouthfuls of stream water and tore off a little meat. I tore it into small pieces and stuck them beside my knife. Then I pulled out one piece at a time, chewed it, and climbed again. After walking for a long time, the village began to come into view from one end. Strictly speaking, what I saw was not the village, but the lights of the village. The fires inside the tents were softer, and the fires outside the tents were sharp red. I stood looking back for a while, and in a moment of blankness I realized I was sleepy, so I turned again and began climbing. I had chewed and swallowed all the meat I had torn, and I was climbing literally by habit. If there had been no guarantee that I could make it in a day, perhaps I should have found a place to pitch a tent along the way. I might have to come back later. But “have to come back” was a thought that made no sense. “Might want to come back” would be the accurate way to say it.</p>
-
-<p>As I thought that, the uphill path suddenly disappeared and became a downhill path. I was already dazed with sleep and out of my mind from the cold, and after struggling up a slope the whole time, I was startled when the slope vanished. About thirty steps down the slight decline, another uphill path began. It did not look very high, and behind it there did not seem to be any larger peak.</p>
-
-<p>The sky was growing brighter little by little. I could not feel any warmth. I had eaten even the meat I had torn while sitting down for a while. By now I had eaten half of the meat I had brought. If I ate more, I might lose strength on the way down. The last peak was steep. It looked as if the rock had been cut deliberately by something, and if I made even a small mistake, I would slip and fall. I clung to it as best I could and crawled sideways upward, then pushed my head out between the sharp peaks.</p>
-
-<p>There were trees. On the side I had climbed, there had been nothing but rocks, but beyond the mountain there were trees everywhere. I had no choice but to step onto the peak and stand, barely balancing in an unstable posture. Beyond the trees, I could see the land below the mountain. There seemed to be many trees with leaves unlike those on our side. And where the forest ended, a river like the one to the south flowed. And there was the sea.</p>
-
-<p>When I turned my head to the right, I saw that great river join the sea.</p>
-
-<p>“Then doesn’t our river go to the sea too?”</p>
-
-<p>Thinking that, I looked toward our village. The mountain continued toward the river, and the river passed between the mountains. Perhaps that was why we had never paid attention in that direction. There was probably sea beyond it too. To reach the sea, there was no need to climb this high mountain. We only had to follow the river. Then even our village would be less afraid. If the land became wider, there would be more animals, and then life would become better.</p>
-
-<p>Thinking this, my heart grew hurried with the desire to return to the village. And at the moment I thought my foot had slipped, I woke as if someone had struck the back of my head with a snap.</p>
-
-<p>The train was still running. But the atmosphere inside the train felt somehow unsettled. I turned around and saw the old man standing there with his luggage.</p>
-
-<p>“You did not seem to have brought separate luggage. The bag by your feet is all, right?”</p>
-
-<p>Still dazed, I looked around again.</p>
-
-<p>“We are here. You can get off now. Get ready. You were sleeping so well that I was wondering when to wake you, but you woke up on your own.”</p>
-
-<p>“Thank you.”</p>
-
-<p>I thought, what a thing, to have two dreams in a row that left me with lingering attachment. And just as the train announcement chime sounded to say we had arrived at the destination, I realized that the sound was my alarm. I soon woke from sleep.</p>
-
-<hr />
-
-<p>Korean original: <a href="https://brunch.co.kr/@rup-l/13">기차여행과 유목민족(2)</a></p>]]></content><author><name>Ize Studio</name></author><category term="Essays" /><category term="essay" /><category term="translation" /><category term="brunch" /><category term="dream" /><category term="dream-journal" /><category term="train" /><category term="nomads" /><category term="village" /><summary type="html"><![CDATA[A little while later, I dreamed again. It seemed to be a continuation of the dream from earlier, but the time was different, and the dream did not last long. I was sitting in a tent with many people. In the center, an old man stood and was giving a loud speech. I did not know exactly what he was saying, but roughly, it was a request to help a good thing end well. I could not tell what help he wanted, or how he wanted it given. When the old man’s speech ended, people dragged him out. After driving him outside, another old man shouted something loudly, and the others responded. It seemed that, between the two opinions, this old man’s opinion suited the people’s tastes better. Then people rushed out in a crowd. I too, mixed among them, came outside without understanding why. Faces I did not know were mixed with faces I knew, and because everyone was running this way and that, I could not gather my thoughts. Thinking about it, this was a village where people traveled together until they died, so there should not have been any unfamiliar faces. Unable to understand what was going on, I decided to climb the rock that I had sometimes climbed after my son climbed it long ago and look down.]]></summary></entry></feed>
+<p>Korean original: <a href="https://brunch.co.kr/@rup-l/12">기차여행과 유목민족(1)</a></p>]]></content><author><name>Ize Studio</name></author><category term="Essays" /><category term="essay" /><category term="translation" /><category term="brunch" /><category term="dream" /><category term="dream-journal" /><category term="train" /><category term="nomads" /><summary type="html"><![CDATA[I was on a train, going somewhere. It was a boring trip, so I had been reading a book and fell asleep. The seats on the train had an arrangement I had never seen before. Like a cafe by a window, they were arranged so that passengers sat facing outside, and a table was fixed right in front of the window. The seats were divided two by two, so one could go to the restroom without asking the person beside them to move. And behind each seat there was again another table and seat. So if one looked at the train from above, there was a center aisle, and seats divided in twos with their backs to the aisle, and a table in front of them. That table touched the backrest of another seat, and in front of those seats there was another table attached to the window.]]></summary></entry></feed>
