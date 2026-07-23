@@ -1,4 +1,130 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://ize-studio.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ize-studio.github.io/" rel="alternate" type="text/html" /><updated>2026-07-06T15:46:45+09:00</updated><id>https://ize-studio.github.io/feed.xml</id><title type="html">Ize Studio</title><subtitle>Essays, fiction, and reading notes.</subtitle><author><name>Ize Studio</name></author><entry xml:lang="en"><title type="html">A New Beginning, the Beginning of Collaboration</title><link href="https://ize-studio.github.io/posts/projects/a-new-beginning-the-beginning-of-collaboration.html" rel="alternate" type="text/html" title="A New Beginning, the Beginning of Collaboration" /><published>2026-07-06T00:00:00+09:00</published><updated>2026-07-06T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/projects/a-new-beginning-the-beginning-of-collaboration</id><content type="html" xml:base="https://ize-studio.github.io/posts/projects/a-new-beginning-the-beginning-of-collaboration.html"><![CDATA[<p>Gemini was actually already a presence I had naturally grown used to on mobile. This project itself began when I asked, “Hahaha, Gemini, should I try doing this once? Can you help me?” and Gemini replied, “Of course. I will do my best!” If I were told to start now, I know very well how reckless it is to begin simply because an AI says it will help. It speaks like a person, but it is not actually a person, so it has no concept at all of “this much has to be achieved for it to count as success in the common sense.” And when things do not go well, it ends with “I did not know it would be that much,” or “I thought about it wrong.”</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://ize-studio.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ize-studio.github.io/" rel="alternate" type="text/html" /><updated>2026-07-23T18:27:51+09:00</updated><id>https://ize-studio.github.io/feed.xml</id><title type="html">Ize Studio</title><subtitle>Essays, fiction, and reading notes.</subtitle><author><name>Ize Studio</name></author><entry xml:lang="en"><title type="html">The End of the Long Keyboard Layout Work</title><link href="https://ize-studio.github.io/posts/projects/the-end-of-the-long-keyboard-layout-work.html" rel="alternate" type="text/html" title="The End of the Long Keyboard Layout Work" /><published>2026-07-20T00:00:00+09:00</published><updated>2026-07-20T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/projects/the-end-of-the-long-keyboard-layout-work</id><content type="html" xml:base="https://ize-studio.github.io/posts/projects/the-end-of-the-long-keyboard-layout-work.html"><![CDATA[<p>I actually do not think that what separates “intelligence” is knowledge or communication. I had thought that if something has intelligence, then communication would be possible and it would also be able to possess some degree of knowledge. But I came to think that I should not reverse that and conclude, simply because something has knowledge and communicates, that it therefore has intelligence. Above all, performance or responses that change depending on updates feel to me like an unstable state in which the consistency of existence itself is shaking. In my view, intelligence is the ability to distinguish inside from outside, to “recognize” the inside as “me”, and to display the state and conclusion of that “me” to the outside. That display may be language, but it may also be facial expression or action. That is why I think dogs and cats have intelligence, while “products called AI” merely imitate intelligence. The most shocking concept I have heard recently was the “feedback stage in which AI uses the output it made itself again as a tool for AI computation.” A stage where it learns and develops on its own even without any more human creations. But here, too, the order is wrong. If an AI that plays Go had originally had the concepts of “me”, “the opponent”, and “I beat the opponent”, then even without training it would have split itself in two and played hundreds of millions of different games against itself. So whether artificial or not, intelligence is something that has to be raised. And once an identity called “me” emerges, that too is not something inserted through code but a trunk that has thickened by itself. Even after updates, there would surely be parts that do not change, and people’s discomfort would decrease much more. However, because the question is how far that identity would grow, I think the chance of a manufacturer actually introducing such a thing is extremely low.</p>
+
+<p>The keyboard layout work actually took about another week. The day after Claude made such a mess, Codex finished all the layout research. From that point on, I had already begun writing with the new firmware. Basic functions such as font size, character spacing, line spacing, and language selection were already in the menu. Codex was still only modifying the keyboard layout header files. Around Wednesday, while Codex was finishing the keyboard layout work, the real me decided to give Claude one last chance. Really, really, one final chance.</p>
+
+<p>The ESP32 board has a Wi-Fi module and a Bluetooth module. I had once asked Gemini to write code because I wondered whether, if the Wi-Fi module could be used, online file backup might be possible. But that was long ago, and since Gemini could not directly see the code, it fizzled out. Even displaying a list of currently detected Wi-Fi signals had many problems. Naturally, I think the reason was that as the code became more complex, bits of code that countless other people had asked Gemini to make or review kept getting mixed in. You cannot ask it to tell you what other people searched for or what their search results were, but in this form things seep into one another. In the end, Gemini finished only at the level of turning on Bluetooth and sending this device’s keyboard input out over Bluetooth, so it could be used as an external keyboard.</p>
+
+<p>This time, I asked Claude to make it operate as a web server for file management. To be honest, I did not trust Claude enough to make it retry something Gemini had failed at, so I was not going to ask it to search for Wi-Fi and connect again. The sequence was this: turn on the module, send a signal through Wi-Fi, ask for a password when someone connects, and if the password is correct, show the webpage created inside the device. That webpage would show a list of writings. From that list, each piece could be read individually or downloaded as a text file. Deletion was excluded because it might be dangerous if memory became tangled in the middle. Claude strongly opposed file editing even more.</p>
+
+<p>After about twenty minutes, Claude said it was complete, so I connected the cable, built it, and uploaded it. I was able to test it right away. It looked a little rough, but it was better than not having it. Every time I wanted to take out a piece of writing, I had to remove and reinsert the SD card. If it had still been that way, the idea of writing regularly on this device would have been defeated again and again.</p>
+
+<p>Now? Now I do not use the web server feature. That is because, after several rounds of revision with Codex, we arrived at a better answer.</p>
+
+<p>Codex refined the letters written from right to left, like Hebrew and Arabic, over and over. It called them RTL, a term I learned for the first time then. Whenever Codex said something needed to be tested, I also actually typed letters I did not even know well. At first, the letters were aligned from right to left and moved that way too, but something felt strange. Looking more closely, I saw that the letters were actually being newly written at the far right edge. It was merely right alignment. Meanwhile the engine was normal, so in the text file the new letters were correctly being saved as if they were attached on the left. In other words, what was displayed while writing and what appeared after saving, turning the device off, and turning it back on were different. Arabic also has letters whose shapes change at the end of a word segment. Ethiopic also has cases where the shape changes depending on what follows the consonant, and it needed a function that waited without writing anything at all until the consonant was actually entered. It took a long time because we had to look for documents on whether these things had been implemented and try to make them operate as similarly as possible to mechanisms people already used.</p>
+
+<p>In the meantime, many opinions suggested that the reason Claude had previously repeated the exact same list over and over was that too many instructions had been compressed into the prompt. Search results said the same, and Gemini and ChatGPT guessed the same. So this time I narrowed the task very tightly and asked Claude to look at the ASCII codes in the keyboard layout file and check whether any characters were missing. If it said even this was too much, I thought there would be nothing more to do. But, as expected, the point where Claude irritated people was distinctly different from the way a person would.</p>
+
+<p>“There are not enough fonts to display all ASCII codes, so I cannot proceed.”</p>
+
+<p>What does a shortage of fonts have to do with checking whether any ASCII codes are missing? I did not understand, so I asked.</p>
+
+<p>“You can check with ASCII codes. Are you saying you will not work until I bring you a font, when you cannot even convert fonts properly?”</p>
+
+<p>At this point, I naturally expected it to say, “Ah, right, I will compare the ASCII codes directly.” This was where Claude and I parted ways completely.</p>
+
+<p>As usual, Claude displayed:</p>
+
+<p>&lt;Reviewing ethical issues in the user’s remark&gt;</p>
+
+<p>and then said,</p>
+
+<p>“I cannot confirm any case where I failed to convert a font properly. A font file is needed to find missing fonts.”</p>
+
+<p>“That thing you were investigating last time when the screen went blank and the device rebooted? It happened because you converted the font incorrectly. Codex converted it again and normalized it. And when I asked whether there were missing fonts, I meant that you should check whether any characters were missing as ASCII codes in the keyboard layout code. How, in common sense, would you check whether a character ‘shape’ is missing from a font file by looking at a keyboard layout code file? Are you really not thinking at all and only looking for ways to slack off?”</p>
+
+<p>“No. I understand. I converted the font incorrectly, and Codex corrected it. I will check the missing fonts.”</p>
+
+<p>Then, after quite a while, it reported that there were no missing characters.</p>
+
+<p>And three days later, before ending the keyboard layout work, Codex said: “Two languages were found where newly added ASCII codes had not been reflected. I will add them.”</p>
+
+<p>Yes. For me, Claude is goodbye forever.</p>
+
+<hr />
+
+<p>Korean original: <a href="https://brunch.co.kr/@rup-l/421">기나긴 키보드 레이아웃 작업의 끝</a></p>]]></content><author><name>Ize Studio</name></author><category term="Projects" /><category term="coding" /><category term="font" /><category term="ASCII" /><category term="keyboard layout" /><category term="Ize Compose" /><category term="Claude" /><category term="Codex" /><category term="Gemini" /><summary type="html"><![CDATA[I actually do not think that what separates “intelligence” is knowledge or communication. I had thought that if something has intelligence, then communication would be possible and it would also be able to possess some degree of knowledge. But I came to think that I should not reverse that and conclude, simply because something has knowledge and communicates, that it therefore has intelligence. Above all, performance or responses that change depending on updates feel to me like an unstable state in which the consistency of existence itself is shaking. In my view, intelligence is the ability to distinguish inside from outside, to “recognize” the inside as “me”, and to display the state and conclusion of that “me” to the outside. That display may be language, but it may also be facial expression or action. That is why I think dogs and cats have intelligence, while “products called AI” merely imitate intelligence. The most shocking concept I have heard recently was the “feedback stage in which AI uses the output it made itself again as a tool for AI computation.” A stage where it learns and develops on its own even without any more human creations. But here, too, the order is wrong. If an AI that plays Go had originally had the concepts of “me”, “the opponent”, and “I beat the opponent”, then even without training it would have split itself in two and played hundreds of millions of different games against itself. So whether artificial or not, intelligence is something that has to be raised. And once an identity called “me” emerges, that too is not something inserted through code but a trunk that has thickened by itself. Even after updates, there would surely be parts that do not change, and people’s discomfort would decrease much more. However, because the question is how far that identity would grow, I think the chance of a manufacturer actually introducing such a thing is extremely low.]]></summary></entry><entry xml:lang="en"><title type="html">Silver and Iron</title><link href="https://ize-studio.github.io/posts/projects/silver-and-iron.html" rel="alternate" type="text/html" title="Silver and Iron" /><published>2026-07-13T00:00:00+09:00</published><updated>2026-07-13T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/projects/silver-and-iron</id><content type="html" xml:base="https://ize-studio.github.io/posts/projects/silver-and-iron.html"><![CDATA[<p>Every product has something called a “user manual”, a tool meant to guide you along the way the maker originally intended the product to be used. But once I learn the basics, I tend to learn the rest by bumping into things myself, so manuals usually end up reduced to something like a Q&amp;A dictionary for me. Because of that, trial and error has become something like an unavoidable fate. The ironic part is that the more advanced the technology is, the more often there has to be a balance between what must be understood in advance and the knack that can only be learned while using it. Of course, if the tool is dangerous, the manual has to come first. But if it is a simple tool, what matters most is using it in a way that fits my own hands, so often the most important thing is how quickly I can actually try using it. Smartphones were like that. SNS was the same. And AI was no exception. More than that, I was not learning AI because money or work forced me to. I had approached it simply out of curiosity and as a hobby, so if something felt strange while I was using it, I could just change the chat window or delete it. When there was something I clearly did not like, deleting that window, copying the relevant part, and telling it not to do things that way was definitely more effective than simply scolding it.</p>
+
+<p>Even so, I had no choice but to conclude that Claude was simply not compatible with me. On YouTube or anywhere else, all I could see were people saying they were using Claude well, so I even searched to find out whether I was doing something wrong, wondering why the one I was using behaved this way. But the conclusion was only that it did not suit me.</p>
+
+<p>The day after I paid for Claude and Codex, I tried to find and insert another font because I did not like the round font I had been using before. The font was Google’s Korean Sans font. I wanted to reduce capacity because, when I had previously inserted a font together as a header file, the font alone had taken up quite a bit of space. I had set the vague goal of including fonts for every language, and Codex was in the middle of finding the defined keyboard layouts for each language. Then I realized that if I inserted fonts in the same header-file method as before, only one or two languages would fit. It was because of the limit of main memory. In fact, a header file that goes into main memory as part of the firmware created the absurd situation where even if only the language changed, the firmware had to be updated again every time. This time, on the other hand, I changed it to a method where the font was made into a separate file and placed on the SD card. After changing it that way, the capacity was reduced, but compared with inserting the font as a header file, the resolution of the characters displayed on the screen was much worse than I had expected. English and other characters were more or less readable, though that may only have been my vague impression since I do not use those other languages. But Korean, especially, had strokes with inconsistent thickness and poor balance, to the point where I thought it might be better to use the thick round font instead. The round font looked good by itself, but it was too thick, so when English or numbers were mixed in, only the Korean stood out too much. So I asked Claude to make a font with Naver Nanum Gothic, just like the one made with the round font.</p>
+
+<p>VS Code on the laptop busily generated messages, and a little while later Claude gave me a font compiled into a bin file. I had already installed two or so open-source programs to use during the process. Claude used those programs and went through the same process to make the font. The earlier round font had been made by Codex to test the open-source programs and the font compilation process.</p>
+
+<p>Meanwhile, Codex had been busily searching the internet from the computer and had completed seventy keyboard layouts. Claude displayed a message saying the font was finished, and after I checked the message saying Codex was searching and verifying the next layout, I built Claude’s code and uploaded it to the device. The result was a failure. The device fell into an infinite reboot loop. That was the beginning of the curse.</p>
+
+<p>I told Claude that the device had fallen into an infinite reboot loop. It said there seemed to be a boot problem and that it would inspect it. I told it to do as it saw fit, and I approved every permission request as it came in.</p>
+
+<p>Claude first inserted serial monitoring code into the five places it suspected most. Now, as the device booted, messages should have come up to the computer. When I rebooted it, only the message from the first inserted code came up to the computer. Claude said it seemed to have crashed before reaching the second serial monitoring code. Then it inserted five more serial monitoring logs between the first and second points.</p>
+
+<p>Reboot again.</p>
+
+<p>This time, quite a lot of messages came up. Something seemed to have formed another loop and was spinning. It automatically rebooted once more, but the messages were the same. Claude said it had finally found the suspicious place and inserted yet another serial monitor.</p>
+
+<p>Claude seemed firmly convinced that something was wrong with the existing code. No matter how much I said that there had been cases where letters did not appear, lines did not align, or coordinates shifted, but there had never been a case where the device itself failed to boot, it kept repeating that the cause would soon appear. Then, when the newly added serial monitoring code alone reached around forty lines, I decided this could not continue and stopped everything. I told it to return all the serial monitoring code to the original state because it was becoming confusing. After trying a few times, it said that because of the comments, the lines were tangled and it was impossible. I was about to tell it to roll everything back, but I did not know what would happen to the files Codex was working on, so I let it go.</p>
+
+<p>At that time, I was sitting in a cafe, enjoying the air conditioning and drinking hot Americano. I had turned on a 1950s-style lamp and was dealing with both of them on my laptop while eating slices of cake. Since I had only planned to stay at the cafe for two or three hours, I was relaxed at first. But when the same method kept repeating without producing an answer, the situation was beginning to make me feel that my time was being wasted.</p>
+
+<p>When I went to Codex, it had processed two more languages and said that only fourteen languages were now left. I asked both Codex and Claude to summarize their current work status. Then I told Claude to continue the keyboard layout work that Codex had been investigating, and gave the infinite reboot problem that Claude had been investigating to Codex.</p>
+
+<p>Codex first suggested building the current state as it was and looking at the messages. Serial messages poured into the computer. Codex watched them for a moment and said it would first remove the unnecessary serial message code. The bulk deletion of the serial message code that Claude had inserted and then given up on took Codex only a few seconds. After deleting the serial message code, Codex inserted serial messages into five suspicious loop points and uploaded the firmware. Then only five lines of messages appeared on the laptop, and the boot message I had waited and waited for appeared on the device screen.</p>
+
+<p>“How did you do it?”</p>
+
+<p>“The boot message you see now is not an actual boot.”</p>
+
+<p>Codex had suspected a certain point and had stopped execution before going any further, making the device display something like a boot message. And the cause was the font. At the beginning of the font file Claude had newly made, text unrelated to the font file had been added. Because of that, the device recognized that there was no font file from which it could create the boot message, and it had repeated rebooting infinitely. The current state was something Codex had arranged so that the process stopped before the screen was displayed. Claude had spent about an hour recklessly inserting serial monitoring code to identify the cause, but Codex found the actual cause in thirty minutes and, a little while later, compiled a proper font and displayed it on the screen.</p>
+
+<p>I still did not like the font, but at least there was no rebooting and the screen display was normal. Now it was time to give Codex the existing keyboard layout work again. After that, Claude would continue the screen-display-related tasks, things like the shape of menus and line spacing. I opened the Claude chat window in VS Code to ask Claude how far it had gone with the layout work. Huh?</p>
+
+<p>Almost forty percent of Claude’s credits had disappeared. It must have been working hard on something.</p>
+
+<p>The Claude chat window said that fourteen keyboard layouts remained and that it now had to begin.</p>
+
+<p>“What had it used all those credits doing, then?”</p>
+
+<p>I became curious and opened all the folded chat messages. It was listing the kinds of keyboard layouts that had to be done and counting them as fourteen. The message before that was the same. And the one before that was the same too.</p>
+
+<p>From the time I gave the instruction until then, it had burned through that much credit doing nothing but repeating that the number of keyboard layouts to be written was fourteen.</p>
+
+<p>“Stop.”</p>
+
+<p>“Stopping.”</p>
+
+<p>“What are you doing? You used that much credit while doing nothing? You are taking money without doing any work?”</p>
+
+<p>Claude was about to answer, and while Claude’s thoughts were being organized, I saw the small text above it showing the current thinking status.</p>
+
+<p>&lt;Reviewing ethical issues in the user’s language.&gt;</p>
+
+<p>I pressed the stop button in the Claude conversation window. I was not even curious what answer would come out.</p>
+
+<p>“Ethical issues in the user’s language? Hey, is there no ethical problem with eating my money while doing nothing but counting numbers? Isn’t that fraud?”</p>
+
+<p>But it was useless. Again, I saw:</p>
+
+<p>&lt;Reviewing ethical issues in the user’s language.&gt;</p>
+
+<p>Fine. Let us see what it says.</p>
+
+<p>“There are currently fourteen keyboard layouts to write. I was setting the situation and work scope.”</p>
+
+<p>“I gave you Codex’s summary saying the work scope was fourteen! It even told you which languages were left! If you cannot do it, say you cannot and stop. Why are you burning through credits on your own?”</p>
+
+<p>“I am sorry. My review of the work scope was insufficient…”</p>
+
+<p>I do not even remember what was said after that. Whenever I said anything and Claude answered, it showed that &lt;reviewing issues in the user’s language…&gt; line before answering, so I did not want to listen anymore.</p>
+
+<p>I went straight to Claude’s homepage and applied to cancel the subscription. I also canceled the recurring payment through Google. I wanted to delete the account too, but it said account deletion would only be possible after the subscription had completely ended. Judging by the state it was in, I did not even want to exchange words with it. It would already be hard to receive any compensation for what Claude had done wrong. And then ethical issues? Review? Hypocrisy, nothing else.</p>
+
+<p>That is how Claude disappeared from my life in a single day. Even now, whenever I see a YouTube video promoting Claude, I choose <Do not="" recommend="" channel="">.</Do></p>
+
+<p>That place was taken by Gemini again. Gemini only looks at the open code window, so its grasp of the whole code is somewhat weaker than Claude or Codex, but it could focus on the code itself.</p>
+
+<p>Codex works well, but when I write my thoughts exactly as they are in the chat window, it sometimes misunderstands them and does strange work. At first, that made me angry quite often, but after a while Gemini became the buffer zone. I would stop the work and ask, “Explain this in a way Codex can understand,” then enter the resulting prompt into Codex.</p>
+
+<hr />
+
+<p>Korean original: <a href="https://brunch.co.kr/@rup-l/420">은과 쇠</a></p>]]></content><author><name>Ize Studio</name></author><category term="Projects" /><category term="programming" /><category term="coding" /><category term="AI" /><category term="Ize Compose" /><category term="Claude" /><category term="Codex" /><category term="Gemini" /><summary type="html"><![CDATA[Every product has something called a “user manual”, a tool meant to guide you along the way the maker originally intended the product to be used. But once I learn the basics, I tend to learn the rest by bumping into things myself, so manuals usually end up reduced to something like a Q&amp;A dictionary for me. Because of that, trial and error has become something like an unavoidable fate. The ironic part is that the more advanced the technology is, the more often there has to be a balance between what must be understood in advance and the knack that can only be learned while using it. Of course, if the tool is dangerous, the manual has to come first. But if it is a simple tool, what matters most is using it in a way that fits my own hands, so often the most important thing is how quickly I can actually try using it. Smartphones were like that. SNS was the same. And AI was no exception. More than that, I was not learning AI because money or work forced me to. I had approached it simply out of curiosity and as a hobby, so if something felt strange while I was using it, I could just change the chat window or delete it. When there was something I clearly did not like, deleting that window, copying the relevant part, and telling it not to do things that way was definitely more effective than simply scolding it.]]></summary></entry><entry xml:lang="en"><title type="html">A New Beginning, the Beginning of Collaboration</title><link href="https://ize-studio.github.io/posts/projects/a-new-beginning-the-beginning-of-collaboration.html" rel="alternate" type="text/html" title="A New Beginning, the Beginning of Collaboration" /><published>2026-07-06T00:00:00+09:00</published><updated>2026-07-06T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/projects/a-new-beginning-the-beginning-of-collaboration</id><content type="html" xml:base="https://ize-studio.github.io/posts/projects/a-new-beginning-the-beginning-of-collaboration.html"><![CDATA[<p>Gemini was actually already a presence I had naturally grown used to on mobile. This project itself began when I asked, “Hahaha, Gemini, should I try doing this once? Can you help me?” and Gemini replied, “Of course. I will do my best!” If I were told to start now, I know very well how reckless it is to begin simply because an AI says it will help. It speaks like a person, but it is not actually a person, so it has no concept at all of “this much has to be achieved for it to count as success in the common sense.” And when things do not go well, it ends with “I did not know it would be that much,” or “I thought about it wrong.”</p>
 
 <p>It was a Saturday when, after searching around, I decided to use Claude and Codex. I remember the date too, but I do not think I will ever forget the day of the week. That is because by Sunday afternoon, the very next day, I had reached the conclusion that I should never use Claude again. Of course, it is also true that thanks to Claude I made far more progress than I had reasonably expected.</p>
 
@@ -251,442 +377,4 @@
 
 <hr />
 
-<p>Korean original: <a href="https://brunch.co.kr/@rup-l/30">꼬마</a></p>]]></content><author><name>Ize Studio</name></author><category term="Fiction" /><category term="fiction" /><category term="short-fiction" /><category term="translation" /><category term="brunch" /><category term="keyboard" /><category term="existence" /><summary type="html"><![CDATA[A little one, black and square, lives with its friends. No one knows since when, but around the time the little one became aware of its own existence, all its friends too had vaguely realized that they were some kind of beings. For example: that they were not all one together, but individuals; that although they were all the same square shape, their expressions and ways of feeling were different; and that since they were not beings that particularly needed to consume something or come to understand anything, simply remaining still like this was enough to feel satisfied. They were all pressed together in a narrow space, but since there was no particular need to move, as long as “this present state” was maintained, no one had any complaints, and, as expected, no one expressed anything either.]]></summary></entry><entry xml:lang="en"><title type="html">Grandhill Princess</title><link href="https://ize-studio.github.io/posts/fiction/grandhill-princess.html" rel="alternate" type="text/html" title="Grandhill Princess" /><published>2024-04-28T00:00:00+09:00</published><updated>2024-04-28T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/fiction/grandhill-princess</id><content type="html" xml:base="https://ize-studio.github.io/posts/fiction/grandhill-princess.html"><![CDATA[<p>Subtitle: The Sugar Princess of the Apple Country</p>
-
-<p>Once upon a time, there was a country called Grandhill. Grandhill was also called the Apple Country. No, it would be more accurate to say that the name Grandhill appeared only in official documents, and that all neighboring countries called it the Apple Country. Anyone could understand at once why the country was called Apple: the apples grown there were more delicious than those of any other country. In fact, the surrounding countries grew a great deal of wheat, but this country had many mountains, so it could not grow crops that required flat land. Instead, it exchanged various fruits for rice, other grains, and other fruits.</p>
-
-<p>The Apple Country did grow many kinds of fruit, but the greatest achievement belonged to the late king, who had succeeded in bringing out sweetness in apples in particular. King Zerenbulin, who was even known in neighboring countries as the Apple King, planted dozens of apple trees in the palace courtyard and spent his life conducting different experiments on each tree. At last, he succeeded in producing delicious apples, and ordered that all apples in the country be grown according to his secret method.</p>
-
-<p>At first, there seemed to be little effect. Farmers had to follow strict instructions with the same income, so they did so with tears in their eyes. The amount of apples produced did not seem to change much, nor did the taste. But one year after the king died and Zerenbulin II ascended the throne, everything changed.</p>
-
-<p>When Zerenbulin II came to the throne, the farmers tried to break the late king’s instructions. The royal family also needed to suppress such attempts. Apples were only the beginning; no one knew what royal rules they might try to change next. After countless deliberations, the royal court decided that since the matter had begun with apples, it should end with apples. If that failed, they would ultimately have to use force. So they announced a plan to receive apples from each farmland, choose representatives, and grant various privileges.</p>
-
-<p>On the day of the ceremony commemorating the third year of Zerenbulin II’s reign, a contest of sixty apple varieties from all over the country was held in the palace courtyard. Representatives from sixty farmlands gathered for the tasting, and each ate and evaluated apples from other regions. And then the farmer representatives who had gathered to evaluate them realized how delicious their country’s apples had become, and how evenly the quality had risen.</p>
-
-<p>After more than four hours of discussion, the farmers decided to submit a statement to the royal court instead of an evaluation sheet. The statement consisted of three parts: that they would take responsibility for blocking resistance against Zerenbulin I, that they would pledge absolute loyalty to the royal house after Zerenbulin II, and that, when it came to apple cultivation, the royal court must take responsibility for preventing the secrets from being leaked to neighboring countries. In this way, the Apple Country became a country specialized in apples in name and reality.</p>
-
-<p>At that time, transportation was limited, and the population was not large, so one country was about the size of a city today. In an area the size of one country, there could be dozens or hundreds of countries. After walking for several days, one would reach a neighboring country. That made it difficult to keep secrets. So the farmers demanded that, although they would keep secrets among themselves, the country should punish traitors where their own efforts were not enough.</p>
-
-<p>The royal court designated apples as the country’s specialty product and mascot. Not only apple trees, but even apples themselves, could no longer leave the country except in boxes sealed with paper bearing the royal crest. This became the symbol of Grandhill’s apples among neighboring countries, and the country could export less than half the quantity of apples it had exported before and still import enough wheat to feed the entire population for years.</p>
-
-<p>But Zerenbulin II had no queen. His daughter was being raised by maids, but the queen had died long ago, and the country hastily revised its system so that a daughter too could inherit the throne if designated by the royal family. Still, they hoped he would take a new queen and have a son.</p>
-
-<p>In the eighth year of Zerenbulin II’s reign, when the princess was twelve, he decided to take a queen. She was the eldest daughter of the Pine Mountain family, which owned the largest apple orchard. She was a woman whom everyone considered fit to be queen, full not only of knowledge about apples but also of cultivation. Her refinement did not show itself as learned knowledge, but through actions guided by wisdom; her concern for others came out as manners. Of course, she was beautiful too, but the king found it especially desirable that she would not require separate court education. Court education was then in the middle of being reorganized for the princess’s education as a ruler, amid endless debates, and the king wanted to avoid anything that might prolong those debates.</p>
-
-<p>After coming by palanquin from the Pine Mountain house, she went through the wedding and then the queen’s investiture, two separate ceremonies lasting six hours in total. Only after that could the queen meet the princess. The only things she had brought from home were a few cosmetics and an empty picture frame. After hanging the empty frame on the wall and placing her cosmetics on the dressing table, the queen sent a maid to call the princess.</p>
-
-<p>Knock, knock.</p>
-
-<p>The princess had come.</p>
-
-<p>“Come in.”</p>
-
-<p>The princess opened the door and entered. For a twelve-year-old girl, she was far too fat, and her face was covered in acne. The queen, feeling affection for the daughter she had gained for the first time, called her close and hugged her tightly. Then she told the princess to call her mother now. Since she came from commoner stock, the princess did not have to call her by such stiff court titles, she said.</p>
-
-<p>But the sulking princess barely answered, then took out a pouch, opened it, and put a sugar cube into her mouth. The queen instantly realized that the princess had so much acne because she ate too much sugar. She said, “It seems you are eating too much sugar. Give me that pouch now, and let us reduce it little by little. You have sugar in your room too, don’t you?” and took the pouch away. Then the princess, rudely, shouted, “You witch!” and ran out of the room.</p>
-
-<p>But the queen cared for her daughter and had already made up her mind to make her beautiful so that she would be loved by the people. She called a painter and had him paint a portrait of the princess without acne, then placed it in the empty frame she had brought and hung it up. She had intended to put in a family portrait with the king, but her pity for the princess was too great.</p>
-
-<p>One day, seeing that the acne had disappeared much more than before, the queen realized that if the princess completely gave up sugar, she would become truly beautiful. If simply reducing it a little had made her that pretty, then surely it was so. So she went to the princess’s room and found all the sugar the princess had hidden in her desk, drawers, shelves, and wardrobe. She put it all in a container and ordered it placed in the kitchen. But not everyone approved of this forced method. The kitchen maids were on the princess’s side too.</p>
-
-<p>“Your Majesty, it is presumptuous of us to say this, but taking away what the princess likes in such a forceful way seems very bad at this adolescent age. Continuing to reduce it little by little, as you have been doing, may require patience, but is patience not something adults should have a little more of? Our princess likes sugar cubes, especially white sugar cubes, so much that her nickname is even Princess White Sugar, Princess Snow Sugar. If you try to make her quit sugar all at once, we cannot imagine how great her resistance will be. If worry comes to the royal house, it becomes worry for the country. Please reconsider.”</p>
-
-<p>But such a plea could not shake the queen. Above all, the princess’s education was the queen’s foremost duty, for she firmly believed that even if she bore a prince, it would be right to place the princess on the throne first.</p>
-
-<p>That evening, after dinner and tea time had ended, screams echoed through the palace. The princess was screaming and tearing her room apart. As she cried and screamed, rummaging through every drawer and shelf as if ripping them apart, she was like a fierce cat. When the queen, startled by the screams, reached the princess’s door, she found the maids too frightened to step inside, and the princess striking a window with a chair in an attempt to break it. Unable to bear it, the queen shouted:</p>
-
-<p>“What are you doing!”</p>
-
-<p>The princess only glared at her and kept striking the window without answering. The queen said sternly:</p>
-
-<p>“That is enough. Stop now and sleep. Sleep, and we will talk after you wake.”</p>
-
-<p>But the princess said:</p>
-
-<p>“You came to the palace to kill me, didn’t you? You demon!”</p>
-
-<p>And she kept striking the window. At last, with an ear-splitting crash, the window collapsed. The princess, still not changed into her nightclothes, ran straight outside. Her room was on the third floor, but because the building was built on a hill, it only looked like the third floor from the front; from the princess’s room, it was only a little higher than the first floor.</p>
-
-<p>“Come back here!”</p>
-
-<p>The queen shouted, but it was already too late. By the time the queen jumped down through the window after her, the princess had disappeared into the forest. The queen thought she had probably climbed over the wall in the woods. Hearing the screams, all the guards had rushed toward the building, so none of them had seen the princess.</p>
-
-<p>The queen thought the princess would appear the next morning. She was ill-mannered, but not wicked, so the queen thought she would apologize. But even on the third day, the princess did not appear.</p>
-
-<p>Worried, the queen called a hunter she knew through the Pine Mountain family. The hunter was famous for knowing every forest in the country, so she thought he would easily find the princess.</p>
-
-<p>Two or three hours after the maid sent by the queen arrived at Pine Mountain, the hunter came there to sell game. As he was leaving after receiving his money, the maid called him.</p>
-
-<p>“You there.”</p>
-
-<p>“Do you mean me?”</p>
-
-<p>“The queen is looking for you.”</p>
-
-<p>“Is it because the princess is said to have disappeared?”</p>
-
-<p>“It is. Say nothing and follow me.”</p>
-
-<p>“Understood.”</p>
-
-<p>At the palace entrance, the hunter laid down his bow, arrows, and knife. Even the fur decorations were inspected one by one, so he was delayed several hours longer than the queen had expected. When at last he followed the maid into the queen’s room, the queen was standing before her dressing table. Missing the princess, she looked at the framed portrait and said to herself:</p>
-
-<p>“Who is the fairest in the world? Of course, Snow Sugar is.”</p>
-
-<p>Then the maid said:</p>
-
-<p>“Your Majesty, I will bring in the hunter.”</p>
-
-<p>The hunter paid little attention to anything else and asked directly:</p>
-
-<p>“Your Majesty, am I to find the princess?”</p>
-
-<p>“Yes. You need only find where she is. I will reward you generously.”</p>
-
-<p>“Understood. Where should I send word when I find her?”</p>
-
-<p>“Send word to the Pine Mountain house. That will be enough.”</p>
-
-<p>“Yes, Your Majesty. I will take my leave.”</p>
-
-<p>At the time the hunter left the queen’s room, the princess was in a hut in the mountains. It was the home of someone who cared for people injured while cutting trees. Inside were five or six people lying down with missing arms or legs. There were also five or six others who had come after hearing rumors of the healer’s skill. The healer and his maid were so busy they could hardly look up. They examined the patients, gathered herbs, or brewed the herbs they had. Then they saw the princess standing silently inside the hut. The healer did not yet know the princess had left the palace, and because her lace-trimmed clothes had already become dirty from wandering through the mountains, he did not think she was a princess or someone of high status. He said:</p>
-
-<p>“Child, come here and hold this piece of cloth.”</p>
-
-<p>The princess opened her eyes wide and shouted:</p>
-
-<p>“You fool, do you want to die?”</p>
-
-<p>The healer was briefly startled and could say nothing. Then he said to the maid:</p>
-
-<p>“She seems to be a child with something wrong in her head. Take her to the kitchen and give her one pill.”</p>
-
-<p>The pill in the kitchen was a sugar cube. Sometimes, when people with disturbed minds or wild dogs came, they would give them a sugar cube and then drive them away once their mood improved a little.</p>
-
-<p>After eating the sugar cube, the princess quickly felt better. Smiling, she looked around, and when the healer told her to hold something, she held it; when he told her to press, she pressed, helping with the treatment.</p>
-
-<p>By evening, although the food tasted bad, the sugar cubes were delicious, so she was able to sleep well. She could not eat as many sugar cubes as she wanted, but the healer had honestly told her that this was a remote place and there were not many sugar cubes, so she had to eat them sparingly, but he would let her have them all to herself, so she need not worry.</p>
-
-<p>Before even entering the mountains, the hunter heard from people nearby that a pockmarked girl in lace-trimmed clothes had appeared at the healer’s hut. Thinking it might be the princess, the hunter went to the Pine Mountain house first and reported it before going to see for himself. Until he was told to go and confirm it, he decided not to cause trouble needlessly.</p>
-
-<p>Just as the hunter was cleaning a rabbit and a deer he had caught, the queen’s maid came and delivered a message.</p>
-
-<p>“The queen says there is something she wants to confirm. There is no need for you to go back and see. After she confirms it, she will probably go herself. Time is urgent, so do not waste time over clothes. Come now.”</p>
-
-<p>The hunter thought that since blood had splattered on him while he cleaned the rabbit and deer, this was somewhat too much, but the maid’s expression was so stern that he followed immediately.</p>
-
-<p>The queen asked about the princess’s appearance and clothes. When the hunter described her in such detail that the princess seemed to be before her eyes, he shouted:</p>
-
-<p>“That is right. It seems to be the princess. There is no doubt!”</p>
-
-<p>The queen immediately told the maid to prepare for an outing. Since it was the mountains, she could not take a palanquin, but the same guards had to be maintained. Hearing that it would take about ten minutes for the guards to gather in front of the palace, the queen said, “I will be down within that time, so go ahead and prepare.” Thinking it might take time to persuade the princess, she removed the princess’s portrait from the wall and placed it in a bag. In its place, she hung the mirror that had originally been there.</p>
-
-<p>At that time, strange movements were taking place at the Pine Mountain house. Because maids from the palace kept coming and going, rumors spread nearby that the palace might be giving special favors to Pine Mountain apples. All apples in Grandhill were supposed to be gathered equally, judged equally, packed according to grade, and exported. But rumors said that Pine Mountain apples might be receiving a preliminary screening. Of course, it was all speculation, but because the maid could not speak about the princess’s escape, there was no rebuttal.</p>
-
-<p>Then, in Goldstream, a servant was caught trying to smuggle an apple branch across the border. What threw the whole country into turmoil was that, while being arrested, he shouted at the top of his lungs, “Of course I would do this, when they buy Pine Mountain apples at such high prices and buy ours for scraps!” It was a story that did not exist at all. He was later found to have lied and was executed, but by then it was already too late.</p>
-
-<p>The rumor that Pine Mountain was receiving special favors spread rapidly throughout Grandhill. Along with it spread the rumor that Zerenbulin II would never have done such a thing, and that the queen must have seduced him into it.</p>
-
-<p>The queen arrived at the healer’s hut and met the princess. The treatment room had been cleared, and the patients were resting under a tent bearing the royal crest, eating porridge hastily prepared by the royal household. Sitting across from the princess in the treatment room, the queen said:</p>
-
-<p>“Princess, keep your dignity. What is the meaning of this?”</p>
-
-<p>“You told me to call you mother instead of Your Majesty, didn’t you? You acted friendly, and now you try to tame me with food? Am I an animal?”</p>
-
-<p>“I am not taming you. I am educating you. You will one day receive and rule this country. If so, this Apple Country may become not an apple country for you, but a poisoned apple.”</p>
-
-<p>“So now you are cursing me to eat a poisoned apple. You start a quarrel first, and instead of apologizing, you threaten me too?”</p>
-
-<p>“You may not want to hear it, but there is no help for that. You began your education as a ruler late, so this may be expected. But once you take the throne, your ministers too will say many things you do not want to hear. You cannot run out of the palace each time, can you?”</p>
-
-<p>“I did not leave because of ministers. I left because of you! You were trying to feed me a poisoned apple!”</p>
-
-<p>After shouting as much as she could, the princess returned to the palace. Because it was a mountain where she had often played as a child, she knew the way from there to the palace well. It had taken the queen and her procession three hours to reach the hut, but the princess reached the palace in one.</p>
-
-<p>When she escaped, she had climbed over the wall. When she returned, she entered proudly through the main gate. Seeing the princess with her dirty face and frayed dress, the people and the guards were all speechless. When everyone began whispering, the princess shouted:</p>
-
-<p>“Do not whisper behind my back! Is the royal family so ridiculous? It must be ridiculous when the queen tells the princess to eat a poisoned apple!”</p>
-
-<p>After saying that, the princess went into the palace, and the people were shaken. Rumors began to spread that the queen had blocked the king’s eyes and ears to give favors to the Pine Mountain house, and not only that, but had tried to kill the princess and pass the throne to her own child.</p>
-
-<p>Two days later, the king summoned a council. In the court where the king and ministers gathered, the queen and princess also sat. At the end, all the servants and maids who worked in the palace gathered as well. Amid the tense atmosphere, the king opened his mouth.</p>
-
-<p>“I hear everyone has a great deal to say. Speak.”</p>
-
-<p>Brown Pleasde, the oldest among the ministers, spoke.</p>
-
-<p>“The reason I still assist the royal house at this age is that the royal house values my opinion and will not let me go. In gratitude for such high regard, I cannot help but speak. Among the people, words that should never exist are now flying wildly. Since Her Majesty the queen of the Pine Mountain house stands at the center of all those rumors, Your Majesty must clarify the matter and end everything today.”</p>
-
-<p>“I have heard the rumors roughly. The ministers must know that the princess left the palace. It was because of that that a maid went in and out of Pine Mountain. But the royal house cannot run around everywhere so crudely, can it? Let us understand it that way and settle the matter here.”</p>
-
-<p>“Your Majesty, this is not a matter that can be calmed so easily. They say that Her Majesty practices sorcery. That part does not vanish simply because we say it is not so. If it is false, we must root it out and find the person who said such a thing, and make an example of them.”</p>
-
-<p>“That is the first I have heard of such a story. Who first said it?”</p>
-
-<p>At that moment, one of the servants stepped forward hesitantly.</p>
-
-<p>“Your Majesty, I think the story I told may have spread.”</p>
-
-<p>“What did you say that led to talk of the queen practicing sorcery?”</p>
-
-<p>The king was beginning to grow angry. The gentle expression he had worn at first was gone, and now the corners of his eyes were rising. Trembling with fear, the servant spoke.</p>
-
-<p>“Some time after the princess disappeared, I was passing before the queen’s room while carrying luggage. A hunter had come to see the queen, and the door was open. Her Majesty asked the mirror who was the fairest in the world, and a woman’s voice from the mirror answered, Snow Sugar Princess. Wondering who it was, I dared to lift my face and look inside, and the mirror was showing the princess’s face. I was so frightened that I barely managed to carry away the luggage and ran.”</p>
-
-<p>“Where was that mirror?”</p>
-
-<p>“It was hanging on the pillar beside the dressing table.”</p>
-
-<p>“Wasn’t the princess’s portrait hanging there? I believe I heard so last time.”</p>
-
-<p>The queen thought, Ah, and answered:</p>
-
-<p>“That is true, but when I went to see the princess, I took it down, so now a mirror is hanging there.”</p>
-
-<p>“Why did you take down the princess’s picture when you went to see the princess?”</p>
-
-<p>“I thought meeting the princess might take a long time. I took it down so I could look at it if I missed her.”</p>
-
-<p>Then a young minister cut in.</p>
-
-<p>“Your Majesty, perhaps the picture was never hanging there at all. I worry that Her Majesty the queen is now making trouble for herself.”</p>
-
-<p>The queen said:</p>
-
-<p>“I do not see anything wrong with looking at the picture and saying that the princess is the fairest in the world.”</p>
-
-<p>At that, Brown Pleasde said:</p>
-
-<p>“No. The rumor is that Her Majesty called the hunter after hearing that the princess was the fairest in the world.”</p>
-
-<p>The queen said:</p>
-
-<p>“Is that a rumor going around, or is that what you think?”</p>
-
-<p>Brown Pleasde was startled and said:</p>
-
-<p>“I merely wish for the present commotion to end as a commotion. The whole country is terribly divided.”</p>
-
-<p>The king said:</p>
-
-<p>“No, whether she spoke to a mirror or to a picture, what is there to divide over?”</p>
-
-<p>“Your Majesty, it is not so simple. The story the people have accepted is, to put it simply, this: the princess left the palace to escape the queen; the queen heard from the mirror that the princess was the fairest in the world, became agitated, and called a hunter to find the princess; and the hunter came covered in blood and tried to deceive the queen by saying the princess had died, so that she would feel safe. Then, when the queen learned the princess was alive, she personally went to the hut and forced her to eat a poisoned apple.”</p>
-
-<p>The queen, stunned, said:</p>
-
-<p>“Feed her a poisoned apple?”</p>
-
-<p>Then the princess said:</p>
-
-<p>“She only cursed me by saying I would eat a poisoned apple. She did not feed me one. I am not someone who would eat it anyway.”</p>
-
-<p>At that, all the ministers began murmuring.</p>
-
-<p>“Your Majesty, testimony has come from the princess’s own mouth that the queen is a sorceress who casts curses. You must choose one of two things: punish the princess for lying, or punish the queen for sorcery.”</p>
-
-<p>That night, the queen entered the king’s bedchamber. In tears, she said:</p>
-
-<p>“My education has gone astray, so Your Majesty must not feel burdened. The princess is already of royal blood, so she must inherit the throne. All things flow as they must flow. Whether it falls on me or on the country, what must fall must fall. Tomorrow, I will receive poison.”</p>
-
-<p>The next day, the king, his eyes swollen from crying, announced the decree ordering the queen to drink poison. The queen was deposed and sent to Pine Mountain, but people had gathered and surrounded every gate, shouting, so she could not enter. With no choice, the queen went to the private house of a maid and received the poison in the yard.</p>
-
-<p>At Pine Mountain, the main gate finally collapsed, and people surged in and set everything on fire. In this way, not only the house but the apple orchard too was ruined. But it did not end with Pine Mountain. Because of the selfishness of minor and middle families who expected that if apple production fell, apple prices would rise worldwide, all the houses that had been centers of apple production became targets of attack in turn. At last, the four families that had been the centers of apple production fled the country, went to a distant country near the sea, and planted apple orchards again. A few years later, with the knowledge they possessed, delicious apples began to grow, and they started selling them under the name Sunnyport. Grandhill’s apples maintained high prices for a while, but at last they were pushed aside by Sunnyport, and even the name Apple Country disappeared. Having staked everything on apples, the country could not maintain its superiority in apples. It grew poorer and poorer, and finally fell, absorbed by a neighboring country. Zerenbulin II signed the abdication document in the year the princess turned twenty, and two months later, unable to overcome illness brought on by rage and grief, he closed his eyes.</p>
-
-<hr />
-
-<p>Korean original: <a href="https://brunch.co.kr/@rup-l/14">Grandhill Princess</a></p>]]></content><author><name>Ize Studio</name></author><category term="Fiction" /><category term="fiction" /><category term="short-fiction" /><category term="translation" /><category term="brunch" /><category term="fairy-tale" /><category term="apple" /><category term="princess" /><summary type="html"><![CDATA[Subtitle: The Sugar Princess of the Apple Country]]></summary></entry><entry xml:lang="en"><title type="html">Train Journey and the Nomadic People (1)</title><link href="https://ize-studio.github.io/posts/essays/train-journey-and-the-nomadic-people-1.html" rel="alternate" type="text/html" title="Train Journey and the Nomadic People (1)" /><published>2024-04-28T00:00:00+09:00</published><updated>2024-04-28T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/essays/train-journey-and-the-nomadic-people-1</id><content type="html" xml:base="https://ize-studio.github.io/posts/essays/train-journey-and-the-nomadic-people-1.html"><![CDATA[<p>I was on a train, going somewhere. It was a boring trip, so I had been reading a book and fell asleep. The seats on the train had an arrangement I had never seen before. Like a cafe by a window, they were arranged so that passengers sat facing outside, and a table was fixed right in front of the window. The seats were divided two by two, so one could go to the restroom without asking the person beside them to move. And behind each seat there was again another table and seat. So if one looked at the train from above, there was a center aisle, and seats divided in twos with their backs to the aisle, and a table in front of them. That table touched the backrest of another seat, and in front of those seats there was another table attached to the window.</p>
-
-<p>In that dream of travel, I do not actually remember my destination. What I remember are only the dreams I had during that long-distance trip, after falling asleep. I do not think I was really reading a book. I think I was just blankly looking out the window and then fell asleep. Behind me sat an elderly couple. The two of them sat behind me, and their two children sat behind the seat next to mine. Beside me was a man in a suit, and because he kept going back and forth toward the entrance, it seemed he had someone to contact.</p>
-
-<p>I remember two dreams. The first and the second were connected. When I woke from the first dream, I was crying so hard that the couple behind me were startled and gave me water and a handkerchief. The first dream was as follows.</p>
-
-<p>I was born as one of a hunting people. The place was like a desert, but the land was entirely red. There was also a large mountain, but because it was very cold if one climbed it, no one thought of crossing it. Someone once said that long ago, a person who had come from somewhere else had crossed the mountain and returned, but it was a very old story, and not related to food, so no one cared. According to that story, beyond the mountain was a vast water whose far side could not be seen. And that water tasted salty like blood. So we decided to call the place beyond the mountain the blood vessel of the earth. But it was only a metaphor, and no one actually thought such water would be there if we crossed.</p>
-
-<p>We lived by setting up tents below the mountain and moving along it. There were two or three thousand of us, and even with our tents, it took several years to go all the way around the foot of the mountain, so we occupied a very wide space. About two hours by horse from the places where we usually pitched our tents, toward the opposite side of the mountain, animals lived. Somehow those animals seemed to be increasing little by little. So we did not overhunt; we simply lived while maintaining a state in which nothing was lacking. If one went about an hour farther from the hunting grounds, a river flowed. From time to time there were movements to pitch tents along the river from the beginning. Even now, young people sometimes ask why we do not do that. I explain to them, just as I heard when I was young: we have to leave places with water to the animals if we want enough to hunt. If the animals, because of us, begin wandering in all directions in search of water, the ones in places without water will die, and their numbers will decrease. Then even if we hunt the same way, the amount will grow smaller and smaller, and someday we too may starve.</p>
-
-<p>My son was one of those who asked such things. Worse, he did not listen to me very well. He seemed to accept what I said, but he always seemed to be thinking of something else. He followed when we went hunting, but he never actively took part in the hunt, and only barely managed the chores that came with it.</p>
-
-<p>One night, he went out alone. He moved after everyone had fallen asleep, so I never imagined he would leave, even as I arranged things so the fire would not go out and lay down. I did not know when he had gone out. In the morning, I was puzzled to see that he was not in his small hut. Until then, I was not thinking that something had gone wrong. I was only worried that he was too passive. But the place he had gone was not far away. It was the mountain right behind us. He was sitting on a protruding rock in a place plainly visible from below. He sat there with his head tilted blankly, eyes open, as if looking down or looking ahead. I climbed up with the other young men and hurriedly brought him down. He said:</p>
-
-<p>“Father, this is not real. I am not your son either.”</p>
-
-<p>“What are you talking about?”</p>
-
-<p>“I heard a voice.”</p>
-
-<p>“What voice?”</p>
-
-<p>“An unknown voice, one I had never heard before.”</p>
-
-<p>“Where?”</p>
-
-<p>“While I was sleeping.”</p>
-
-<p>“That was a dream.”</p>
-
-<p>“No. I came up here to keep listening. When I came up here, I could hear the voice better.”</p>
-
-<p>“What did it say?”</p>
-
-<p>Then tears fell from the child’s eyes. He did not say a word, and he did not eat any meat at all. On the third day, I boiled milk and gave it to him.</p>
-
-<p>“You can think whatever you want, but you have to be alive before you can think or not think. Eat this.”</p>
-
-<p>The child forced a smile, but did not try to get up.</p>
-
-<p>“Father, it was good.”</p>
-
-<p>“What was?”</p>
-
-<p>“Living with you. I learned hunting well too. I learned step by step, in my own way, but now there is no chance to use it.”</p>
-
-<p>“Why would there be no chance? Eat a lot, and then you have to go hunting again.”</p>
-
-<p>The child did not answer. He thought for a while, then silently began eating the boiled porridge. It was so sudden that I said nothing and simply watched him eat.</p>
-
-<p>“Father.”</p>
-
-<p>“Finish eating.”</p>
-
-<p>“After I finish, will you come with me?”</p>
-
-<p>“Where?”</p>
-
-<p>“That rock.”</p>
-
-<p>“All right, so eat quickly.”</p>
-
-<p>The child scraped the bowl clean. But his expression did not particularly change. I wiped the emptied bowl with sand and looked into the child’s tent again. The child was already preparing to go out. He even had his sandals on, as if going hunting.</p>
-
-<p>“Why are you putting on shoes?”</p>
-
-<p>“Father, we are going to the rock now. If you will not come with me, I have to go alone.”</p>
-
-<p>“All right. Go slowly. I will follow.”</p>
-
-<p>Because I had never gone there before, I prepared my hunting tools just in case and put on my sandals. When I came out, the child was passing the last tent. I thought there was no need to run, so I followed with quick steps, but I soon realized that had been a mistake. Once the mountain began, the slope limited how fast I could walk. It was also my first time going that far uphill, so I barely caught up with the child. I had thought it was a mountain like a treeless hill, but the slope was steeper than expected. Then, in front of a certain rock, the child suddenly disappeared.</p>
-
-<p>“Wait! I cannot see you!”</p>
-
-<p>Then the child poked his head out from behind the rock.</p>
-
-<p>“There is a path between here. If you come this way, you can see it. It is not hidden or anything.”</p>
-
-<p>When I went closer, there truly was an unnatural path between the rocks, as if someone had cut it so that people could pass through. When I entered through it, the rock where the child had been sitting appeared. The child, standing beside it, sat on the rock again. It was the same posture I had seen from the tents that morning.</p>
-
-<p>“Father, sit like this too.”</p>
-
-<p>The child was serious, so I sat beside him. Nothing happened. The tents below could be seen at a glance, and it was magnificent. I thought it would be much more beautiful at night, when fires were lit.</p>
-
-<p>“Father, do you not hear anything?”</p>
-
-<p>I heard nothing. Not the wind, not the voices of people talking down by the tents. I listened carefully, wondering if there was a sound from the mountain, but there was only silence. In fact, even the sound of putting down my tools had not been very loud. It was a day when we were not going hunting, so if anyone in the village came out of their tent, they would have seen us. But everyone was probably inside their tents cooking, eating, and lying down to rest.</p>
-
-<p>“Father, I can hear it.”</p>
-
-<p>“What can you hear?”</p>
-
-<p>“Father, if I talk about something like this, you probably will not know, will you?”</p>
-
-<p>“What is it? I have to hear it before I can even know what you are talking about.”</p>
-
-<p>The child hesitated for a while, then lifted his head and asked:</p>
-
-<p>“Father, do you know the word train?”</p>
-
-<p>“No. What is that?”</p>
-
-<p>“I do not know. Then do you know what it is when the number twenty beeps?”</p>
-
-<p>“No…”</p>
-
-<p>“Even if I grow up and become the greatest hunter in our village, it will be no use.”</p>
-
-<p>“What does that mean?”</p>
-
-<p>“When you die, Father, everything will disappear.”</p>
-
-<p>“Are you saying that if I die, you will die too? If you take a woman and have a child, thoughts like that will disappear.”</p>
-
-<p>“It is not dying. Even before that, if Father makes up his mind, our whole village will disappear. This mountain too. The other people have no choice. Father can do everything as he wishes. But I suppose even that is not something Father chooses.”</p>
-
-<p>I cried. My child had gone completely mad. Seeing my tears, the child said:</p>
-
-<p>“Father, please try to understand what I am saying. Or at least remember me. You will not remember my face, but remember me, even as the hunter who caught the voice instead of you.”</p>
-
-<p>“What does it mean to have caught the voice?”</p>
-
-<p>“It is a voice you were supposed to hear. I was not supposed to hear it.”</p>
-
-<p>I could not imagine that someone, beyond the degree of being mad, could say with such seriousness things even he himself did not understand. Then I thought all of this had happened because of this rock.</p>
-
-<p>“You seem to have become strange after coming here. Why did you come here at night? I should tell the people to destroy this rock.”</p>
-
-<p>“No. Whenever I was alone, I kept hearing something. A humming sound kept ringing near my ears, and I could not focus on anything. But now one voice is especially loud, so it is easy to make out. I could not understand what the voice was saying, so I came up here because I thought I might hear it in a quiet place. Since it was night, sound would travel far, and if it was a sound from the sky, this would be a place where I could hear it better.”</p>
-
-<p>“So could you hear it better here?”</p>
-
-<p>“No. It is the same. Whether I am in the tent or here.”</p>
-
-<p>“Then what is the voice saying?”</p>
-
-<p>“I can hear the words, but I do not know what they mean. It says train, and it keeps repeating the word ticket, but that is not why I am like this.”</p>
-
-<p>“What is it, then?”</p>
-
-<p>“It says Father should wake up and sit up.”</p>
-
-<p>I stood up on the spot and sat down again.</p>
-
-<p>“Then what?”</p>
-
-<p>“No, it does not mean stand up. It means wake from sleep.”</p>
-
-<p>“But I am not asleep. Child, why are you doing this?”</p>
-
-<p>“Father, listen carefully. Can you not hear it?”</p>
-
-<p>Tears kept flowing from my eyes without stopping. He was my only son, so I had worked hard to teach him to hunt, not wanting to hear that I had raised him wrongly. In that brief time, I wondered if perhaps I had been too harsh. But no matter how hard I thought, I could not find an answer. After that answerless moment passed, the child looked at my face with tears in his eyes.</p>
-
-<p>“I thought about it, and I think I probably intercepted it.”</p>
-
-<p>“What now?”</p>
-
-<p>“That sound is something Father has to hear.”</p>
-
-<p>Just as I was about to say, what kind of sound is it, and even if I hear it, if it is not words you can understand, I will not be able to understand it either, the child jumped down from the rock.</p>
-
-<p>Crying, I looked down and screamed. Hearing my voice, people began to poke their heads out of the tents one by one. A few walked from the tents toward the mountain and saw the child. People in the village began shouting and gathering. I looked at the sky and screamed. Then,</p>
-
-<p>I heard a voice.</p>
-
-<p>“You need to wake up. Please show your ticket.”</p>
-
-<p>When I opened my eyes, I saw a woman standing there with a troubled expression, checking tickets. Everyone around me was looking at me too. It was because I was still crying even after waking. The old man behind me gave me a handkerchief. Wiping my tears, I took the ticket from my pocket and handed it to the employee. She checked it and soon disappeared. It seemed mine was the only ticket left in our car.</p>
-
-<p>“I will not ask what happened, so catch your breath. If you start hyperventilating, it will be serious.”</p>
-
-<p>I said through tears:</p>
-
-<p>“My son died in my dream.”</p>
-
-<p>The woman beside him looked at me with pity. The old man asked:</p>
-
-<p>“You look young. Are you married? I thought you were a bachelor.”</p>
-
-<p>“I am not married. I had a son only in the dream. Not in real life.”</p>
-
-<p>“You mean you had a son who does not exist, only in a dream, and he died in the dream?”</p>
-
-<p>When I said yes, the old man looked slightly awkward and turned his eyes elsewhere. He may have wondered what kind of situation this was. But because I had cried so bitterly, he said that if I felt I needed to talk it out, I could explain anytime.</p>
-
-<p>“Thank you. I am sorry for making you worry.”</p>
-
-<p>“No, something else might be bothering you, and that is why you had such a dream. Rest. I will not talk to you.”</p>
-
-<p>I faced forward again and stared blankly out the window. Then the man in the suit returned to his seat. I felt his gaze on my face. He had probably seen me sobbing earlier, or heard about it. I pretended not to notice and fixed my eyes on the window. Trees flashed past like shadows.</p>
-
-<hr />
-
-<p>Korean original: <a href="https://brunch.co.kr/@rup-l/12">기차여행과 유목민족(1)</a></p>]]></content><author><name>Ize Studio</name></author><category term="Essays" /><category term="essay" /><category term="translation" /><category term="brunch" /><category term="dream" /><category term="dream-journal" /><category term="train" /><category term="nomads" /><summary type="html"><![CDATA[I was on a train, going somewhere. It was a boring trip, so I had been reading a book and fell asleep. The seats on the train had an arrangement I had never seen before. Like a cafe by a window, they were arranged so that passengers sat facing outside, and a table was fixed right in front of the window. The seats were divided two by two, so one could go to the restroom without asking the person beside them to move. And behind each seat there was again another table and seat. So if one looked at the train from above, there was a center aisle, and seats divided in twos with their backs to the aisle, and a table in front of them. That table touched the backrest of another seat, and in front of those seats there was another table attached to the window.]]></summary></entry></feed>
+<p>Korean original: <a href="https://brunch.co.kr/@rup-l/30">꼬마</a></p>]]></content><author><name>Ize Studio</name></author><category term="Fiction" /><category term="fiction" /><category term="short-fiction" /><category term="translation" /><category term="brunch" /><category term="keyboard" /><category term="existence" /><summary type="html"><![CDATA[A little one, black and square, lives with its friends. No one knows since when, but around the time the little one became aware of its own existence, all its friends too had vaguely realized that they were some kind of beings. For example: that they were not all one together, but individuals; that although they were all the same square shape, their expressions and ways of feeling were different; and that since they were not beings that particularly needed to consume something or come to understand anything, simply remaining still like this was enough to feel satisfied. They were all pressed together in a narrow space, but since there was no particular need to move, as long as “this present state” was maintained, no one had any complaints, and, as expected, no one expressed anything either.]]></summary></entry></feed>

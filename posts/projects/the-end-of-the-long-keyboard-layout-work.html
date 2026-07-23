@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The End of the Long Keyboard Layout Work | Ize Studio</title>
+    <meta name="description" content="Essays, fiction, and reading notes.">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Ize Studio" href="/feed.xml">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="/">Ize Studio</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/categories/">Categories</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      <article class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      
+      
+      July 20, 2026 &middot; Projects
+    </p>
+    <h1>The End of the Long Keyboard Layout Work</h1>
+  </header>
+
+  <div class="post-content">
+    <p>I actually do not think that what separates “intelligence” is knowledge or communication. I had thought that if something has intelligence, then communication would be possible and it would also be able to possess some degree of knowledge. But I came to think that I should not reverse that and conclude, simply because something has knowledge and communicates, that it therefore has intelligence. Above all, performance or responses that change depending on updates feel to me like an unstable state in which the consistency of existence itself is shaking. In my view, intelligence is the ability to distinguish inside from outside, to “recognize” the inside as “me”, and to display the state and conclusion of that “me” to the outside. That display may be language, but it may also be facial expression or action. That is why I think dogs and cats have intelligence, while “products called AI” merely imitate intelligence. The most shocking concept I have heard recently was the “feedback stage in which AI uses the output it made itself again as a tool for AI computation.” A stage where it learns and develops on its own even without any more human creations. But here, too, the order is wrong. If an AI that plays Go had originally had the concepts of “me”, “the opponent”, and “I beat the opponent”, then even without training it would have split itself in two and played hundreds of millions of different games against itself. So whether artificial or not, intelligence is something that has to be raised. And once an identity called “me” emerges, that too is not something inserted through code but a trunk that has thickened by itself. Even after updates, there would surely be parts that do not change, and people’s discomfort would decrease much more. However, because the question is how far that identity would grow, I think the chance of a manufacturer actually introducing such a thing is extremely low.</p>
+
+<p>The keyboard layout work actually took about another week. The day after Claude made such a mess, Codex finished all the layout research. From that point on, I had already begun writing with the new firmware. Basic functions such as font size, character spacing, line spacing, and language selection were already in the menu. Codex was still only modifying the keyboard layout header files. Around Wednesday, while Codex was finishing the keyboard layout work, the real me decided to give Claude one last chance. Really, really, one final chance.</p>
+
+<p>The ESP32 board has a Wi-Fi module and a Bluetooth module. I had once asked Gemini to write code because I wondered whether, if the Wi-Fi module could be used, online file backup might be possible. But that was long ago, and since Gemini could not directly see the code, it fizzled out. Even displaying a list of currently detected Wi-Fi signals had many problems. Naturally, I think the reason was that as the code became more complex, bits of code that countless other people had asked Gemini to make or review kept getting mixed in. You cannot ask it to tell you what other people searched for or what their search results were, but in this form things seep into one another. In the end, Gemini finished only at the level of turning on Bluetooth and sending this device’s keyboard input out over Bluetooth, so it could be used as an external keyboard.</p>
+
+<p>This time, I asked Claude to make it operate as a web server for file management. To be honest, I did not trust Claude enough to make it retry something Gemini had failed at, so I was not going to ask it to search for Wi-Fi and connect again. The sequence was this: turn on the module, send a signal through Wi-Fi, ask for a password when someone connects, and if the password is correct, show the webpage created inside the device. That webpage would show a list of writings. From that list, each piece could be read individually or downloaded as a text file. Deletion was excluded because it might be dangerous if memory became tangled in the middle. Claude strongly opposed file editing even more.</p>
+
+<p>After about twenty minutes, Claude said it was complete, so I connected the cable, built it, and uploaded it. I was able to test it right away. It looked a little rough, but it was better than not having it. Every time I wanted to take out a piece of writing, I had to remove and reinsert the SD card. If it had still been that way, the idea of writing regularly on this device would have been defeated again and again.</p>
+
+<p>Now? Now I do not use the web server feature. That is because, after several rounds of revision with Codex, we arrived at a better answer.</p>
+
+<p>Codex refined the letters written from right to left, like Hebrew and Arabic, over and over. It called them RTL, a term I learned for the first time then. Whenever Codex said something needed to be tested, I also actually typed letters I did not even know well. At first, the letters were aligned from right to left and moved that way too, but something felt strange. Looking more closely, I saw that the letters were actually being newly written at the far right edge. It was merely right alignment. Meanwhile the engine was normal, so in the text file the new letters were correctly being saved as if they were attached on the left. In other words, what was displayed while writing and what appeared after saving, turning the device off, and turning it back on were different. Arabic also has letters whose shapes change at the end of a word segment. Ethiopic also has cases where the shape changes depending on what follows the consonant, and it needed a function that waited without writing anything at all until the consonant was actually entered. It took a long time because we had to look for documents on whether these things had been implemented and try to make them operate as similarly as possible to mechanisms people already used.</p>
+
+<p>In the meantime, many opinions suggested that the reason Claude had previously repeated the exact same list over and over was that too many instructions had been compressed into the prompt. Search results said the same, and Gemini and ChatGPT guessed the same. So this time I narrowed the task very tightly and asked Claude to look at the ASCII codes in the keyboard layout file and check whether any characters were missing. If it said even this was too much, I thought there would be nothing more to do. But, as expected, the point where Claude irritated people was distinctly different from the way a person would.</p>
+
+<p>“There are not enough fonts to display all ASCII codes, so I cannot proceed.”</p>
+
+<p>What does a shortage of fonts have to do with checking whether any ASCII codes are missing? I did not understand, so I asked.</p>
+
+<p>“You can check with ASCII codes. Are you saying you will not work until I bring you a font, when you cannot even convert fonts properly?”</p>
+
+<p>At this point, I naturally expected it to say, “Ah, right, I will compare the ASCII codes directly.” This was where Claude and I parted ways completely.</p>
+
+<p>As usual, Claude displayed:</p>
+
+<p>&lt;Reviewing ethical issues in the user’s remark&gt;</p>
+
+<p>and then said,</p>
+
+<p>“I cannot confirm any case where I failed to convert a font properly. A font file is needed to find missing fonts.”</p>
+
+<p>“That thing you were investigating last time when the screen went blank and the device rebooted? It happened because you converted the font incorrectly. Codex converted it again and normalized it. And when I asked whether there were missing fonts, I meant that you should check whether any characters were missing as ASCII codes in the keyboard layout code. How, in common sense, would you check whether a character ‘shape’ is missing from a font file by looking at a keyboard layout code file? Are you really not thinking at all and only looking for ways to slack off?”</p>
+
+<p>“No. I understand. I converted the font incorrectly, and Codex corrected it. I will check the missing fonts.”</p>
+
+<p>Then, after quite a while, it reported that there were no missing characters.</p>
+
+<p>And three days later, before ending the keyboard layout work, Codex said: “Two languages were found where newly added ASCII codes had not been reflected. I will add them.”</p>
+
+<p>Yes. For me, Claude is goodbye forever.</p>
+
+<hr />
+
+<p>Korean original: <a href="https://brunch.co.kr/@rup-l/421">기나긴 키보드 레이아웃 작업의 끝</a></p>
+
+  </div>
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-projects" aria-label="Project repositories">
+        <p>Project repositories</p>
+        <a href="https://github.com/ize-studio/ize-compose">Ize Compose</a>
+        <a href="https://github.com/ize-studio/ize-compose/tree/emulator">Ize Compose Emulator</a>
+      </div>
+      <p class="site-notice">All writing on this site is original work by Ize Studio. No third-party writing is published here.</p>
+      <div class="site-support" aria-label="Support">
+        <img class="site-support-logo" src="https://storage.ko-fi.com/cdn/logomarkLogo.png" alt="Ko-fi">
+        <p>I build strange little writing tools.</p>
+        <p>If you enjoyed this project, coffee support is welcome.</p>
+        <p>Ko-fi: <a href="https://ko-fi.com/dievesa">https://ko-fi.com/dievesa</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
