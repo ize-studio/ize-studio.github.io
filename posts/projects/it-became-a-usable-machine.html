@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <title>It Became a Usable Machine | Ize Studio</title>
+    <meta name="description" content="I wrote this episode twice. I had missed something very simple. After finishing the piece, another topic came to mind, so I pressed Control and N to create a...">
+    <link rel="canonical" href="https://ize-studio.github.io/posts/projects/it-became-a-usable-machine.html">
+    <meta property="og:site_name" content="Ize Studio">
+    <meta property="og:title" content="It Became a Usable Machine | Ize Studio">
+    <meta property="og:description" content="I wrote this episode twice. I had missed something very simple. After finishing the piece, another topic came to mind, so I pressed Control and N to create a...">
+    <meta property="og:url" content="https://ize-studio.github.io/posts/projects/it-became-a-usable-machine.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="It Became a Usable Machine | Ize Studio">
+    <meta name="twitter:description" content="I wrote this episode twice. I had missed something very simple. After finishing the piece, another topic came to mind, so I pressed Control and N to create a...">
+    <meta name="twitter:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    
+      <meta property="article:published_time" content="2026-08-10T00:00:00+09:00">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Ize Studio" href="/feed.xml">
+  </head>
+  <body class="layout-post">
+    <a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+  <a class="site-title" href="/">IZE STUDIO</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    
+      <a href="/">Index</a>
+    
+      <a href="/writing/">Writing</a>
+    
+      <a href="/fiction/">Fiction</a>
+    
+      <a href="/projects/">Projects</a>
+    
+      <a href="/shop/">Shop</a>
+    
+      <a href="/about/">About</a>
+    
+  </nav>
+  <details class="mobile-menu">
+    <summary>Menu</summary>
+    <nav aria-label="Mobile navigation">
+      
+        <a href="/">Index</a>
+      
+        <a href="/writing/">Writing</a>
+      
+        <a href="/fiction/">Fiction</a>
+      
+        <a href="/projects/">Projects</a>
+      
+        <a href="/shop/">Shop</a>
+      
+        <a href="/about/">About</a>
+      
+    </nav>
+  </details>
+</header>
+
+    <main class="site-main" id="content">
+      
+
+
+<article class="article">
+  <header class="article-header">
+    <p class="eyebrow">
+      Projects
+    </p>
+    <h1 class="article-title">It Became a Usable Machine</h1>
+    
+    <p class="article-meta">
+      <time datetime="2026-08-10T00:00:00+09:00">August 10, 2026</time>
+    </p>
+  </header>
+
+  <div class="article-body">
+    <p>I wrote this episode twice. I had missed something very simple. After finishing the piece, another topic came to mind, so I pressed Control and N to create a new document. A new file opened. After I finished that piece too and opened the menu, nothing appeared in the preview of the previous piece. I had a bad feeling, but I thought surely not and opened the file. There really was nothing in it. It had disappeared.</p>
+
+<p>In truth, preventing writing from disappearing was something I had cared about a great deal from the beginning. That is why the text file I saved as a test, back when I first made a firmware with Gemini that supported only Korean and English, is still on the SD card. Later, when I revised the code for power shutdown, I made sure that whether the device turned off automatically because of the sleep timer or whether I turned it off by pressing Control L, it would always save the current file before shutting down. If the device’s power was forcibly cut, nothing could be done, but otherwise it was made to save no matter what. I thought that was enough, but now I saw that two more things were needed: autosave at fixed intervals, and saving the current file before opening a new file. It sounds obvious, but in the case of a standalone program that operates without relying on an operating system, those obvious things have to be planted one by one. That was a lesson I had already learned long ago while making the keyboard layouts, but I never dreamed I would rediscover it after completing the firmware and using it well. Right now I am working on a separate solo project and pushed myself a little too hard, so my weekly Codex credits have run out and I am waiting. Once the limit resets, I will update the firmware first. Recently, someone posted in a ZeroWriter-related Discord that my firmware was good for writing Polish, so I had been in an elevated state. That person too will probably run an online update for the first time once I release the new firmware version.</p>
+
+<p>In any case, after the previous post, the last remaining task was synchronizing the writing list. At the time, I did not actually think it would be the last. I had been improving, one by one, the things that felt inconvenient to me while using it, so in some ways it may have looked like a haphazard patchwork program with no roadmap at all. Fortunately, though, it is only a tool for writing. It is not software installed on a machine that has to do something creative or active on its own, so I think that much can be tolerated. So I thought writing synchronization was simply the problem or task that had to be solved at that moment, and that once it was done, I would create and attach yet another task.</p>
+
+<p>But once the direction was decided, synchronizing the writing list was not that difficult. Deciding the direction was the hard part. The best option would have been to make a homepage and connect the device to it. If I were the only one using it, there would have been no problem. But because this was a public project, users would also have to be able to make a similar space. And if they were really just people who write, people who simply wanted a writing tool, I thought they might not want to spend their time on something like that. Or if they had never done it before, they might get scared and simply give up. But if I made an easy-to-connect website for them, that seemed like something the manufacturer should be doing. If I made my firmware, added a function that connected to that page, and then said, “Buy the machine, sign up for this website, and use this firmware to write conveniently,” it could be taken, in one sense, as a sign that I wanted to pick a fight with the manufacturer. More than anything, it would be over the moment the manufacturer provided a similar service. Then, finally, a good idea came to me. I could use the very fact that I was releasing this firmware on GitHub in reverse. To use this firmware meant that the user at least knew how to access GitHub.</p>
+
+<p>“Codex, when we made the GitHub repository before, I saw that it could be made private too. If I make a private repository, could I use that as my writing storage?”</p>
+
+<p>“Yes. If you provide a token, pull and push functionality can be implemented without much difficulty.”</p>
+
+<p>“Do it.”</p>
+
+<p>Codex told me how to create a private repository and issue a token. After I followed those steps, Codex revised the existing device-access webpage file, and I put it onto the SD card. A little later, Codex said the firmware revision was complete and asked whether I wanted to build and upload it.</p>
+
+<p>“Let’s upload twice. I need to make one more revision first. Do not raise the version for this revision.”</p>
+
+<p>I thought that if the webpage code was also modified, it would be convenient to have the webpage file downloaded to the SD card together with it. If the firmware could change automatically, there seemed to be no reason to manually put in the auxiliary file every time. First, I proceeded by uploading the update directly through the webpage. From now on, when a new version comes out, this firmware will also download other files uploaded to the release. I built the same file again with only the version changed. I uploaded it to the GitHub release and uploaded the webpage file with it. Commit. A new release was created, and when I connected the device to Wi-Fi and opened the webpage, an update mark appeared. I ran the update. Good.</p>
+
+<p>Now it was time for synchronization. Originally I had planned to run writing synchronization from the webpage, but it felt cumbersome. I thought it would be better to make this possible directly from the device. I considered trying it once and, if it was too slow, doing it that way, but it felt ironic that a device would connect to an external website over the internet to synchronize, yet require another device to access it as well. So I decided it would be better to revise the menu.</p>
+
+<p>“Codex. Let’s make just one more change. Add a Sync menu at the very top of the device menu. When I select it, make it synchronize automatically.”</p>
+
+<p>Something like this is made quickly. I modified the GitHub release, but because the release version was the same, automatic updating was not possible, so I updated by uploading the file manually.</p>
+
+<p>After the device rebooted automatically, I selected the Sync menu and pressed Enter. Wi-Fi connection… failed.</p>
+
+<p>“Why can’t it catch Wi-Fi? It just did a moment ago.”</p>
+
+<p>“I had made it call Wi-Fi data only when it was in the Network menu. I will fix it.”</p>
+
+<p>I updated it again, selected the Sync menu, and pressed Enter. Wi-Fi connection… success.</p>
+
+<p>20 files updated.</p>
+
+<p>1/20 2/20 3/20… 20/20 success…</p>
+
+<p>Oh, this is fascinating. I slightly edited one piece of writing.</p>
+
+<p>One different part detected.</p>
+
+<p>1/20 2/20 3/20… 20/20 success…</p>
+
+<p>“Codex, Codex, this is strange.”</p>
+
+<p>“It was set to overwrite everything on GitHub unconditionally. I will correct it.”</p>
+
+<p>Again… Wi-Fi connection success, one different part detected, one push, 1/1 success.</p>
+
+<p>Success. From that point on, after writing, I began synchronizing immediately and then accessing GitHub on my phone to copy the writing. I had no idea it could be this convenient. I had already been satisfied with simply not having to remove and reinsert the SD card…</p>
+
+<p>(<a href="https://youtu.be/vkfOeOaQhhk?si=bdmQu2zV-ozV5ln5">Sync test video</a>)</p>
+
+<p>Now I thought this firmware was not perfect, but at least no longer needed to be revised. That was before I lost today’s writing. So, planning to post more actively on Reddit, I visited the homepage made with GitHub again.</p>
+
+<p>I had done quite a lot with GitHub. First, I had made the ZeroWriter firmware public on GitHub. GitHub also had a service that could make it look like a website, so I set up the code page and the website separately. On Reddit, I link to the website, and on the website, there is a link to the code page. Second, there is a private repository used for synchronizing writing through the firmware. Third, there is a webpage unrelated to ZeroWriter. It is a space where I post English translations of pieces uploaded to my blog or Brunch. ChatGPT translates them, and when I put the translated files into a specific folder of another private repository, Codex made code that publishes them like a blog on a public webpage. The homepage I said I visited was the first one: the space attached to the repository where the firmware was made public, configured to look like a website.</p>
+
+<p>Ize Compose. That was the name of this firmware. Gemini had said that it meant “wisdom” in an ancient Eastern European language, so I had placed it at the front. Before promoting it in earnest, I remembered something Claude had said early in the project.</p>
+
+<p>“With the data I currently have, I cannot find any language in which the word Ize carries a meaning like wisdom, intelligence, or knowledge. If you can provide the source, I can look further.”</p>
+
+<p>But I was in the middle of working on something else, and I did not think it was urgent, so I had let it pass. This time I asked ChatGPT again.</p>
+
+<p>“The name is Ize Compose. I put Ize at the front because I was told it means wisdom.”</p>
+
+<p>“I cannot find any example in Eastern European or Slavic languages where Ize is used with that meaning. I do not think this is a matter of me searching poorly. Where did the source come from?”</p>
+
+<p>This time, Gemini had caused the accident.</p>
+
+<hr />
+
+<p>Korean original: <a href="https://brunch.co.kr/@rup-l/424">쓸 만한 기계가 됐다</a></p>
+
+  </div>
+
+  <nav class="post-navigation" aria-label="Post navigation">
+    
+      <a href="/posts/projects/i-want-to-make-it-feel-like-a-product.html">← I Want to Make It Feel Like a Product</a>
+    
+    
+      <a href="/posts/projects/even-you-gemini.html">Even You, Gemini... →</a>
+    
+  </nav>
+
+  
+    <aside class="related-writing" aria-labelledby="related-writing-title">
+      <div class="section-heading">
+        <span id="related-writing-title">Related writing</span>
+        <span>Same shelf</span>
+      </div>
+      
+      <div class="post-index post-index--compact">
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/wrapping-up.html">
+  <time class="post-index__date" datetime="2026-09-06T00:00:00+09:00">Sep 6, 2026</time>
+  <span class="post-index__title">Wrapping Up</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/actual-use-is-the-best-review.html">
+  <time class="post-index__date" datetime="2026-08-31T00:00:00+09:00">Aug 31, 2026</time>
+  <span class="post-index__title">Actual Use Is the Best Review</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/trying-firmware-without-a-device.html">
+  <time class="post-index__date" datetime="2026-08-24T00:00:00+09:00">Aug 24, 2026</time>
+  <span class="post-index__title">Trying Firmware Without a Device?</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </aside>
+  
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div>
+    <a class="site-footer__mark" href="/">IZE STUDIO</a>
+    <p>Writing / Projects / Objects</p>
+  </div>
+  <nav class="site-footer__links" aria-label="External links">
+    <a href="https://github.com/ize-studio/ize-compose" target="_blank" rel="noopener noreferrer">Ize Compose ↗</a>
+    <a href="https://github.com/ize-studio/ize-compose/tree/emulator" target="_blank" rel="noopener noreferrer">Emulator ↗</a>
+    <a href="https://brunch.co.kr/@rup-l" target="_blank" rel="noopener noreferrer">Brunch ↗</a>
+    <a href="https://www.youtube.com/@ize-studio" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+    <a href="https://ko-fi.com/dievesa" target="_blank" rel="noopener noreferrer">Ko-fi ↗</a>
+  </nav>
+  <p class="site-notice">All writing on this site is original work by Ize Studio. © 2026</p>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <title>Wrapping Up | Ize Studio</title>
+    <meta name="description" content="Wanting to write, wanting to express something in writing, and having something one wants to express in writing are three different things.">
+    <link rel="canonical" href="https://ize-studio.github.io/posts/projects/wrapping-up.html">
+    <meta property="og:site_name" content="Ize Studio">
+    <meta property="og:title" content="Wrapping Up | Ize Studio">
+    <meta property="og:description" content="Wanting to write, wanting to express something in writing, and having something one wants to express in writing are three different things.">
+    <meta property="og:url" content="https://ize-studio.github.io/posts/projects/wrapping-up.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wrapping Up | Ize Studio">
+    <meta name="twitter:description" content="Wanting to write, wanting to express something in writing, and having something one wants to express in writing are three different things.">
+    <meta name="twitter:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    
+      <meta property="article:published_time" content="2026-09-06T00:00:00+09:00">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Ize Studio" href="/feed.xml">
+  </head>
+  <body class="layout-post">
+    <a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+  <a class="site-title" href="/">IZE STUDIO</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    
+      <a href="/">Index</a>
+    
+      <a href="/writing/">Writing</a>
+    
+      <a href="/fiction/">Fiction</a>
+    
+      <a href="/projects/">Projects</a>
+    
+      <a href="/shop/">Shop</a>
+    
+      <a href="/about/">About</a>
+    
+  </nav>
+  <details class="mobile-menu">
+    <summary>Menu</summary>
+    <nav aria-label="Mobile navigation">
+      
+        <a href="/">Index</a>
+      
+        <a href="/writing/">Writing</a>
+      
+        <a href="/fiction/">Fiction</a>
+      
+        <a href="/projects/">Projects</a>
+      
+        <a href="/shop/">Shop</a>
+      
+        <a href="/about/">About</a>
+      
+    </nav>
+  </details>
+</header>
+
+    <main class="site-main" id="content">
+      
+
+
+<article class="article">
+  <header class="article-header">
+    <p class="eyebrow">
+      Projects
+    </p>
+    <h1 class="article-title">Wrapping Up</h1>
+    
+    <p class="article-meta">
+      <time datetime="2026-09-06T00:00:00+09:00">September 6, 2026</time>
+    </p>
+  </header>
+
+  <div class="article-body">
+    <p>Wanting to write, wanting to express something in writing, and having something one wants to express in writing are three different things.</p>
+
+<p>Wanting to write means feeling relief simply from seeing letters appear on paper or on a screen. Like spinning a fidget spinner, it is the wish that any words at all, whatever they may be, would just appear before me as sentences.</p>
+
+<p>Having something one wants to express in writing also has a similar range of spectrums. It can mean wanting the reader to feel a certain emotion too, wanting to create a chance for empathy, or simply wanting to write something entertaining. Having something one wants to express in writing is different from having some particular thing to write about. It is a state in which all one has to do is write. Wanting to write something does not mean that such a piece of writing will actually be written. Even if one wants to write something people can empathize with, it may be so uninteresting that no one reads it at all, or it may instead feel coercive and be rejected. Unlike writing that comes out because one is simply in a state where one only needs to write, the case where achieving or failing to achieve a goal matters is probably when one wants to express something through writing.</p>
+
+<p>The idea of changing the firmware of a writing tool with my own hands and making it into a tool that I could use came to me simply because I wanted to write. To be clear, there are times when I have something I want to express in writing, and there are times when I do not. It is also true that most of the time, I simply want to write. But there is no particular thing I must write. Of course, there are ideas that run through my thoughts. Sometimes there are also things I want to keep pushing forward through writing. But that is more like letting out a little pressure before something festers inside, not challenging myself because I think there is a chance of gaining empathy. If I were to be greedy, I would say I only hope it is enjoyable to read. That is about it. Even if there are people who empathize, I think their very existence would be a product of chance.</p>
+
+<p>So even when I carry a notebook around, I am not desperately trying to catch something that has occurred to me as if my life depended on it. I simply write it down. These days, I have also taken a liking to making apps with AI, so I made a small-screen typewriter app for use on a laptop. But I only use it when I happen to be using the laptop and feel like scribbling. So it is true that there is no reason for firmware I spent a month making to contain anything particularly grand. Still, it is also true that I tried putting in every feature I had heard of in my own way. Since I was not confident about maintaining a dedicated server, I used GitHub as a server so that writing could be synchronized. On the GitHub Pages site where the code is public, I also set up a mechanism that lets the device update automatically when new firmware is uploaded. Above all, I implemented things like font size and language settings. To make those settings and synchronization work, I had to study the ESP module a little. And anything even slightly beyond that little bit had to be solved by ChatGPT. Still, thanks to that, I eventually removed the Bluetooth module, which was a shortcut to wasting battery, and instead added a new auto-save-before-shutdown function. I have not yet added a frequent auto-save feature while writing, because the only real problem so far happens when I create a new file while in the middle of writing. If the device enters sleep mode, whether automatically or manually, I made it save no matter what. Because of that, I have not decided whether to add frequent auto-save or to insert a save-before-create step when making a new file. I could add both, but honestly, since the problem of creating a new file in the middle of writing happened accidentally once and has not happened again, I also felt too lazy to bother. And I have a new project underway with Codex too.</p>
+
+<p>Writing with a ballpoint pen is not something I do often either, but if I have no writing instrument at all, I feel uneasy. That does not mean I will necessarily write something just because someone gives me a pen at such a moment. I simply like the act of writing itself. Through this project, I gained one more writing tool. The people who ran the funding campaign released new firmware a week ago, but I do not know whether Korean is supported now. I have not visited the site because I have no inconvenience at all with my own firmware. Still, someone tried my firmware and said on Discord that they use Polish and had no problem writing with it, and thanked me. That made me feel good. I had coaxed and dragged Codex along until it could display Turkish, Cyrillic, and other scripts, but since I do not use those languages myself, I could not know whether they were right or wrong. I had been thinking that the meaning was simply in having made the attempt.</p>
+
+<p>And so the project ended. What feels regrettable about ending it is not that there were many things I could have done but did not, or many things I wanted to do but could not. It is the fact that something I spent a month clinging to is now no longer there. That itself feels regrettable. But even saying that feels a little excessive, since the electronic dictionary keyboard I bought to try doing the same thing is still rolling around untouched. Stumbling around somewhere between laziness and busyness is probably the dilemma of every office worker. This was a hobby, not my main job, so there was no deadline. There was only expectation. I managed to meet that expectation for once, and that is why I wanted to leave it in writing too. Gemini egged me on and got me started. Then I learned about Claude, but while looking into it before subscribing, I also found out about Codex, started both at the same time, and soon dropped Claude. In the end, even the new projects I am working on now continue as collaborations between ChatGPT and Codex.</p>
+
+<p>I do not have much to say about AI. It is simply a tool, and an intensely personalized one. It almost makes me think that the final form of customization, for any program, may have been AI. The problem arises when that personal tool is used in business. Perhaps it is because it makes no sense for the scale to be official while the responsibility remains personal. I already have original books translated personally for reading, and I use AI very well for coding, but since my main job is not IT, I cannot really say much about it. I gave it photos of my cards and had it write code to shuffle and spread them, and I was surprised because the results were as good as when I draw the cards myself. Ah, I mean tarot cards, not credit cards.</p>
+
+<p>So the conclusion is this: I am proud that a usable writing tool came out of it, but it is only one of the writing tools I use, so I think I will keep looking for writing tools in the future. And once I developed my own way of using AI, I came to use it better than before, and I think I will use it even more from now on. To add one thing, there is a big difference between the paid and free versions of Gemini and ChatGPT.</p>
+
+<p>As for Claude, I have nothing to say.</p>
+
+<hr />
+
+<p>Original Korean article: <a href="https://brunch.co.kr/@rup-l/432">마무리하며</a></p>
+
+  </div>
+
+  <nav class="post-navigation" aria-label="Post navigation">
+    
+      <a href="/posts/projects/actual-use-is-the-best-review.html">← Actual Use Is the Best Review</a>
+    
+    
+  </nav>
+
+  
+    <aside class="related-writing" aria-labelledby="related-writing-title">
+      <div class="section-heading">
+        <span id="related-writing-title">Related writing</span>
+        <span>Same shelf</span>
+      </div>
+      
+      <div class="post-index post-index--compact">
+        
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/actual-use-is-the-best-review.html">
+  <time class="post-index__date" datetime="2026-08-31T00:00:00+09:00">Aug 31, 2026</time>
+  <span class="post-index__title">Actual Use Is the Best Review</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/trying-firmware-without-a-device.html">
+  <time class="post-index__date" datetime="2026-08-24T00:00:00+09:00">Aug 24, 2026</time>
+  <span class="post-index__title">Trying Firmware Without a Device?</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/even-you-gemini.html">
+  <time class="post-index__date" datetime="2026-08-17T00:00:00+09:00">Aug 17, 2026</time>
+  <span class="post-index__title">Even You, Gemini...</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </aside>
+  
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div>
+    <a class="site-footer__mark" href="/">IZE STUDIO</a>
+    <p>Writing / Projects / Objects</p>
+  </div>
+  <nav class="site-footer__links" aria-label="External links">
+    <a href="https://github.com/ize-studio/ize-compose" target="_blank" rel="noopener noreferrer">Ize Compose ↗</a>
+    <a href="https://github.com/ize-studio/ize-compose/tree/emulator" target="_blank" rel="noopener noreferrer">Emulator ↗</a>
+    <a href="https://brunch.co.kr/@rup-l" target="_blank" rel="noopener noreferrer">Brunch ↗</a>
+    <a href="https://www.youtube.com/@ize-studio" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+    <a href="https://ko-fi.com/dievesa" target="_blank" rel="noopener noreferrer">Ko-fi ↗</a>
+  </nav>
+  <p class="site-notice">All writing on this site is original work by Ize Studio. © 2026</p>
+</footer>
+
+  </body>
+</html>

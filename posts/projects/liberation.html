@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <title>Liberation | Ize Studio</title>
+    <meta name="description" content="When I vaguely imagined coding with the help of AI, what I had in mind was something like an all-purpose tool. I would say,">
+    <link rel="canonical" href="https://ize-studio.github.io/posts/projects/liberation.html">
+    <meta property="og:site_name" content="Ize Studio">
+    <meta property="og:title" content="Liberation | Ize Studio">
+    <meta property="og:description" content="When I vaguely imagined coding with the help of AI, what I had in mind was something like an all-purpose tool. I would say,">
+    <meta property="og:url" content="https://ize-studio.github.io/posts/projects/liberation.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Liberation | Ize Studio">
+    <meta name="twitter:description" content="When I vaguely imagined coding with the help of AI, what I had in mind was something like an all-purpose tool. I would say,">
+    <meta name="twitter:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    
+      <meta property="article:published_time" content="2026-07-27T00:00:00+09:00">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Ize Studio" href="/feed.xml">
+  </head>
+  <body class="layout-post">
+    <a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+  <a class="site-title" href="/">IZE STUDIO</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    
+      <a href="/">Index</a>
+    
+      <a href="/writing/">Writing</a>
+    
+      <a href="/fiction/">Fiction</a>
+    
+      <a href="/projects/">Projects</a>
+    
+      <a href="/shop/">Shop</a>
+    
+      <a href="/about/">About</a>
+    
+  </nav>
+  <details class="mobile-menu">
+    <summary>Menu</summary>
+    <nav aria-label="Mobile navigation">
+      
+        <a href="/">Index</a>
+      
+        <a href="/writing/">Writing</a>
+      
+        <a href="/fiction/">Fiction</a>
+      
+        <a href="/projects/">Projects</a>
+      
+        <a href="/shop/">Shop</a>
+      
+        <a href="/about/">About</a>
+      
+    </nav>
+  </details>
+</header>
+
+    <main class="site-main" id="content">
+      
+
+
+<article class="article">
+  <header class="article-header">
+    <p class="eyebrow">
+      Projects
+    </p>
+    <h1 class="article-title">Liberation</h1>
+    
+    <p class="article-meta">
+      <time datetime="2026-07-27T00:00:00+09:00">July 27, 2026</time>
+    </p>
+  </header>
+
+  <div class="article-body">
+    <p>When I vaguely imagined coding with the help of AI, what I had in mind was something like an all-purpose tool. I would say,</p>
+
+<p>“I want to write code for a feature like this.”</p>
+
+<p>and the AI would say,</p>
+
+<p>“I made six programs with that kind of feature. Pick one!”</p>
+
+<p>That was the sort of feeling I had.</p>
+
+<p>But once I actually used it, I found that the person giving the instructions had to know at least a little about the language in question, and above all had to already have the thing they wanted to make clearly inside their head. If there was even the smallest gap in the instruction, it would detect that gap like a knife and dig straight into it. Even so, since I still could not know everything from beginning to end, there were inevitably parts where I had to look at the result, adjust to it, and continue. In those moments, the method was ultimately only one thing: break it into pieces. After some time had passed, Gemini and ChatGPT both said that the reason Claude had failed to even begin the keyboard layout work was that I had not broken the instructions down. They themselves were not sure exactly how I should have broken them down so Claude could begin, but the conclusion was that if the analysis kept spinning in place, it meant the analysis had not been completed; and because Claude had not been able to reach the core on its own, it could not work and probably kept restarting the analysis. In any case, it was already in the past, and at the time I still became angry just hearing about Claude, so I gave Claude’s role to Gemini. Back then, Gemini’s monthly subscription period had not yet ended, so in effect I was subscribed to all three. Claude worked for two or three days and took free money.</p>
+
+<p>After organizing the keyboard layouts, I made every folder public on GitHub. Come to think of it, before that, even with just four fonts inside, the ESP32’s internal storage had been barely holding on. Now, even after putting in most of the fonts I wanted, the font files were on the SD card, so there was plenty of internal storage left. I remembered what Gemini had said when the project first began. It had said that if the firmware left more than half of the internal storage empty, firmware updates could be done without connecting a cable. The idea was to move the file into the remaining space and switch over during reboot. Until now, because I had kept modifying and improving the code, firmware updates were ongoing, so I had to keep the device disassembled to connect the cable. Structurally, whenever I updated the firmware, I had to disconnect the internal keyboard cable before USB-C communication became possible. So if updates could be done without connecting a cable, I could finally assemble the device.</p>
+
+<p>At that moment, by chance, I asked ChatGPT about it. On my phone, I had Gemini, ChatGPT, and Claude icons gathered in one folder, and I pressed ChatGPT instead of Gemini. But when I looked into it, ChatGPT was not a basic feature. If I subscribed to Codex, ChatGPT would also be subscribed at the same tier depending on the plan. Then using something else instead of ChatGPT would also be like throwing money away…?</p>
+
+<p>In any case, when I asked ChatGPT, it said that with the current size it would be impossible, but that it would work if I reduced the size just a little more. I went back to Codex and asked what could be reduced, since the current size needed to come down a bit more. Codex answered that the Bluetooth module was taking up too much space.</p>
+
+<p>“But Bluetooth is still a core feature that lets this device be used as an external keyboard, isn’t it?”</p>
+
+<p>“But the Bluetooth module consumes too much power for that to be considered a core feature, so using this device as an external keyboard is too inefficient. On top of that, the module itself is large, so simply deciding not to use the Bluetooth module will solve all the current problems.”</p>
+
+<p>So I removed the Bluetooth module. I think it took about ten minutes. After the code that used the Bluetooth module had been added, Gemini, Codex, and Claude had all touched things here and there, so there were many revisions made along the way. That meant there was a lot to fix again after removing it.</p>
+
+<p>Once the Bluetooth module was removed, the firmware size dropped well below half of the internal memory. The next goal was clear.</p>
+
+<p>“Now that the size has been reduced, let’s put an update function into the web server already embedded in it.”</p>
+
+<p>Following the realization I mentioned earlier, I explained it very specifically. If I did not break it down and explain it now, it would only become something I would have to explain later while tearing it apart and fixing it.</p>
+
+<p>“The current firmware takes up only half of the internal memory, so live updates are possible. That means we are going to make firmware updates possible without touching the internal serial keyboard cable. Only then can I use it properly assembled. Leave the existing webpage as the writing-management function, and make one new webpage. Add an Update item to the menu. When that menu is selected, the device enters web server mode, and the webpage shown then should accept only the firmware file.”</p>
+
+<p>From that point on, Codex made things immediately, just as I had imagined them. There was a tedious process that had to be repeated: build the update file, move it to the phone, connect from the phone to the device opened in web server mode, and upload the update file. Still, it was far better than proceeding with the back cover left open.</p>
+
+<p>Two days later, I carefully asked Codex. Very carefully.</p>
+
+<p>“This is something Gemini and Codex failed at before, but could this device perhaps connect to Wi-Fi? It would also need to search for Wi-Fi signals, display them, let me select one, and then enter the password.”</p>
+
+<p>“Yes, it is possible. Since we have confirmed that it can operate as a web server, Wi-Fi connection is also possible.”</p>
+
+<p>“Then after it connects to Wi-Fi and opens the webpage, let me connect to that page. The page can just be the writing-management web server page.”</p>
+
+<p>The Wi-Fi connection took a little time. Because I had tried this and failed in various ways in the past, I was a bit nervous. But it succeeded. When the Wi-Fi list is displayed, I select one with the arrow keys and press Enter. When it asks for a password, I type it in, and if the password I entered is correct, it connects. Just as in web server mode, in Wi-Fi mode too, for battery optimization and file protection, the device screen only shows a message that the network is connecting, and writing is disabled.</p>
+
+<p>When I entered the 10.49…. address, the list of writings appeared.</p>
+
+<p>Now that the network was connected, there were many things I wanted to do.</p>
+
+<p>Writing management over the network.</p>
+
+<p>Updates over the network.</p>
+
+<p>And something I had only used before but had never even thought of making myself:</p>
+
+<p>online automatic updates.</p>
+
+<p>There is a lot to do again.</p>
+
+<hr />
+
+<p>Korean original: <a href="https://brunch.co.kr/@rup-l/422">해방</a></p>
+
+  </div>
+
+  <nav class="post-navigation" aria-label="Post navigation">
+    
+      <a href="/posts/projects/the-end-of-the-long-keyboard-layout-work.html">← The End of the Long Keyboard Layout Work</a>
+    
+    
+      <a href="/posts/projects/i-want-to-make-it-feel-like-a-product.html">I Want to Make It Feel Like a Product →</a>
+    
+  </nav>
+
+  
+    <aside class="related-writing" aria-labelledby="related-writing-title">
+      <div class="section-heading">
+        <span id="related-writing-title">Related writing</span>
+        <span>Same shelf</span>
+      </div>
+      
+      <div class="post-index post-index--compact">
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/wrapping-up.html">
+  <time class="post-index__date" datetime="2026-09-06T00:00:00+09:00">Sep 6, 2026</time>
+  <span class="post-index__title">Wrapping Up</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/actual-use-is-the-best-review.html">
+  <time class="post-index__date" datetime="2026-08-31T00:00:00+09:00">Aug 31, 2026</time>
+  <span class="post-index__title">Actual Use Is the Best Review</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/trying-firmware-without-a-device.html">
+  <time class="post-index__date" datetime="2026-08-24T00:00:00+09:00">Aug 24, 2026</time>
+  <span class="post-index__title">Trying Firmware Without a Device?</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </aside>
+  
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div>
+    <a class="site-footer__mark" href="/">IZE STUDIO</a>
+    <p>Writing / Projects / Objects</p>
+  </div>
+  <nav class="site-footer__links" aria-label="External links">
+    <a href="https://github.com/ize-studio/ize-compose" target="_blank" rel="noopener noreferrer">Ize Compose ↗</a>
+    <a href="https://github.com/ize-studio/ize-compose/tree/emulator" target="_blank" rel="noopener noreferrer">Emulator ↗</a>
+    <a href="https://brunch.co.kr/@rup-l" target="_blank" rel="noopener noreferrer">Brunch ↗</a>
+    <a href="https://www.youtube.com/@ize-studio" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+    <a href="https://ko-fi.com/dievesa" target="_blank" rel="noopener noreferrer">Ko-fi ↗</a>
+  </nav>
+  <p class="site-notice">All writing on this site is original work by Ize Studio. © 2026</p>
+</footer>
+
+  </body>
+</html>

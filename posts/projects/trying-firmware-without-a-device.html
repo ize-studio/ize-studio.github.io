@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <title>Trying Firmware Without a Device? | Ize Studio</title>
+    <meta name="description" content="After all the detours, I finally finished uploading even the code to GitHub. There were two more updates after that, I think, but those were only for inciden...">
+    <link rel="canonical" href="https://ize-studio.github.io/posts/projects/trying-firmware-without-a-device.html">
+    <meta property="og:site_name" content="Ize Studio">
+    <meta property="og:title" content="Trying Firmware Without a Device? | Ize Studio">
+    <meta property="og:description" content="After all the detours, I finally finished uploading even the code to GitHub. There were two more updates after that, I think, but those were only for inciden...">
+    <meta property="og:url" content="https://ize-studio.github.io/posts/projects/trying-firmware-without-a-device.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trying Firmware Without a Device? | Ize Studio">
+    <meta name="twitter:description" content="After all the detours, I finally finished uploading even the code to GitHub. There were two more updates after that, I think, but those were only for inciden...">
+    <meta name="twitter:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    
+      <meta property="article:published_time" content="2026-08-24T00:00:00+09:00">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Ize Studio" href="/feed.xml">
+  </head>
+  <body class="layout-post">
+    <a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+  <a class="site-title" href="/">IZE STUDIO</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    
+      <a href="/">Index</a>
+    
+      <a href="/writing/">Writing</a>
+    
+      <a href="/fiction/">Fiction</a>
+    
+      <a href="/projects/">Projects</a>
+    
+      <a href="/shop/">Shop</a>
+    
+      <a href="/about/">About</a>
+    
+  </nav>
+  <details class="mobile-menu">
+    <summary>Menu</summary>
+    <nav aria-label="Mobile navigation">
+      
+        <a href="/">Index</a>
+      
+        <a href="/writing/">Writing</a>
+      
+        <a href="/fiction/">Fiction</a>
+      
+        <a href="/projects/">Projects</a>
+      
+        <a href="/shop/">Shop</a>
+      
+        <a href="/about/">About</a>
+      
+    </nav>
+  </details>
+</header>
+
+    <main class="site-main" id="content">
+      
+
+
+<article class="article">
+  <header class="article-header">
+    <p class="eyebrow">
+      Projects
+    </p>
+    <h1 class="article-title">Trying Firmware Without a Device?</h1>
+    
+    <p class="article-meta">
+      <time datetime="2026-08-24T00:00:00+09:00">August 24, 2026</time>
+    </p>
+  </header>
+
+  <div class="article-body">
+    <p>After all the detours, I finally finished uploading even the code to GitHub. There were two more updates after that, I think, but those were only for incidental things like the design of the internal web page. They were not because there was a functional problem. More than anything, the more I thought about it, the more convinced I became that it had been the right decision to use Wi-Fi, but to make it almost time-limited, and also to leave out the Bluetooth module.</p>
+
+<p>I had tried to make the device usable like a Bluetooth external keyboard, but the Bluetooth module drained the battery far more than expected. It had reached the point where using it like an ordinary keyboard on the market was almost impossible. So that decision came from actual use.</p>
+
+<p>I had posted the news about the final firmware on Reddit and was resting when a thought suddenly came to me.</p>
+
+<p>“Honestly, this is not some product promotion trying to sell something. It is just, ‘I made this, so try it once.’ In that case, is it really right to make a homepage and post links? If the point is simply to let people try it, shouldn’t I just make it possible for them to try it?”</p>
+
+<p>That was not an unreasonable thought. After all, I did not really make the firmware myself. I planned it, but in practice Codex had made it, more or less. So it did not seem impossible to make a simulator with the same structure as that firmware. I asked Codex right away, without thinking about it for long.</p>
+
+<p>“Can you make a simulator with the same functions as this firmware, something people on Reddit could use right away?”</p>
+
+<p>“Yes.”</p>
+
+<p>“You are saying you can do it without even asking what method I want?”</p>
+
+<p>“If people on Reddit are going to use it right away, running it in a web browser is the best option. The code does not have to be complicated, and there is nothing to install.”</p>
+
+<p>“Then make it.”</p>
+
+<p>Now it talks as if none of this was anything, but when making the simulator code, there were so many absurd mistakes that it had to go through about twenty rounds of revision.</p>
+
+<p>“I was trying to make firmware, not a simulator. Is this really something that should drag on and keep bothering me like this?”</p>
+
+<p>That was the kind of thought I had, and once again it became a cycle of debugging.</p>
+
+<ol>
+  <li>
+    <p>The screen did not look like the ZeroWriter. It was either too wide or square.</p>
+  </li>
+  <li>
+    <p>The key layout did not look like the ZeroWriter. The arrow keys were separated off to the side like a general-purpose keyboard, or there was no menu key.</p>
+  </li>
+</ol>
+
+<p>These two things happened five or six times, even after I had given it a picture of the ZeroWriter and told it to draw it the same way. What made it more irritating was that, only after those five or six repetitions, it finally said:</p>
+
+<p>“This time, I will revise it by referring to the photo you uploaded.”</p>
+
+<p>I wanted to ask what it had been looking at until then, but honestly, this sort of thing was so common that I did not even feel like fighting over it.</p>
+
+<p>After the proportions, screen size, menus, and other visible parts were roughly matched, I began refining the menus. The menu behavior was already the same, but I wanted to implement even the web page settings properly. After making the web page connection screen and password setting screen display the same way, and after making settings like language selection and font size actually apply, I added GitHub integration as one last indulgence. It is clear that adding requirements one by one produces much better results than simply saying, “Make it the same.”</p>
+
+<p>The feature exists, but I do not actually connect the browser simulator to GitHub and use it. I have not even tried connecting it. I did not want it to conflict with the post list in the repository I already use, and honestly, I also did not think anyone would issue an actual GitHub token just to connect it to a simulator. Outwardly, though, I made it look as if syncing and updating work properly.</p>
+
+<p>Finally, I brought one more detail to life. When typing, instead of making the letters appear instantly on the screen, I added a slight delay so that it would feel like an actual e-ink display. I also made the Alt-key accent input for European languages behave the same way as the firmware. And lastly, I blocked the pop-up menu that appears when holding down Control or Shift on a touch screen, where it gets recognized like a right-click.</p>
+
+<p>I had found and blocked that pop-up menu as an inconvenience when using it on a tablet, thinking it would be the last thing. But then, once again, there was one more last thing I wanted to add: the same sleep screen as the firmware. The photo of typewriter letters gathered together was that screen.</p>
+
+<p>After that, there really was no more “last thing.” I added the simulator code page to the Ize Compose repository and website on GitHub, and made a download link. Anyone can look at the HTML code, check it, download it, and use it. Since it is a web version, there is no need to build anything. If you wanted to buy another e-ink device but hesitated because of the price and how often you would use it, you can just use it on the tablet you already have. Since it opens in a web browser, it does not matter whether you are on Windows or Android. On an ordinary laptop or desktop, you can simply use the keyboard. That made me think that writing with the tablet simulator might also be possible. Still, for me, writing for a long time on an on-screen keyboard is basically impossible, so I did not try it.</p>
+
+<p>Unlike the firmware, the browser-based simulation tool really feels like a toy.</p>
+
+<p>It is fun.</p>
+
+<hr />
+
+<p>Original Korean article: <a href="https://brunch.co.kr/@rup-l/426">기기 없이 펌웨어를 써보기?</a></p>
+
+  </div>
+
+  <nav class="post-navigation" aria-label="Post navigation">
+    
+      <a href="/posts/projects/even-you-gemini.html">← Even You, Gemini...</a>
+    
+    
+      <a href="/posts/projects/actual-use-is-the-best-review.html">Actual Use Is the Best Review →</a>
+    
+  </nav>
+
+  
+    <aside class="related-writing" aria-labelledby="related-writing-title">
+      <div class="section-heading">
+        <span id="related-writing-title">Related writing</span>
+        <span>Same shelf</span>
+      </div>
+      
+      <div class="post-index post-index--compact">
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/wrapping-up.html">
+  <time class="post-index__date" datetime="2026-09-06T00:00:00+09:00">Sep 6, 2026</time>
+  <span class="post-index__title">Wrapping Up</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/actual-use-is-the-best-review.html">
+  <time class="post-index__date" datetime="2026-08-31T00:00:00+09:00">Aug 31, 2026</time>
+  <span class="post-index__title">Actual Use Is the Best Review</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/even-you-gemini.html">
+  <time class="post-index__date" datetime="2026-08-17T00:00:00+09:00">Aug 17, 2026</time>
+  <span class="post-index__title">Even You, Gemini...</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </aside>
+  
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div>
+    <a class="site-footer__mark" href="/">IZE STUDIO</a>
+    <p>Writing / Projects / Objects</p>
+  </div>
+  <nav class="site-footer__links" aria-label="External links">
+    <a href="https://github.com/ize-studio/ize-compose" target="_blank" rel="noopener noreferrer">Ize Compose ↗</a>
+    <a href="https://github.com/ize-studio/ize-compose/tree/emulator" target="_blank" rel="noopener noreferrer">Emulator ↗</a>
+    <a href="https://brunch.co.kr/@rup-l" target="_blank" rel="noopener noreferrer">Brunch ↗</a>
+    <a href="https://www.youtube.com/@ize-studio" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+    <a href="https://ko-fi.com/dievesa" target="_blank" rel="noopener noreferrer">Ko-fi ↗</a>
+  </nav>
+  <p class="site-notice">All writing on this site is original work by Ize Studio. © 2026</p>
+</footer>
+
+  </body>
+</html>

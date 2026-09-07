@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <title>I Want to Make It Feel Like a Product | Ize Studio</title>
+    <meta name="description" content="In truth, even by this point, I still did not have a concrete image of this firmware in my head. I had only been thinking, vaguely, “Let’s make this firmware...">
+    <link rel="canonical" href="https://ize-studio.github.io/posts/projects/i-want-to-make-it-feel-like-a-product.html">
+    <meta property="og:site_name" content="Ize Studio">
+    <meta property="og:title" content="I Want to Make It Feel Like a Product | Ize Studio">
+    <meta property="og:description" content="In truth, even by this point, I still did not have a concrete image of this firmware in my head. I had only been thinking, vaguely, “Let’s make this firmware...">
+    <meta property="og:url" content="https://ize-studio.github.io/posts/projects/i-want-to-make-it-feel-like-a-product.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="I Want to Make It Feel Like a Product | Ize Studio">
+    <meta name="twitter:description" content="In truth, even by this point, I still did not have a concrete image of this firmware in my head. I had only been thinking, vaguely, “Let’s make this firmware...">
+    <meta name="twitter:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    
+      <meta property="article:published_time" content="2026-08-03T00:00:00+09:00">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Ize Studio" href="/feed.xml">
+  </head>
+  <body class="layout-post">
+    <a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+  <a class="site-title" href="/">IZE STUDIO</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    
+      <a href="/">Index</a>
+    
+      <a href="/writing/">Writing</a>
+    
+      <a href="/fiction/">Fiction</a>
+    
+      <a href="/projects/">Projects</a>
+    
+      <a href="/shop/">Shop</a>
+    
+      <a href="/about/">About</a>
+    
+  </nav>
+  <details class="mobile-menu">
+    <summary>Menu</summary>
+    <nav aria-label="Mobile navigation">
+      
+        <a href="/">Index</a>
+      
+        <a href="/writing/">Writing</a>
+      
+        <a href="/fiction/">Fiction</a>
+      
+        <a href="/projects/">Projects</a>
+      
+        <a href="/shop/">Shop</a>
+      
+        <a href="/about/">About</a>
+      
+    </nav>
+  </details>
+</header>
+
+    <main class="site-main" id="content">
+      
+
+
+<article class="article">
+  <header class="article-header">
+    <p class="eyebrow">
+      Projects
+    </p>
+    <h1 class="article-title">I Want to Make It Feel Like a Product</h1>
+    
+    <p class="article-meta">
+      <time datetime="2026-08-03T00:00:00+09:00">August 3, 2026</time>
+    </p>
+  </header>
+
+  <div class="article-body">
+    <p>In truth, even by this point, I still did not have a concrete image of this firmware in my head. I had only been thinking, vaguely, “Let’s make this firmware turn the ZeroWriter into a machine that other people could actually use too.” I had not thought deeply about what shape the firmware should have, how it should be structured, or how it would need to behave for not only me, but other people as well, to feel that it was good for writing. So I could not help thinking, from time to time, that maybe I should just call it done and use it, since at least I did not feel any major inconvenience when writing in Korean. Even so, what pulled me along to the end was GitHub. Since I had made all the code public on GitHub, someone else could take that code and make a slightly more usable firmware. And if that improvement was something I could have thought of well enough myself, I felt like it would bother me. So I decided to go just a little further, only as far as I could think.</p>
+
+<p>First, I checked once again whether the keyboard layouts were truly usable. I selected a few languages, pressed the keys, checked whether there were any letters that would not type, and then showed the code to Gemini and asked it to check whether anything looked wrong. I also asked ChatGPT, but at the time I assumed there must be some hidden connection between ChatGPT and Codex that I did not know about, so I took it for granted that they were on the same side and did not pay much attention.</p>
+
+<p>For the other languages in the keyboard layouts, I did not know them, so I had to rely on Gemini to check them. In any case, there were no major problems that needed to be fixed immediately. The only thing was that selecting the language was a little cumbersome. On the device, I had to open the menu, move to the language screen, and then use the right arrow key to move through the languages one by one. On a computer, that might have been a little better, but on an e-paper screen, it was unavoidably frustrating. So after thinking about it for about two days, and after going through the process of constantly revising, building, and updating whenever I did not like something, I finally decided to move language settings from the device to the webpage.</p>
+
+<p>Once one line for language settings disappeared from the menu, I became a little greedy. At that time, settings such as font size, line spacing, and language were grouped under a system item in the menu. But if language could only be changed after connecting to the webpage anyway, then it seemed better to make the entire system menu configurable from the webpage. Since firmware updates were already being done by going into the webpage and uploading the firmware file there, a proper system settings screen had effectively been created.</p>
+
+<p>On the webpage, there are two pages to choose from: System Menu and Writing Management. Inside the System Menu, you can set text spacing, font size, language, and firmware updates. For language settings, English and the other languages are selected separately, and for English, you can choose between QWERTY and Dvorak. The function that uses the Alt key to select accents or characters like ss is available throughout English.</p>
+
+<p>After doing this, I thought things had been organized fairly well. And the fact that the firmware size had been reduced enough to allow firmware updates directly from the webpage also meant that testing various things had become easier. But it was also time to stabilize it. On the main page of the firmware GitHub repository, there was still a warning saying that it was under testing and that important documents should be backed up before use. In truth, removing that warning was the final goal. Even if this was only something built on top of an open-source project, if I was going to remove a warning that said backups were mandatory, I thought it should reach the level of a product. Well… even as I write this, when I look at the typeface, I wonder who would buy a product like this. Maybe it is usable because it is open source.</p>
+
+<p>And finally, I suggested one piece of code to Codex that would make it look “like” a product.</p>
+
+<p>“When I upload a release to GitHub, make a function that automatically updates by comparing only the version tag.”</p>
+
+<p>Of course, Codex first gave reasons why it could not be done.</p>
+
+<p>“Pulling in releases is complicated because of places that require approval…”</p>
+
+<p>“No, just look at the version and the file name. Can anyone other than me upload something strange to the release?”</p>
+
+<p>“Ah, I see. That is possible.”</p>
+
+<p>In any case, it never does things properly in one go. But after a few rounds of trial and error, it eventually made something fairly plausible. For testing and possible rollback, I did not make it check whether the version was higher or lower than the current one. I simply made it possible to update when the release version shown on the front page of the relevant GitHub repository was different from the current version.</p>
+
+<p>Now, when I connect to the webpage inside the device and look at the update menu, I can either update online with a single click or upload firmware for updating. When the online update button is pressed, it immediately downloads the firmware file from GitHub and sends it to the device. Even when firmware upload is executed, it sends the file directly to the device. Once the device receives the firmware file, the device takes care of the rest.</p>
+
+<p>At one point, there was a flood of courses and books saying that to use AI well, one had to write good prompts. Even now, I still see such courses from time to time. To me, it feels like the Internet Information Search Specialist certificate that appeared in the early days of the internet, when search engines were not very good yet. You learn how to talk so that it gives the right answer by talking to it. After collecting countless wrong answers, such as what kinds of phrasing make it give strange answers or respond without sincerity.</p>
+
+<p>AI needs experience, but so does the user. If you try to save the time it takes to accumulate that experience, you cannot properly use any tool. Even a mouse or keyboard has to be used often before it becomes familiar to the hand, so it makes no sense to think that AI as a tool is somehow different. Countless tools all function as extensions of our bodies, only differing in the kind of sense they extend. AI is an extension of the senses, but it is an extension of a sense humanity has never experienced before: the sense called the computer.</p>
+
+<p>In my experience, the most appropriate way to write a good prompt is to ask the AI. And not by asking, “I want to do this, so what prompt should I write?” It has to be found through conversation.</p>
+
+<p>For code-related work, ChatGPT does write prompts telling Codex to write code according to certain criteria. It also writes prompts to give to ChatGPT itself, though I have not actually used those.</p>
+
+<p>There was a time when I asked it to recommend stocks based on two criteria: stocks that were rising but had risen less than expected, or stocks that looked as though they were about to rise. At first, it lost its way and recommended all kinds of strange KOSDAQ stocks. But after I explained one by one why this one would not work and that one would not work, it told me that I should ask in this kind of way and wrote a prompt for me. It was a fairly thoughtful prompt, asking for companies with signals such as large purchases at night or after hours, increases in major shareholders’ stakes, or disclosures of executives buying shares, while also having no particular factors in the overall circumstances that would cause the stock price to fall. It gave me a prompt with content I had not quite thought of myself. But usually, after a certain point in conversation, ChatGPT catches on and begins the work.</p>
+
+<p>Now only one thing remains. Whether through Wi-Fi or web server mode, once I connect and open the webpage, I can download or copy my writing. If I turn off the device and insert the SD card into a computer, I can also retrieve the text files. But the “product-like” device I had in mind was one with a fixed webpage where the writings would be synchronized. A device where, even if it is at home, I can edit writings on the computer, and even at home, with only a simple operation, upload writings to the homepage.</p>
+
+<hr />
+
+<p>Korean original: <a href="https://brunch.co.kr/@rup-l/423">제품처럼 만들고 싶어</a></p>
+
+  </div>
+
+  <nav class="post-navigation" aria-label="Post navigation">
+    
+      <a href="/posts/projects/liberation.html">← Liberation</a>
+    
+    
+      <a href="/posts/projects/it-became-a-usable-machine.html">It Became a Usable Machine →</a>
+    
+  </nav>
+
+  
+    <aside class="related-writing" aria-labelledby="related-writing-title">
+      <div class="section-heading">
+        <span id="related-writing-title">Related writing</span>
+        <span>Same shelf</span>
+      </div>
+      
+      <div class="post-index post-index--compact">
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/wrapping-up.html">
+  <time class="post-index__date" datetime="2026-09-06T00:00:00+09:00">Sep 6, 2026</time>
+  <span class="post-index__title">Wrapping Up</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/actual-use-is-the-best-review.html">
+  <time class="post-index__date" datetime="2026-08-31T00:00:00+09:00">Aug 31, 2026</time>
+  <span class="post-index__title">Actual Use Is the Best Review</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+<a class="post-index__row post-index__row--compact" href="/posts/projects/trying-firmware-without-a-device.html">
+  <time class="post-index__date" datetime="2026-08-24T00:00:00+09:00">Aug 24, 2026</time>
+  <span class="post-index__title">Trying Firmware Without a Device?</span>
+  <span class="post-index__category">Projects</span>
+</a>
+
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </aside>
+  
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div>
+    <a class="site-footer__mark" href="/">IZE STUDIO</a>
+    <p>Writing / Projects / Objects</p>
+  </div>
+  <nav class="site-footer__links" aria-label="External links">
+    <a href="https://github.com/ize-studio/ize-compose" target="_blank" rel="noopener noreferrer">Ize Compose ↗</a>
+    <a href="https://github.com/ize-studio/ize-compose/tree/emulator" target="_blank" rel="noopener noreferrer">Emulator ↗</a>
+    <a href="https://brunch.co.kr/@rup-l" target="_blank" rel="noopener noreferrer">Brunch ↗</a>
+    <a href="https://www.youtube.com/@ize-studio" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+    <a href="https://ko-fi.com/dievesa" target="_blank" rel="noopener noreferrer">Ko-fi ↗</a>
+  </nav>
+  <p class="site-notice">All writing on this site is original work by Ize Studio. © 2026</p>
+</footer>
+
+  </body>
+</html>
