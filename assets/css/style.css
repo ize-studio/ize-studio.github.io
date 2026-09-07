@@ -303,6 +303,10 @@ h3 {
 }
 
 .section-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem 1.2rem;
   margin: 1.2rem 0 0;
   text-align: right;
   font-size: 0.78rem;
@@ -359,6 +363,37 @@ h3 {
 
 .brunch-index {
   border-bottom: 1px solid var(--rule);
+}
+
+.link-ledger {
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+  border-bottom: 1px solid var(--rule);
+}
+
+.link-ledger a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.7fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: baseline;
+  padding: 1rem 0;
+  border-top: 1px solid var(--rule);
+  text-decoration: none;
+}
+
+.link-ledger span:first-child {
+  font-size: clamp(1.1rem, 1.8vw, 1.6rem);
+  line-height: 1.25;
+}
+
+.link-ledger span:last-child {
+  color: var(--ink-faint);
+  font-family: Inter, Pretendard, system-ui, -apple-system, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  overflow-wrap: anywhere;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 .brunch-entry {
@@ -833,9 +868,14 @@ h3 {
   }
 
   .post-index__row,
-  .brunch-entry {
+  .brunch-entry,
+  .link-ledger a {
     grid-template-columns: 1fr;
     gap: 0.25rem;
+  }
+
+  .link-ledger span:last-child {
+    text-align: left;
   }
 
   .post-index__category {
