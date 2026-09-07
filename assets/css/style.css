@@ -96,12 +96,30 @@ summary:focus-visible {
 
 .site-title,
 .site-footer__mark {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.04rem;
   color: var(--ink);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
   text-decoration: none;
+}
+
+.site-title__name,
+.site-footer__name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
   text-transform: uppercase;
+}
+
+.site-title__byline,
+.site-footer__byline {
+  color: var(--ink-faint);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  text-transform: none;
 }
 
 .site-nav {

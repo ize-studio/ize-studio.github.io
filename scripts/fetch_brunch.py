@@ -24,7 +24,7 @@ BASE_URL = f"https://brunch.co.kr/@{AUTHOR}"
 API_URL = f"https://api.brunch.co.kr/v2/article/%40{AUTHOR}?lastTime=0&thumbnail=Y&membershipContent=false"
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_PATH = ROOT / "_data" / "brunch.json"
-USER_AGENT = "IzeStudioBrunchSync/1.0 (+https://ize-studio.github.io/)"
+USER_AGENT = "BoundaryBrunchSync/1.0 (+https://ize-studio.github.io/)"
 
 
 class BrunchSyncWarning(RuntimeError):

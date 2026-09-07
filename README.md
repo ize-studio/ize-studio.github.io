@@ -1,6 +1,8 @@
-# Ize Studio
+# BOUNDARY
 
-Source repository for the Ize Studio GitHub Pages site.
+Writing, projects, machines, and objects by RUP L.
+
+This is the source repository for the BOUNDARY GitHub Pages site. It is currently published through the `ize-studio` GitHub account.
 
 The site is a Jekyll archive for essays, fiction, reading notes, writing tools, project records, Korean writing links, and future small editions or objects.
 
