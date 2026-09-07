@@ -162,11 +162,11 @@ summary:focus-visible {
 
 .home-intro {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(280px, 6fr);
-  gap: clamp(2rem, 6vw, 7rem);
+  grid-template-columns: minmax(0, 5.4fr) minmax(260px, 5.6fr);
+  gap: clamp(2rem, 5.6vw, 6.4rem);
   align-items: end;
-  min-height: min(680px, calc(100vh - 7rem));
-  padding-bottom: clamp(4rem, 8vw, 7rem);
+  min-height: min(650px, calc(100vh - 7rem));
+  padding-bottom: clamp(3.5rem, 7vw, 6.2rem);
 }
 
 .home-intro__text {
@@ -176,7 +176,7 @@ summary:focus-visible {
 .home-intro__image {
   margin: 0;
   justify-self: end;
-  width: min(100%, 720px);
+  width: min(100%, 660px);
 }
 
 .home-intro__image img,
@@ -243,6 +243,10 @@ h3 {
   border-top: 1px solid var(--rule);
 }
 
+.editorial-section--quiet {
+  padding-block: clamp(2.6rem, 5vw, 4.8rem);
+}
+
 .section-heading {
   display: flex;
   justify-content: space-between;
@@ -264,8 +268,8 @@ h3 {
 
 .post-index__row {
   display: grid;
-  grid-template-columns: 9rem minmax(0, 1fr) 9rem;
-  gap: clamp(1rem, 3vw, 2.5rem);
+  grid-template-columns: 8.2rem minmax(0, 1fr) 7.4rem;
+  gap: clamp(0.9rem, 2.5vw, 2rem);
   align-items: baseline;
   padding: 1.15rem 0;
   border-top: 1px solid var(--rule);
@@ -309,9 +313,18 @@ h3 {
 
 .featured-project {
   display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(280px, 4fr);
+  grid-template-columns: minmax(0, 5.6fr) minmax(340px, 4.4fr);
   gap: clamp(2rem, 5vw, 5rem);
   align-items: end;
+}
+
+.featured-project--text-only {
+  grid-template-columns: minmax(7rem, 1fr) minmax(0, 920px);
+  align-items: start;
+}
+
+.featured-project--text-only .featured-project__body {
+  grid-column: 2;
 }
 
 .featured-project__media {
@@ -319,13 +332,16 @@ h3 {
 }
 
 .featured-project__body h2 {
-  max-width: 720px;
-  font-size: clamp(2.2rem, 4.5vw, 5.8rem);
-  line-height: 0.98;
+  max-width: 920px;
+  margin-top: 0.3rem;
+  font-size: clamp(3rem, 5.5vw, 6.4rem);
+  line-height: 0.96;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .featured-project__body p:not(.eyebrow):not(.project-links) {
-  max-width: 560px;
+  max-width: 620px;
   color: var(--ink-soft);
 }
 
@@ -347,7 +363,7 @@ h3 {
 
 .brunch-entry {
   display: grid;
-  grid-template-columns: 9rem minmax(0, 1fr) 2rem;
+  grid-template-columns: 8.2rem minmax(0, 1fr) 2rem;
   gap: clamp(1rem, 3vw, 2rem);
   align-items: baseline;
   padding: 1rem 0;
@@ -364,7 +380,9 @@ h3 {
 }
 
 .brunch-entry__title {
+  font-family: "Noto Serif KR", "Nanum Myeongjo", "Iowan Old Style", Georgia, serif;
   font-size: clamp(1.05rem, 1.7vw, 1.55rem);
+  font-weight: 500;
   line-height: 1.35;
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -799,6 +817,10 @@ h3 {
   .product-page__body,
   .site-footer {
     grid-template-columns: 1fr;
+  }
+
+  .featured-project--text-only .featured-project__body {
+    grid-column: auto;
   }
 
   .home-intro {
