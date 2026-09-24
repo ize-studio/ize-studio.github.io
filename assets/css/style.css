@@ -530,13 +530,15 @@ h3 {
 
 .fiction-list,
 .project-list,
+.research-list,
 .category-sections {
   display: grid;
   gap: clamp(2.5rem, 5vw, 5rem);
 }
 
 .fiction-entry,
-.project-entry {
+.project-entry,
+.research-entry {
   display: grid;
   grid-template-columns: 7rem minmax(0, 1fr);
   gap: clamp(1rem, 4vw, 4rem);
@@ -545,7 +547,8 @@ h3 {
 }
 
 .fiction-entry__number,
-.project-entry__number {
+.project-entry__number,
+.research-entry__number {
   color: var(--ink-faint);
   font-family: Inter, Pretendard, system-ui, -apple-system, sans-serif;
   font-size: 0.76rem;
@@ -557,6 +560,32 @@ h3 {
 .project-entry h2 {
   font-size: clamp(2rem, 4vw, 4.4rem);
   line-height: 0.98;
+}
+
+.research-entry h2 {
+  max-width: 1040px;
+  font-size: clamp(1.8rem, 3.2vw, 3.7rem);
+  line-height: 1.04;
+}
+
+.research-entry__summary {
+  max-width: 780px;
+  margin-top: 1.4rem;
+  color: var(--ink-soft);
+}
+
+.research-entry__summary p {
+  margin: 0;
+}
+
+.research-entry__doi {
+  margin: 1.2rem 0 0;
+  color: var(--accent);
+  font-family: Inter, Pretendard, system-ui, -apple-system, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  overflow-wrap: anywhere;
 }
 
 .fiction-entry p,
@@ -867,6 +896,7 @@ h3 {
   .archive-year,
   .fiction-entry,
   .project-entry,
+  .research-entry,
   .product-page__body,
   .site-footer {
     grid-template-columns: 1fr;
