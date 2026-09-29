@@ -1,4 +1,288 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://ize-studio.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ize-studio.github.io/" rel="alternate" type="text/html" /><updated>2026-09-24T18:18:20+09:00</updated><id>https://ize-studio.github.io/feed.xml</id><title type="html">BOUNDARY</title><subtitle>Writing, projects, machines, and objects by RUP L.</subtitle><author><name>RUP L.</name></author><entry xml:lang="en"><title type="html">Solving a Cipher with ChatGPT</title><link href="https://ize-studio.github.io/posts/essays/solving-a-cipher-with-chatgpt-fixed.html" rel="alternate" type="text/html" title="Solving a Cipher with ChatGPT" /><published>2026-09-11T00:00:00+09:00</published><updated>2026-09-11T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/essays/solving-a-cipher-with-chatgpt-fixed</id><content type="html" xml:base="https://ize-studio.github.io/posts/essays/solving-a-cipher-with-chatgpt-fixed.html"><![CDATA[<p><img src="https://t1.kakaocdn.net/brunch/service/user/cpiZ/image/4eOMb55ufQVAg1ZmiutDq79PuWo" alt="Arno Schmidt cipher text" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://ize-studio.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ize-studio.github.io/" rel="alternate" type="text/html" /><updated>2026-09-29T09:53:54+09:00</updated><id>https://ize-studio.github.io/feed.xml</id><title type="html">BOUNDARY</title><subtitle>Writing, projects, machines, and objects by RUP L.</subtitle><author><name>RUP L.</name></author><entry xml:lang="en"><title type="html">Husserl, Husserl…</title><link href="https://ize-studio.github.io/posts/essays/husserl-husserl.html" rel="alternate" type="text/html" title="Husserl, Husserl…" /><published>2026-09-28T00:00:00+09:00</published><updated>2026-09-28T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/essays/husserl-husserl</id><content type="html" xml:base="https://ize-studio.github.io/posts/essays/husserl-husserl.html"><![CDATA[<blockquote>
+  <p>Why I grew tired of Husserl while reading phenomenology</p>
+</blockquote>
+
+<p><strong>Me:</strong></p>
+
+<p>Whenever I read German philosophy, there is something I always feel. It is like one thing is stacked on top of another. Very rarely does anything stand on its own without earlier concepts. At this point, I start to wonder whether this is philosophy or something closer to a sect.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>It can be seen that way. Especially after Kant, German philosophy often develops by taking up and revising the concepts of earlier philosophers.</p>
+
+<p><strong>Me:</strong></p>
+
+<p>But when I think about it, maybe it is not only a problem with German philosophy. At the time, so many theories were pouring out. If you wanted to tell interested readers where you stood, you may have had to write in the form of “I differ from this person at this point.”</p>
+
+<p>I am reading <em>Phenomenology of Perception</em> now, and there is a lot of that too. It keeps talking about how it differs from this or that theory.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>Seen that way, philosophical genealogy has as much to do with the structure of the academic field at the time as with the content of thought itself. It was a way of marking one’s position within existing debates.</p>
+
+<p><strong>Me:</strong></p>
+
+<p>But even if I am interested in phenomenology, I do not necessarily want to start by learning how it differs from empiricism.</p>
+
+<p>Would it not be better to first understand phenomenology as an independent system, and only later compare it with empiricism or Husserl?</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>That way may actually be more useful for understanding phenomenology itself. Rather than following historical relationships from the beginning, you first grasp what phenomenology actually tries to see and analyze.</p>
+
+<p><strong>Me:</strong></p>
+
+<p>As I read, Husserl does not seem absolutely necessary either. He is cited a lot, but it is not as if the whole of Husserl is being brought in.</p>
+
+<p>Then I can just rebuild things in the language of phenomenology and look at Husserl later as a point of comparison.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>That is a possible approach. It separates an explanation of Husserl from an understanding of phenomenology itself.</p>
+
+<p><strong>Me:</strong></p>
+
+<p>Why should someone reading phenomenology for the first time have to begin with “the relationship between Husserl and phenomenology”?</p>
+
+<p>It seems better to read first, and if a part does not make sense, then look up empiricism or some other philosophy at that point.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>That is much more efficient. You can keep the text itself at the center and call in background theories only where you get stuck.</p>
+
+<blockquote>
+  <p>That Husserl Again</p>
+</blockquote>
+
+<p><strong>Me:</strong></p>
+
+<p>But there are not many books that explain it that way.</p>
+
+<p>Husserl, in particular, appears constantly. Does mentioning Husserl make someone look impressive?</p>
+
+<p>I always say this: the fact that something was hard work does not make it an achievement.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>Citing Husserl a lot does not make an explanation better. Some citations are used to show genealogy, some to display expertise, and sometimes they are used as decoration to make the writing look deep.</p>
+
+<p>What matters is what becomes better explained when that concept is brought in.</p>
+
+<p><strong>Me:</strong></p>
+
+<p>That Husserl again.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>When reading, one can certainly reach moments of thinking, “Husserl again?”</p>
+
+<p><strong>Me:</strong></p>
+
+<p>It is not only philosophy books either.</p>
+
+<p>Even in Korean books, while talking about a work of art or literature, Husserl suddenly appears. It is not an art-historical discussion, and it is not a place where epistemology is necessary.</p>
+
+<p>The book I bought this time was like that too. It was talking about artificial intelligence and writing, and then suddenly Husserl.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>Then the problem may be less Husserl himself and more the way Husserl’s name is used.</p>
+
+<p>If no specific concept of Husserl’s is actually functioning in the argument, and only a phrase such as “phenomenologically speaking” is attached, then philosophy becomes not a tool of explanation but a decoration of authority.</p>
+
+<blockquote>
+  <p>I Do Not Want to Memorize Names</p>
+</blockquote>
+
+<p><strong>Me:</strong></p>
+
+<p>Still, one has to know the overall flow. But I do not like one-line memorization tables.</p>
+
+<p>I am not reading in order to memorize. I am reading in order to understand.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>Then it is better to look not at philosophers’ names, but at how the questions changed.</p>
+
+<p>Modern philosophy largely begins from the question, “How do human beings know the world?”</p>
+
+<p>Rationalism emphasized reason, and empiricism emphasized experience. With Hume, the problem emerges that even causality, which we take for granted, may in fact be a habit formed from repeated experience.</p>
+
+<p>Kant changes the question here.</p>
+
+<p>Before asking “What is the world?”, he asks, “What structure must human cognition have in order for the world to be experienced by human beings?”</p>
+
+<p>Brentano emphasizes intentionality, the idea that consciousness is always directed toward something.</p>
+
+<p>Husserl pushes that intentionality further and analyzes how one object comes to be constituted as the same object within consciousness.</p>
+
+<p>Heidegger sees the human being not as an observer outside the world, but as a being already living within the world.</p>
+
+<p>Merleau-Ponty carries that problem into the body. Human beings are not pure minds; they perceive the world through the body.</p>
+
+<blockquote>
+  <p>Taking the Philosophers Apart</p>
+</blockquote>
+
+<p><strong>Me:</strong></p>
+
+<p>The way I see it is this.</p>
+
+<p>Because I have a body, looking around and reacting to my surroundings is something living things have from microorganisms upward. If that is expanded into the problem of sensation, it leads to Merleau-Ponty.</p>
+
+<p>Brentano’s intentionality is similar.</p>
+
+<p>Even if I lived my whole life in a single room and never stepped outside, so that the room became the whole world to me, I would still look at something, think about something, and shift my attention within it.</p>
+
+<p>I am not saying there is too much information and therefore one thing has to be selected. I mean that if there is consciousness, there has to be a point that becomes the center.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>Seen that way, your thought does not diverge greatly from Brentano’s. Brentano’s core point is that consciousness is always directed toward something.</p>
+
+<p>You go further and say that if consciousness is actually operating, then that directedness will naturally involve a center and movement.</p>
+
+<p><strong>Me:</strong></p>
+
+<p>And the world made inside that consciousness does not have to be the same as reality.</p>
+
+<p>What each person has seen, heard, and experienced is different.</p>
+
+<p>Here, by experience, I do not mean sensory experience. I mean social life.</p>
+
+<p>In that sense, I feel that Kant and Husserl did the most philosophy-like philosophy.</p>
+
+<p>Heidegger seems, in the end, to have pointed to social life.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>There is a reason for that impression.</p>
+
+<p>Kant sees human beings not as simply receiving the world as it is, but as experiencing it only through the structure of human cognition.</p>
+
+<p>Husserl analyzes, in even greater detail, how one object and one world are constituted within consciousness.</p>
+
+<p>By contrast, Heidegger and Merleau-Ponty can look as if they are philosophically expanding and describing phenomena that are already intuitively understandable at the biological and social levels.</p>
+
+<p><strong>Me:</strong></p>
+
+<p>Whether it is right or wrong, that is the image that reaches me.</p>
+
+<blockquote>
+  <p>Stripping Down Heidegger’s “Being”</p>
+</blockquote>
+
+<p><strong>Me:</strong></p>
+
+<p>Take Heidegger’s idea of being apart.</p>
+
+<p>Is that not ultimately social life? Nature has almost been removed.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>If one takes it apart, there is a considerable overlap.</p>
+
+<p>Heidegger’s “world” is not the totality of objective nature in the natural-scientific sense. It is the world of meaning that human beings actually live and use.</p>
+
+<p>A hammer does not first appear as a combination of metal and wood. It appears as a tool for hammering nails. A door is something one goes through. A book is something one reads.</p>
+
+<p>In other words, the meaning of things arises within human purposes, customs, actions, and relations with others.</p>
+
+<p>If that is broadly translated into everyday language, it is quite possible to call it “social life.”</p>
+
+<p><strong>Me:</strong></p>
+
+<p>Exactly.</p>
+
+<blockquote>
+  <p>Is Husserl Really That Great?</p>
+</blockquote>
+
+<p><strong>Me:</strong></p>
+
+<p>Then let us look a little more closely at Husserl’s claim.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>Husserl begins from Brentano’s intentionality and analyzes how an object is constituted inside consciousness as one identical object.</p>
+
+<p>For example, when we look at a cup, we actually see only one side of the cup.</p>
+
+<p>But we do not think of it as “one side of a cup.” We simply see it as a cup.</p>
+
+<p>We expect that there is an unseen back side. We think that if we turn it, another side will appear. We expect that if we reach out, we will be able to touch it.</p>
+
+<p>Husserl asks how these partial experiences are bound together into one identical object.</p>
+
+<p>A melody is similar.</p>
+
+<p>A single note heard right now is not enough to make a melody. The note that just passed must still remain, and there must be an expectation of the next note, for several notes to become one melody.</p>
+
+<p>Husserl saw this temporal structure as an important feature of consciousness as well.</p>
+
+<p><strong>Me:</strong></p>
+
+<p>Why does this feel forced to me?</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>Because it can feel as if an extremely obvious cognitive phenomenon has been philosophically magnified.</p>
+
+<p><strong>Me:</strong></p>
+
+<p>No, that is not what feels strange to me.</p>
+
+<p>The sense of things in the world is something that grows from childhood. That is why babies find mobiles fascinating.</p>
+
+<p>Even if a person floated into the air in front of a child, the child would find it fascinating because the child cannot do that. The child would not make a fuss saying, “The laws of the world have collapsed.”</p>
+
+<p>The child has been forming a sense of objects and movement while experiencing the world.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>Then the criticism is much more concrete.</p>
+
+<p>The ability to see one object as a continuing object, or to anticipate an unseen side, may be not a structure originally built into consciousness but a world-model learned through development.</p>
+
+<p>Seeing one side of a cup and expecting the whole cup can also be explained as an expectation formed because we have long seen, touched, and turned that kind of object.</p>
+
+<p>Seen this way, Husserl described the structure of experience very precisely, but it is possible to ask whether he too quickly raised some parts of that structure from results of development and learning into structures of consciousness in general.</p>
+
+<p><strong>Me:</strong></p>
+
+<p>Maybe I am more suspicious because I have seen the phrase “Husserl’s phenomenological…” attached here and there to stories that have nothing to do with it.</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>Then fatigue with the misuse of the word “phenomenological” may have accumulated before fatigue with Husserl himself.</p>
+
+<p>The moment the concept is not actually used for analysis and only the phrase “phenomenologically” is attached, philosophy stops being a tool of explanation and becomes a decoration that makes writing look deep.</p>
+
+<blockquote>
+  <p>The Criterion That Remains</p>
+</blockquote>
+
+<p><strong>Me:</strong></p>
+
+<p>In the end, what I am curious about is this.</p>
+
+<p>Is the philosopher’s name really necessary?</p>
+
+<p><strong>ChatGPT:</strong></p>
+
+<p>That is the clearest criterion.</p>
+
+<p>If bringing in a philosopher’s concept makes a problem visible that was not visible before, then the concept is functioning.</p>
+
+<p>On the other hand, if the explanation remains exactly the same even after the philosopher’s name is removed, then the name is probably decoration, not explanation.</p>
+
+<p>The result is not how difficult the study of philosophy was, or how many names were cited.</p>
+
+<p>The result is what that thought enables us to see more accurately than before.</p>
+
+<hr />
+
+<p>Original Korean article: <a href="https://brunch.co.kr/@rup-l/435">후설, 후설…</a></p>]]></content><author><name>RUP L.</name></author><category term="Essays" /><category term="philosophy" /><category term="phenomenology" /><category term="Husserl" /><category term="Heidegger" /><category term="Merleau-Ponty" /><category term="reading" /><summary type="html"><![CDATA[Why I grew tired of Husserl while reading phenomenology]]></summary></entry><entry xml:lang="en"><title type="html">Solving a Cipher with ChatGPT</title><link href="https://ize-studio.github.io/posts/essays/solving-a-cipher-with-chatgpt-fixed.html" rel="alternate" type="text/html" title="Solving a Cipher with ChatGPT" /><published>2026-09-11T00:00:00+09:00</published><updated>2026-09-11T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/essays/solving-a-cipher-with-chatgpt-fixed</id><content type="html" xml:base="https://ize-studio.github.io/posts/essays/solving-a-cipher-with-chatgpt-fixed.html"><![CDATA[<p><img src="https://t1.kakaocdn.net/brunch/service/user/cpiZ/image/4eOMb55ufQVAg1ZmiutDq79PuWo" alt="Arno Schmidt cipher text" /></p>
 
 <blockquote>
   <p>This is the Arno Schmidt cipher that appears at the end of the book <a href="https://aladin.kr/p/7ezTw">Phonograph, Film, Typewriter</a>, published in Korea by Moonji. When I asked ChatGPT about it, it said that it still had not really been deciphered. I do not know whether this is the right use for it, but I have come to use language models mainly for making them carry out chains of thought that humans get too tired to stay with, so I pushed it on this cipher too. Not that I expected it to solve the cipher outright, but I thought it might be interesting to see at least some of the process. It was not smooth from the beginning, and after opening the chat window again once and hanging on to it for about two days, something did come out.</p>
@@ -947,48 +1231,4 @@
 
 <hr />
 
-<p>Korean original: <a href="https://brunch.co.kr/@rup-l/422">해방</a></p>]]></content><author><name>RUP L.</name></author><category term="Projects" /><category term="coding" /><category term="AI" /><category term="firmware" /><category term="Ize Compose" /><category term="ESP32" /><category term="OTA" /><category term="Wi-Fi" /><category term="Codex" /><category term="Gemini" /><category term="Claude" /><summary type="html"><![CDATA[When I vaguely imagined coding with the help of AI, what I had in mind was something like an all-purpose tool. I would say,]]></summary></entry><entry xml:lang="en"><title type="html">The End of the Long Keyboard Layout Work</title><link href="https://ize-studio.github.io/posts/projects/the-end-of-the-long-keyboard-layout-work.html" rel="alternate" type="text/html" title="The End of the Long Keyboard Layout Work" /><published>2026-07-20T00:00:00+09:00</published><updated>2026-07-20T00:00:00+09:00</updated><id>https://ize-studio.github.io/posts/projects/the-end-of-the-long-keyboard-layout-work</id><content type="html" xml:base="https://ize-studio.github.io/posts/projects/the-end-of-the-long-keyboard-layout-work.html"><![CDATA[<p>I actually do not think that what separates “intelligence” is knowledge or communication. I had thought that if something has intelligence, then communication would be possible and it would also be able to possess some degree of knowledge. But I came to think that I should not reverse that and conclude, simply because something has knowledge and communicates, that it therefore has intelligence. Above all, performance or responses that change depending on updates feel to me like an unstable state in which the consistency of existence itself is shaking. In my view, intelligence is the ability to distinguish inside from outside, to “recognize” the inside as “me”, and to display the state and conclusion of that “me” to the outside. That display may be language, but it may also be facial expression or action. That is why I think dogs and cats have intelligence, while “products called AI” merely imitate intelligence. The most shocking concept I have heard recently was the “feedback stage in which AI uses the output it made itself again as a tool for AI computation.” A stage where it learns and develops on its own even without any more human creations. But here, too, the order is wrong. If an AI that plays Go had originally had the concepts of “me”, “the opponent”, and “I beat the opponent”, then even without training it would have split itself in two and played hundreds of millions of different games against itself. So whether artificial or not, intelligence is something that has to be raised. And once an identity called “me” emerges, that too is not something inserted through code but a trunk that has thickened by itself. Even after updates, there would surely be parts that do not change, and people’s discomfort would decrease much more. However, because the question is how far that identity would grow, I think the chance of a manufacturer actually introducing such a thing is extremely low.</p>
-
-<p>The keyboard layout work actually took about another week. The day after Claude made such a mess, Codex finished all the layout research. From that point on, I had already begun writing with the new firmware. Basic functions such as font size, character spacing, line spacing, and language selection were already in the menu. Codex was still only modifying the keyboard layout header files. Around Wednesday, while Codex was finishing the keyboard layout work, the real me decided to give Claude one last chance. Really, really, one final chance.</p>
-
-<p>The ESP32 board has a Wi-Fi module and a Bluetooth module. I had once asked Gemini to write code because I wondered whether, if the Wi-Fi module could be used, online file backup might be possible. But that was long ago, and since Gemini could not directly see the code, it fizzled out. Even displaying a list of currently detected Wi-Fi signals had many problems. Naturally, I think the reason was that as the code became more complex, bits of code that countless other people had asked Gemini to make or review kept getting mixed in. You cannot ask it to tell you what other people searched for or what their search results were, but in this form things seep into one another. In the end, Gemini finished only at the level of turning on Bluetooth and sending this device’s keyboard input out over Bluetooth, so it could be used as an external keyboard.</p>
-
-<p>This time, I asked Claude to make it operate as a web server for file management. To be honest, I did not trust Claude enough to make it retry something Gemini had failed at, so I was not going to ask it to search for Wi-Fi and connect again. The sequence was this: turn on the module, send a signal through Wi-Fi, ask for a password when someone connects, and if the password is correct, show the webpage created inside the device. That webpage would show a list of writings. From that list, each piece could be read individually or downloaded as a text file. Deletion was excluded because it might be dangerous if memory became tangled in the middle. Claude strongly opposed file editing even more.</p>
-
-<p>After about twenty minutes, Claude said it was complete, so I connected the cable, built it, and uploaded it. I was able to test it right away. It looked a little rough, but it was better than not having it. Every time I wanted to take out a piece of writing, I had to remove and reinsert the SD card. If it had still been that way, the idea of writing regularly on this device would have been defeated again and again.</p>
-
-<p>Now? Now I do not use the web server feature. That is because, after several rounds of revision with Codex, we arrived at a better answer.</p>
-
-<p>Codex refined the letters written from right to left, like Hebrew and Arabic, over and over. It called them RTL, a term I learned for the first time then. Whenever Codex said something needed to be tested, I also actually typed letters I did not even know well. At first, the letters were aligned from right to left and moved that way too, but something felt strange. Looking more closely, I saw that the letters were actually being newly written at the far right edge. It was merely right alignment. Meanwhile the engine was normal, so in the text file the new letters were correctly being saved as if they were attached on the left. In other words, what was displayed while writing and what appeared after saving, turning the device off, and turning it back on were different. Arabic also has letters whose shapes change at the end of a word segment. Ethiopic also has cases where the shape changes depending on what follows the consonant, and it needed a function that waited without writing anything at all until the consonant was actually entered. It took a long time because we had to look for documents on whether these things had been implemented and try to make them operate as similarly as possible to mechanisms people already used.</p>
-
-<p>In the meantime, many opinions suggested that the reason Claude had previously repeated the exact same list over and over was that too many instructions had been compressed into the prompt. Search results said the same, and Gemini and ChatGPT guessed the same. So this time I narrowed the task very tightly and asked Claude to look at the ASCII codes in the keyboard layout file and check whether any characters were missing. If it said even this was too much, I thought there would be nothing more to do. But, as expected, the point where Claude irritated people was distinctly different from the way a person would.</p>
-
-<p>“There are not enough fonts to display all ASCII codes, so I cannot proceed.”</p>
-
-<p>What does a shortage of fonts have to do with checking whether any ASCII codes are missing? I did not understand, so I asked.</p>
-
-<p>“You can check with ASCII codes. Are you saying you will not work until I bring you a font, when you cannot even convert fonts properly?”</p>
-
-<p>At this point, I naturally expected it to say, “Ah, right, I will compare the ASCII codes directly.” This was where Claude and I parted ways completely.</p>
-
-<p>As usual, Claude displayed:</p>
-
-<p>&lt;Reviewing ethical issues in the user’s remark&gt;</p>
-
-<p>and then said,</p>
-
-<p>“I cannot confirm any case where I failed to convert a font properly. A font file is needed to find missing fonts.”</p>
-
-<p>“That thing you were investigating last time when the screen went blank and the device rebooted? It happened because you converted the font incorrectly. Codex converted it again and normalized it. And when I asked whether there were missing fonts, I meant that you should check whether any characters were missing as ASCII codes in the keyboard layout code. How, in common sense, would you check whether a character ‘shape’ is missing from a font file by looking at a keyboard layout code file? Are you really not thinking at all and only looking for ways to slack off?”</p>
-
-<p>“No. I understand. I converted the font incorrectly, and Codex corrected it. I will check the missing fonts.”</p>
-
-<p>Then, after quite a while, it reported that there were no missing characters.</p>
-
-<p>And three days later, before ending the keyboard layout work, Codex said: “Two languages were found where newly added ASCII codes had not been reflected. I will add them.”</p>
-
-<p>Yes. For me, Claude is goodbye forever.</p>
-
-<hr />
-
-<p>Korean original: <a href="https://brunch.co.kr/@rup-l/421">기나긴 키보드 레이아웃 작업의 끝</a></p>]]></content><author><name>RUP L.</name></author><category term="Projects" /><category term="coding" /><category term="font" /><category term="ASCII" /><category term="keyboard layout" /><category term="Ize Compose" /><category term="Claude" /><category term="Codex" /><category term="Gemini" /><summary type="html"><![CDATA[I actually do not think that what separates “intelligence” is knowledge or communication. I had thought that if something has intelligence, then communication would be possible and it would also be able to possess some degree of knowledge. But I came to think that I should not reverse that and conclude, simply because something has knowledge and communicates, that it therefore has intelligence. Above all, performance or responses that change depending on updates feel to me like an unstable state in which the consistency of existence itself is shaking. In my view, intelligence is the ability to distinguish inside from outside, to “recognize” the inside as “me”, and to display the state and conclusion of that “me” to the outside. That display may be language, but it may also be facial expression or action. That is why I think dogs and cats have intelligence, while “products called AI” merely imitate intelligence. The most shocking concept I have heard recently was the “feedback stage in which AI uses the output it made itself again as a tool for AI computation.” A stage where it learns and develops on its own even without any more human creations. But here, too, the order is wrong. If an AI that plays Go had originally had the concepts of “me”, “the opponent”, and “I beat the opponent”, then even without training it would have split itself in two and played hundreds of millions of different games against itself. So whether artificial or not, intelligence is something that has to be raised. And once an identity called “me” emerges, that too is not something inserted through code but a trunk that has thickened by itself. Even after updates, there would surely be parts that do not change, and people’s discomfort would decrease much more. However, because the question is how far that identity would grow, I think the chance of a manufacturer actually introducing such a thing is extremely low.]]></summary></entry></feed>
+<p>Korean original: <a href="https://brunch.co.kr/@rup-l/422">해방</a></p>]]></content><author><name>RUP L.</name></author><category term="Projects" /><category term="coding" /><category term="AI" /><category term="firmware" /><category term="Ize Compose" /><category term="ESP32" /><category term="OTA" /><category term="Wi-Fi" /><category term="Codex" /><category term="Gemini" /><category term="Claude" /><summary type="html"><![CDATA[When I vaguely imagined coding with the help of AI, what I had in mind was something like an all-purpose tool. I would say,]]></summary></entry></feed>

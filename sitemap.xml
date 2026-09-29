@@ -39,14 +39,14 @@
   
     
       <url>
-        <loc>https://ize-studio.github.io/fiction/</loc>
+        <loc>https://ize-studio.github.io/shop/</loc>
         
       </url>
     
   
     
       <url>
-        <loc>https://ize-studio.github.io/projects/</loc>
+        <loc>https://ize-studio.github.io/fiction/</loc>
         
       </url>
     
@@ -67,7 +67,7 @@
   
     
       <url>
-        <loc>https://ize-studio.github.io/shop/</loc>
+        <loc>https://ize-studio.github.io/projects/</loc>
         
       </url>
     
@@ -106,6 +106,11 @@
   
     
   
+  
+    <url>
+      <loc>https://ize-studio.github.io/posts/essays/husserl-husserl.html</loc>
+      <lastmod>2026-09-28T00:00:00+09:00</lastmod>
+    </url>
   
     <url>
       <loc>https://ize-studio.github.io/posts/essays/solving-a-cipher-with-chatgpt-fixed.html</loc>
