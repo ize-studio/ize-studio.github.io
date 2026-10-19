@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
+    
+    
+    
+    
+    
     <title>Making Hangul Type | BOUNDARY</title>
     <meta name="description" content="Before talking about the thought that I should make multilingual input a reality, it seems right to first tell the story of implementing Korean. That is beca...">
     <link rel="canonical" href="https://ize-studio.github.io/posts/projects/making-hangul-type.html">
+    <link rel="alternate" hreflang="en" href="https://ize-studio.github.io/posts/projects/making-hangul-type.html">
+    
+      <link rel="alternate" hreflang="ko" href="https://ize-studio.github.io/ko/posts/brunch-414.html">
+    
+    <link rel="alternate" hreflang="x-default" href="https://ize-studio.github.io/">
     <meta property="og:site_name" content="BOUNDARY">
     <meta property="og:title" content="Making Hangul Type | BOUNDARY">
     <meta property="og:description" content="Before talking about the thought that I should make multilingual input a reality, it seems right to first tell the story of implementing Korean. That is beca...">
@@ -24,8 +34,15 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="alternate" type="application/atom+xml" title="BOUNDARY" href="/feed.xml">
   </head>
-  <body class="layout-post">
-    <a class="skip-link" href="#content">Skip to content</a>
+  <body class="layout-post lang-en">
+    
+
+
+
+
+
+
+<a class="skip-link" href="#content">Skip to content</a>
 <header class="site-header">
   <a class="site-title" href="/" aria-label="BOUNDARY by RUP L.">
     <span class="site-title__name">BOUNDARY</span>
@@ -49,6 +66,7 @@
     
       <a href="/about/">About</a>
     
+    <a class="language-switch" href="/ko/posts/brunch-414.html" lang="ko" hreflang="ko">한국어</a>
   </nav>
   <details class="mobile-menu">
     <summary>Menu</summary>
@@ -70,12 +88,22 @@
       
         <a href="/about/">About</a>
       
+      <a class="language-switch" href="/ko/posts/brunch-414.html" lang="ko" hreflang="ko">한국어</a>
     </nav>
   </details>
 </header>
 
     <main class="site-main" id="content">
       
+
+
+
+
+
+
+
+
+
 
 
 <article class="article">
@@ -88,6 +116,14 @@
     <p class="article-meta">
       <time datetime="2026-06-22T00:00:00+09:00">June 22, 2026</time>
     </p>
+    
+      <p class="article-translation">
+        
+          <a href="/ko/posts/brunch-414.html" hreflang="ko">한국어 원문 →</a>
+        
+        
+      </p>
+    
   </header>
 
   <div class="article-body">
@@ -117,10 +153,6 @@
 
 <p>In fact, the Hangul composition work itself was all finished there. The function that composed Hangul, receiving “ㄱ,” “ㅏ,” and “ㄱ,” and then, if the next input was a space or a consonant, replacing them with the syllable “각” and discarding the old input, was working normally. Now the problem was maintaining the characters that had been made that way. More than the internal operation itself, what the user saw on the screen had become more important. No matter how correctly the internal computation proceeded, the fact that even one character was not visible had become the more important issue.</p>
 
-<hr />
-
-<p>Korean original: <a href="https://brunch.co.kr/@rup-l/414">한글 활자 만들기</a></p>
-
   </div>
 
   <nav class="post-navigation" aria-label="Post navigation">
@@ -138,6 +170,7 @@
         <span id="related-writing-title">Related writing</span>
         <span>Same shelf</span>
       </div>
+      
       
       <div class="post-index post-index--compact">
         
@@ -188,6 +221,8 @@
               
 
 
+
+
 <a class="post-index__row post-index__row--compact" href="/posts/projects/wrapping-up.html">
   <time class="post-index__date" datetime="2026-09-06T00:00:00+09:00">Sep 6, 2026</time>
   <span class="post-index__title">Wrapping Up</span>
@@ -217,6 +252,8 @@
               
 
 
+
+
 <a class="post-index__row post-index__row--compact" href="/posts/projects/actual-use-is-the-best-review.html">
   <time class="post-index__date" datetime="2026-08-31T00:00:00+09:00">Aug 31, 2026</time>
   <span class="post-index__title">Actual Use Is the Best Review</span>
@@ -235,6 +272,8 @@
             
               
               
+
+
 
 
 <a class="post-index__row post-index__row--compact" href="/posts/projects/trying-firmware-without-a-device.html">
@@ -356,7 +395,9 @@
 </article>
 
     </main>
-    <footer class="site-footer">
+    
+
+<footer class="site-footer">
   <div>
     <a class="site-footer__mark" href="/" aria-label="BOUNDARY by RUP L.">
       <span class="site-footer__name">BOUNDARY</span>

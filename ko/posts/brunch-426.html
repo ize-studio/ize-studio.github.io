@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    
+    
+    <title>기기 없이 펌웨어를 써보기? | BOUNDARY</title>
+    <meta name="description" content="우여곡절 끝에 결국 코드까지 깃허브 업로드가 끝났다. 그 뒤로도 두 번인가 업데이트가 더 있었지만 단지 내부 웹페이지 디자인 같은 부수적인 이유에서였지 기능상의 문제가 있는 건 아니었다. 무엇보다도 와이파이를 사용은 하지만 대신 시간제한을 두다시피 한 것과 블루투스 모듈을 사용하지...">
+    <link rel="canonical" href="https://ize-studio.github.io/ko/posts/brunch-426.html">
+    <link rel="alternate" hreflang="ko" href="https://ize-studio.github.io/ko/posts/brunch-426.html">
+    
+      <link rel="alternate" hreflang="en" href="https://ize-studio.github.io/posts/projects/trying-firmware-without-a-device.html">
+    
+    <link rel="alternate" hreflang="x-default" href="https://ize-studio.github.io/">
+    <meta property="og:site_name" content="BOUNDARY">
+    <meta property="og:title" content="기기 없이 펌웨어를 써보기? | BOUNDARY">
+    <meta property="og:description" content="우여곡절 끝에 결국 코드까지 깃허브 업로드가 끝났다. 그 뒤로도 두 번인가 업데이트가 더 있었지만 단지 내부 웹페이지 디자인 같은 부수적인 이유에서였지 기능상의 문제가 있는 건 아니었다. 무엇보다도 와이파이를 사용은 하지만 대신 시간제한을 두다시피 한 것과 블루투스 모듈을 사용하지...">
+    <meta property="og:url" content="https://ize-studio.github.io/ko/posts/brunch-426.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="기기 없이 펌웨어를 써보기? | BOUNDARY">
+    <meta name="twitter:description" content="우여곡절 끝에 결국 코드까지 깃허브 업로드가 끝났다. 그 뒤로도 두 번인가 업데이트가 더 있었지만 단지 내부 웹페이지 디자인 같은 부수적인 이유에서였지 기능상의 문제가 있는 건 아니었다. 무엇보다도 와이파이를 사용은 하지만 대신 시간제한을 두다시피 한 것과 블루투스 모듈을 사용하지...">
+    <meta name="twitter:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    
+      <meta property="article:published_time" content="2026-08-23T23:00:38+09:00">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="BOUNDARY" href="/feed.xml">
+  </head>
+  <body class="layout-post lang-ko">
+    
+
+
+
+
+
+
+<a class="skip-link" href="#content">본문으로 건너뛰기</a>
+<header class="site-header">
+  <a class="site-title" href="/ko/" aria-label="BOUNDARY by RUP L.">
+    <span class="site-title__name">BOUNDARY</span>
+    <span class="site-title__byline">by RUP L.</span>
+  </a>
+  <nav class="site-nav" aria-label="주요 메뉴">
+    
+      <a href="/ko/">처음</a>
+    
+      <a href="/ko/writing/">글</a>
+    
+      <a href="/ko/fiction/">소설</a>
+    
+      <a href="/ko/research/">연구</a>
+    
+      <a href="/ko/projects/">프로젝트</a>
+    
+      <a href="/ko/shop/">상점</a>
+    
+      <a href="/ko/about/">소개</a>
+    
+    <a class="language-switch" href="/posts/projects/trying-firmware-without-a-device.html" lang="en" hreflang="en">English</a>
+  </nav>
+  <details class="mobile-menu">
+    <summary>메뉴</summary>
+    <nav aria-label="모바일 메뉴">
+      
+        <a href="/ko/">처음</a>
+      
+        <a href="/ko/writing/">글</a>
+      
+        <a href="/ko/fiction/">소설</a>
+      
+        <a href="/ko/research/">연구</a>
+      
+        <a href="/ko/projects/">프로젝트</a>
+      
+        <a href="/ko/shop/">상점</a>
+      
+        <a href="/ko/about/">소개</a>
+      
+      <a class="language-switch" href="/posts/projects/trying-firmware-without-a-device.html" lang="en" hreflang="en">English</a>
+    </nav>
+  </details>
+</header>
+
+    <main class="site-main" id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+<article class="article">
+  <header class="article-header">
+    <p class="eyebrow">
+      프로젝트
+    </p>
+    <h1 class="article-title">기기 없이 펌웨어를 써보기?</h1>
+    
+    <p class="article-meta">
+      <time datetime="2026-08-23T23:00:38+09:00">2026년 8월 23일</time>
+    </p>
+    
+      <p class="article-translation">
+        
+          <a href="/posts/projects/trying-firmware-without-a-device.html" hreflang="en">English translation →</a>
+        
+        
+          <a href="https://brunch.co.kr/@rup-l/426" target="_blank" rel="noopener noreferrer">브런치 원문 ↗</a>
+        
+      </p>
+    
+  </header>
+
+  <div class="article-body">
+    <p>우여곡절 끝에 결국 코드까지 깃허브 업로드가 끝났다. 그 뒤로도 두 번인가 업데이트가 더 있었지만 단지 내부 웹페이지 디자인 같은 부수적인 이유에서였지 기능상의 문제가 있는 건 아니었다. 무엇보다도 와이파이를 사용은 하지만 대신 시간제한을 두다시피 한 것과 블루투스 모듈을 사용하지 않기로 한 것이 잘한 결정이라는 생각이 갈수록 강해졌다. 기기를 블루투스 외장 키보드처럼 사용할 수 있게 하려고 했지만 블루투스 모듈이 배터리를 생각보다 심하게 소모하였기 때문에 시중에 있는 키보드처럼 사용하는 것이 거의 불가능한 수준이었어서 실제 사용해 보고 내린 결정이었다.</p>
+
+<p>최종 펌웨어 소식을 레딧에 올리고 쉬고 있었는데, 문득 그런 생각이 들었다.</p>
+
+<p>‘솔직히 이게 제품 팔아먹으려는 홍보도 아니고 그냥 이런 걸 만들었으니 한 번 써보라는 건데 홈페이지를 만들고 링크 게시하는 게 맞나? 그냥 써보라는 거면 써볼 수 있게만 해주면 되는 거 아닌가?’</p>
+
+<p>이게 억지는 아닌 게, 어차피 펌웨어도 내가 만든 것이 아니라 내가 ‘기획’을 했지 실제로는 코덱스가 만든 것이나 다름없었기 때문에 해당 펌웨어와 같은 구조를 가진 시뮬레이터 같은 것을 만드는 것도 불가능해 보이지 않았던 것이었다. 길게 생각할 것 없이 바로 코덱스에게 물어보았다.</p>
+
+<p>“이 펌웨어와 동일한 기능이지만 레딧에서 바로 사용할 수 있을 것 같은 시뮬레이터 만들어 볼 수 있어?”</p>
+
+<p>“있습니다.”</p>
+
+<p>“어떤 방법을 원하는지 물어보지도 않고 그냥 할 수 있다는 거야?”</p>
+
+<p>“레딧에서 사람들이 바로 사용할 수 있으려면 웹브라우저에서 실행하는 것이 가장 낫습니다. 코드도 복잡하지 않고 따로 설치할 필요도 없고요.”</p>
+
+<p>“그럼 만들어 봐.”</p>
+
+<p>지금이야 아무것도 아니었던 것처럼 이야기하지만 시뮬레이터 코드를 만들 때도 어이가 없는 실수가 워낙 많아서 스무 번 정도는 수정을 거쳐야 했다.</p>
+
+<p>‘내가 펌웨어를 만들려고 했지 시뮬레이터를 만들려고 한 것도 아닌데 이게 이렇게 신경 쓰이게 질질 끌 일인가?’</p>
+
+<p>하는 생각이 들 정도로 또다시 디버깅의 반복이었다.</p>
+
+<ol>
+  <li>
+    <p>화면이 제로라이터와 같지 않았다. 너무 가로로 길거나 정사각형이거나.</p>
+  </li>
+  <li>
+    <p>키 배열이 제로라이터와 같지 않았다. 범용 키보드처럼 화살표가 옆으로 따로 떨어져 있거나 메뉴키가 없었다.</p>
+  </li>
+</ol>
+
+<p>심지어 이 두 가지는 제로라이터의 사진을 입력하고 똑같이 그리라고 했는데도 대여섯 번 반복된 일이었다. 더 약이 오른 것은 대여섯 번 반복하자 그제야</p>
+
+<p>‘이번에는 올려주신 사진을 참조해서 수정하겠습니다.’</p>
+
+<p>라고 한 것이었다. 이제까지 뭘 보고 수정했는지 따지고 싶었지만 솔직히 이 정도는 싸우고 싶은 생각도 들지 않을 정도로 흔한 일이었다.</p>
+
+<p>겉으로 보기에 비율이나 화면 크기, 메뉴 등을 비슷하게 맞춘 후에는 메뉴를 다듬기 시작했다. 메뉴의 동작은 똑같긴 했지만 아예 웹페이지 설정까지 구현하고 싶었던 것이다. 웹페이지 접속화면과 비밀번호 설정까지 똑같이 표시되게 한 후,  언어 선택, 글자 크기 등의 조정도 실제로 적용되게 만들고 나니 마지막 욕심으로 깃허브 연결까지 구현시켰다. 확실히 그냥 똑같이 하라고 하는 것보다 하나씩 요구사항을 추가하는 것이 결과물이 훨씬 좋은 것 같다.</p>
+
+<p>기능은 만들어 놓았지만 나는 브라우저 시뮬레이터는 실제 깃허브를 연결해서 사용하지는 않는다. 심지어 연결 자체를 해보지도 않았다. 기존에 사용하던 리포지토리에서 글 목록이 충돌하는 것을 원하지도 않았지만 솔직히 시뮬레이터인데 누군가 실제로 깃허브 토큰을 발행받아서 연동할 것 같지도 않았던 것이다. 겉으로는 동기화도 잘되고 업데이트도 되는 것처럼 모양을 만들어 놓기는 했다.</p>
+
+<p>마지막으로 디테일을 하나 살렸다. 글자를 칠 때 화면에 바로바로 표시되던 것을 실제 전자잉크화면처럼 약간의 딜레이를 주고 키보드에서 알트키로 유럽어의 악센트를 표시하는 기능도 펌웨어와 동일하게 동작하게 했다. 그리고 마지막으로 컨트롤 키나 시프트 키를 누를 때 길게 누르면 터치화면에서 오른쪽 마우스로 인식해서 팝업메뉴가 뜨는 것도 막았다. 마지막이라는 생각으로 태블릿에서 사용할 때 불편한 점을 찾아내서 팝업메뉴를 막은 것이었는데 그러고 나니 또다시 마지막으로 하고 싶은 것이 또 생겼다. 바로 펌웨어와 똑같은 잠자기 화면이었다. 타자기의 활자들이 모여있는 사진이 그것이다.</p>
+
+<p>그러고 나니 이제는 더 이상 마지막이 없었다. 깃허브의 Ize Compose 리포지토리와 웹페이지에 시뮬레이터 코드 페이지를 추가하고 다운로드 링크를 만들었다. 누구나 HTML로 된 코드를 보고 확인한 후 다운로드하여 사용할 수 있다. 웹버전이라 빌드도 필요 없다. 전자잉크 기기를 하나 더 사고 싶지만 가격과 사용 빈도 때문에 망설였다면 그냥 가지고 있는 태블릿에서 사용하면 된다. 웹브라우저에서 여는 것이어서 윈도우건 안드로이드건 상관도 없다. 일반 노트북이나 데스크탑에서도 그냥 키보드를 사용하면 된다. 그러다 보니 태블릿 시뮬레이터로 글을 쓸 수도 있겠다는 생각이 들었다. 하지만 어쨌든 나는 화면의 키보드로 장기간 글을 쓴다는 건 사실 내게는 불가능한 일이라고 생각하기 때문에 시도는 하지 않았다.</p>
+
+<p>펌웨어와는 다르게 브라우저 기반의 시뮬레이션 도구는 정말 장난감 같은 느낌이다. 재미있다.</p>
+
+  </div>
+
+  <nav class="post-navigation" aria-label="글 이동">
+    
+      <a href="/ko/posts/brunch-425.html">← 제미나이 너마저...</a>
+    
+    
+      <a href="/ko/posts/brunch-427.html">실사용기는 실사용이 최고 →</a>
+    
+  </nav>
+
+  
+    <aside class="related-writing" aria-labelledby="related-writing-title">
+      <div class="section-heading">
+        <span id="related-writing-title">같은 분류의 글</span>
+        <span>같은 서가</span>
+      </div>
+      
+      
+      <div class="post-index post-index--compact">
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+
+
+<a class="post-index__row post-index__row--compact" href="/ko/posts/brunch-432.html">
+  <time class="post-index__date" datetime="2026-09-06T23:00:22+09:00">2026.09.06</time>
+  <span class="post-index__title">마무리하며</span>
+  <span class="post-index__category">프로젝트</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+
+
+<a class="post-index__row post-index__row--compact" href="/ko/posts/brunch-427.html">
+  <time class="post-index__date" datetime="2026-08-30T23:00:21+09:00">2026.08.30</time>
+  <span class="post-index__title">실사용기는 실사용이 최고</span>
+  <span class="post-index__category">프로젝트</span>
+</a>
+
+            
+          
+        
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+
+
+<a class="post-index__row post-index__row--compact" href="/ko/posts/brunch-425.html">
+  <time class="post-index__date" datetime="2026-08-16T23:00:25+09:00">2026.08.16</time>
+  <span class="post-index__title">제미나이 너마저...</span>
+  <span class="post-index__category">프로젝트</span>
+</a>
+
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </aside>
+  
+</article>
+
+    </main>
+    
+
+<footer class="site-footer">
+  <div>
+    <a class="site-footer__mark" href="/ko/" aria-label="BOUNDARY by RUP L.">
+      <span class="site-footer__name">BOUNDARY</span>
+      <span class="site-footer__byline">by RUP L.</span>
+    </a>
+    <p>글 / 프로젝트 / 물건</p>
+  </div>
+  <nav class="site-footer__links" aria-label="External links">
+    <a href="https://github.com/ize-studio/ize-compose" target="_blank" rel="noopener noreferrer">Ize Compose ↗</a>
+    <a href="https://github.com/ize-studio/ize-compose/tree/emulator" target="_blank" rel="noopener noreferrer">Emulator ↗</a>
+    <a href="https://brunch.co.kr/@rup-l" target="_blank" rel="noopener noreferrer">Brunch ↗</a>
+    <a href="https://www.youtube.com/@ize-studio" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+    <a href="https://ko-fi.com/dievesa" target="_blank" rel="noopener noreferrer">Ko-fi ↗</a>
+  </nav>
+  <p class="site-notice">이 사이트의 모든 글은 RUP L.의 창작물입니다. © 2026 RUP L.</p>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    
+    
+    <title>첫 도구 첫 디버깅 | BOUNDARY</title>
+    <meta name="description" content="첫 디버깅은 디버깅이라기보다 소프트웨어 사용 연습에 가까웠다. 애초에 아두이노 자체를 사용해 본 적이 없는 나로서는 소프트웨어 메뉴부터 모든 것이 생소했기 때문이다. 메뉴에서 지금 만드는 코드가 어떤 하드웨어에서 동작할 것인지조차 설정해 주어야 했는데, 단지 디스플레이용이라고만 생...">
+    <link rel="canonical" href="https://ize-studio.github.io/ko/posts/brunch-413.html">
+    <link rel="alternate" hreflang="ko" href="https://ize-studio.github.io/ko/posts/brunch-413.html">
+    
+      <link rel="alternate" hreflang="en" href="https://ize-studio.github.io/posts/projects/first-tool-first-debugging.html">
+    
+    <link rel="alternate" hreflang="x-default" href="https://ize-studio.github.io/">
+    <meta property="og:site_name" content="BOUNDARY">
+    <meta property="og:title" content="첫 도구 첫 디버깅 | BOUNDARY">
+    <meta property="og:description" content="첫 디버깅은 디버깅이라기보다 소프트웨어 사용 연습에 가까웠다. 애초에 아두이노 자체를 사용해 본 적이 없는 나로서는 소프트웨어 메뉴부터 모든 것이 생소했기 때문이다. 메뉴에서 지금 만드는 코드가 어떤 하드웨어에서 동작할 것인지조차 설정해 주어야 했는데, 단지 디스플레이용이라고만 생...">
+    <meta property="og:url" content="https://ize-studio.github.io/ko/posts/brunch-413.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="첫 도구 첫 디버깅 | BOUNDARY">
+    <meta name="twitter:description" content="첫 디버깅은 디버깅이라기보다 소프트웨어 사용 연습에 가까웠다. 애초에 아두이노 자체를 사용해 본 적이 없는 나로서는 소프트웨어 메뉴부터 모든 것이 생소했기 때문이다. 메뉴에서 지금 만드는 코드가 어떤 하드웨어에서 동작할 것인지조차 설정해 주어야 했는데, 단지 디스플레이용이라고만 생...">
+    <meta name="twitter:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    
+      <meta property="article:published_time" content="2026-06-15T08:00:14+09:00">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="BOUNDARY" href="/feed.xml">
+  </head>
+  <body class="layout-post lang-ko">
+    
+
+
+
+
+
+
+<a class="skip-link" href="#content">본문으로 건너뛰기</a>
+<header class="site-header">
+  <a class="site-title" href="/ko/" aria-label="BOUNDARY by RUP L.">
+    <span class="site-title__name">BOUNDARY</span>
+    <span class="site-title__byline">by RUP L.</span>
+  </a>
+  <nav class="site-nav" aria-label="주요 메뉴">
+    
+      <a href="/ko/">처음</a>
+    
+      <a href="/ko/writing/">글</a>
+    
+      <a href="/ko/fiction/">소설</a>
+    
+      <a href="/ko/research/">연구</a>
+    
+      <a href="/ko/projects/">프로젝트</a>
+    
+      <a href="/ko/shop/">상점</a>
+    
+      <a href="/ko/about/">소개</a>
+    
+    <a class="language-switch" href="/posts/projects/first-tool-first-debugging.html" lang="en" hreflang="en">English</a>
+  </nav>
+  <details class="mobile-menu">
+    <summary>메뉴</summary>
+    <nav aria-label="모바일 메뉴">
+      
+        <a href="/ko/">처음</a>
+      
+        <a href="/ko/writing/">글</a>
+      
+        <a href="/ko/fiction/">소설</a>
+      
+        <a href="/ko/research/">연구</a>
+      
+        <a href="/ko/projects/">프로젝트</a>
+      
+        <a href="/ko/shop/">상점</a>
+      
+        <a href="/ko/about/">소개</a>
+      
+      <a class="language-switch" href="/posts/projects/first-tool-first-debugging.html" lang="en" hreflang="en">English</a>
+    </nav>
+  </details>
+</header>
+
+    <main class="site-main" id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+<article class="article">
+  <header class="article-header">
+    <p class="eyebrow">
+      프로젝트
+    </p>
+    <h1 class="article-title">첫 도구 첫 디버깅</h1>
+    
+    <p class="article-meta">
+      <time datetime="2026-06-15T08:00:14+09:00">2026년 6월 15일</time>
+    </p>
+    
+      <p class="article-translation">
+        
+          <a href="/posts/projects/first-tool-first-debugging.html" hreflang="en">English translation →</a>
+        
+        
+          <a href="https://brunch.co.kr/@rup-l/413" target="_blank" rel="noopener noreferrer">브런치 원문 ↗</a>
+        
+      </p>
+    
+  </header>
+
+  <div class="article-body">
+    <p>첫 디버깅은 디버깅이라기보다 소프트웨어 사용 연습에 가까웠다. 애초에 아두이노 자체를 사용해 본 적이 없는 나로서는 소프트웨어 메뉴부터 모든 것이 생소했기 때문이다. 메뉴에서 지금 만드는 코드가 어떤 하드웨어에서 동작할 것인지조차 설정해 주어야 했는데, 단지 디스플레이용이라고만 생각했던 잉크플레이트를 선택한다는 것이, 그리고 그것을 선택하기 위해서는 해당 라이브러리를 일일이 다운로드하여야 하는 설정이 있다는 것 자체가 이해가 가지 않았던 것이었다. 소프트웨어뿐만이 아니라 사실 세상에서 내가 해보지 않은 배경 안에서 이루어지는 모든 일들은 단지 ‘원래’라는 미명하에 무조건 외우고 시작해야 하는 것들이 대다수이다. 그럼에도 전용 소프트웨어라고는 아이폰이나 안드로이드 개발환경만 잠깐 보고 말았던 나에게는 생각보다 범용이라고 하면서 전용 개발 툴이 있다는 것이 약간 이상해 보이기는 했다. 그렇지만 그때도 조금 더 밀어붙여서 비주얼 스튜디오 코드에서 하겠다고 했으면 제미나이가 알아서 알려 주었을 텐데 그냥 ‘원래 그런가 보다’라고 생각해서인지 허우적대면서 이 메뉴 저 메뉴를 연습 삼아 잘도 돌아다녔다.</p>
+
+<p>퇴근하고 오면 내가 만들고 싶은 기능을 이야기하고 제미나이는 그 기능을 코드로 만들어주고 나는 다시 그것을 붙여 넣고 변수를 수정하고 빌드해서 업로드하고 테스트하는 과정을 반복했다.</p>
+
+<p>첫날 일부가 검게 변하던 화면은 하드웨어를 잘못 선택해서 일어난 것이라는 결론이었다. 제미나이가 알아서 하드웨어 사양을 인터넷을 검색해서 가지고 왔지만 세부 사양은, 특히 경험상 찾아내야 하는 것은 시간만 끌뿐 전혀 해결하지 못했다. 그래도 그 정도 검색 속도 정도도 내가 생각지 못했던 성능이라 ‘처음에는’ 매우 만족했다.</p>
+
+<p>단순히 한글만 사용하는 기능은 사실 4일 만에 완성했다. 영어와 한글을 사용할 수 있게 하고 레딧에 올렸는데 반응이 꽤나 괜찮았다. 정말 괜찮았는지는 모르겠지만, 내게는 생각도 못한 반응이어서 조금 더 나아가 볼까 하는 생각을 하게 되었던 것 같다.</p>
+
+<p>이때 생각을 바꿔서 어차피 나 혼자 사용하려고 한 것이니 한국인들만 혹시나 나처럼 한글이 안 돼서 아깝게 기계를 버리게 되면 그러지 말고 이렇게라도 쓰자고 했으면 싱겁긴 해도 깔끔한 결론이 나지 않았을까 싶다.  왜냐하면, 컨트롤 키와 스페이스바를 눌러서 한영 전환하는 기능도 괜찮았고, 어차피 텍스트 파일이 SD카드에 저장되는 것은 원래 제로라이터 펌웨어와 비슷했기 때문이다. 두 달 동안 뛰어다닌 것은… 사실 정확히 말하면 한 달 10일, 약 38일 정도이지만 그동안 뛰어다닌 건 언어를 확장하고 자랑하려고 준비를 하고 나니 그제야 눈에 띄기 시작한 버그들을 해결하기 위해서가 가장 큰 이유였기 때문이다.</p>
+
+<p>솔직히 한글 구현을 하고 나서도 글을 쓸 만했다. 글을 쓰는 속도도 그 정도면 괜찮았고, 스위치와 키캡도 구입해서 교체했다. 그런데 그게, 생각보다 빠르게 하고 나니 제미나이를 대단히 과대평가했다는 것을 알지 못했다. 게다가 대화창에서 코드를 받아다가 복사해서 사용하고, 에러가 나면 터미널 창을 다시 복사해서 채팅창에 붙여 넣고 결과를 기다리는 과정도 비효율적인 데다가 그때는 몰랐지만, 컴파일하고 업로드하는 데 5분 가까이 걸리는 건 말이 되지 않는다. 정말 5분만 걸렸을까? 그래도 한글 전용 기기는 생각할 것도 별로 없었고 펌웨어로 컴파일을 해도 용량의 대부분이 폰트였기에 그때는 그렇게 많이 걸리지 않았을지도 모르겠다.</p>
+
+<p>처음에는 거기서 아주 조금만 욕심을 부렸다. 영어, 독일어, 프랑스어, 터키어, 몬테네그로어, 한국어 이렇게 다섯 개 언어를 현지 키보드 레이아웃으로 구현하기로 한 것이었다. 그리고 몬테네그로어를 강조하고 싶어서 제미나이에게 몬테네그로어로 괜찮은 단어가 있으면 이야기해 달라고 했다. 잠시 인터넷 검색을 한 제미나이는 몬테네그로어로 ‘지혜’를 뜻하는 Iže가 어떠냐고 했다. 그렇게 해서 펌웨어 이름이 <이제>로 결정되었다.</이제></p>
+
+<p>다섯 개 언어로 확장하고 깃허브에 코드를 모두 공개했다. 그때쯤 제로라이터 측에서 크라우드펀딩 페이지에 내 깃허브 링크를 싣고 이와 같은 오픈소스 생태계를 만드는 것이 처음부터 오픈소스로 진행하게 된 계기였다고 소개해 주었다. 안 그래도 반응이 생각보다 좋다고 생각하던 차에 소개를 받고 나니 당연히 저 다섯 개 언어로 만족할 수가 없었고 그다음 수순은, 당연히도 혼자 쓰는 기계에서 영어권 외의 모든 사람들을 위한 펌웨어로 갈 수밖에 없지 않았을까?</p>
+
+  </div>
+
+  <nav class="post-navigation" aria-label="글 이동">
+    
+      <a href="/ko/posts/brunch-412.html">← 키보드가 앞에 있으면</a>
+    
+    
+      <a href="/ko/posts/brunch-414.html">한글 활자 만들기 →</a>
+    
+  </nav>
+
+  
+    <aside class="related-writing" aria-labelledby="related-writing-title">
+      <div class="section-heading">
+        <span id="related-writing-title">같은 분류의 글</span>
+        <span>같은 서가</span>
+      </div>
+      
+      
+      <div class="post-index post-index--compact">
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+
+
+<a class="post-index__row post-index__row--compact" href="/ko/posts/brunch-432.html">
+  <time class="post-index__date" datetime="2026-09-06T23:00:22+09:00">2026.09.06</time>
+  <span class="post-index__title">마무리하며</span>
+  <span class="post-index__category">프로젝트</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+
+
+<a class="post-index__row post-index__row--compact" href="/ko/posts/brunch-427.html">
+  <time class="post-index__date" datetime="2026-08-30T23:00:21+09:00">2026.08.30</time>
+  <span class="post-index__title">실사용기는 실사용이 최고</span>
+  <span class="post-index__category">프로젝트</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+
+
+<a class="post-index__row post-index__row--compact" href="/ko/posts/brunch-426.html">
+  <time class="post-index__date" datetime="2026-08-23T23:00:38+09:00">2026.08.23</time>
+  <span class="post-index__title">기기 없이 펌웨어를 써보기?</span>
+  <span class="post-index__category">프로젝트</span>
+</a>
+
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </aside>
+  
+</article>
+
+    </main>
+    
+
+<footer class="site-footer">
+  <div>
+    <a class="site-footer__mark" href="/ko/" aria-label="BOUNDARY by RUP L.">
+      <span class="site-footer__name">BOUNDARY</span>
+      <span class="site-footer__byline">by RUP L.</span>
+    </a>
+    <p>글 / 프로젝트 / 물건</p>
+  </div>
+  <nav class="site-footer__links" aria-label="External links">
+    <a href="https://github.com/ize-studio/ize-compose" target="_blank" rel="noopener noreferrer">Ize Compose ↗</a>
+    <a href="https://github.com/ize-studio/ize-compose/tree/emulator" target="_blank" rel="noopener noreferrer">Emulator ↗</a>
+    <a href="https://brunch.co.kr/@rup-l" target="_blank" rel="noopener noreferrer">Brunch ↗</a>
+    <a href="https://www.youtube.com/@ize-studio" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+    <a href="https://ko-fi.com/dievesa" target="_blank" rel="noopener noreferrer">Ko-fi ↗</a>
+  </nav>
+  <p class="site-notice">이 사이트의 모든 글은 RUP L.의 창작물입니다. © 2026 RUP L.</p>
+</footer>
+
+  </body>
+</html>

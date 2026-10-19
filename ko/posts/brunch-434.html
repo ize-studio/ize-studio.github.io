@@ -1,0 +1,907 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    
+    
+    <title>chatGPT로 암호문 풀기 | BOUNDARY</title>
+    <meta name="description" content="문학과지성사에서 나온 &lt;축음기, 영화, 타자기&gt;라는 책의 마지막에 나오는 아르노 슈미트 암호문이다. 챗지피티에게 물어보니 아직도 딱히 해독되지는 않았다고 했다. 이런 용도가 맞는지 모르겠지만 나는 언어모델에게 사람은 지겨워서 매달려 있지 못하는 연속적인 사고를 시키는 것...">
+    <link rel="canonical" href="https://ize-studio.github.io/ko/posts/brunch-434.html">
+    <link rel="alternate" hreflang="ko" href="https://ize-studio.github.io/ko/posts/brunch-434.html">
+    
+      <link rel="alternate" hreflang="en" href="https://ize-studio.github.io/posts/essays/solving-a-cipher-with-chatgpt-fixed.html">
+    
+    <link rel="alternate" hreflang="x-default" href="https://ize-studio.github.io/">
+    <meta property="og:site_name" content="BOUNDARY">
+    <meta property="og:title" content="chatGPT로 암호문 풀기 | BOUNDARY">
+    <meta property="og:description" content="문학과지성사에서 나온 &lt;축음기, 영화, 타자기&gt;라는 책의 마지막에 나오는 아르노 슈미트 암호문이다. 챗지피티에게 물어보니 아직도 딱히 해독되지는 않았다고 했다. 이런 용도가 맞는지 모르겠지만 나는 언어모델에게 사람은 지겨워서 매달려 있지 못하는 연속적인 사고를 시키는 것...">
+    <meta property="og:url" content="https://ize-studio.github.io/ko/posts/brunch-434.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="chatGPT로 암호문 풀기 | BOUNDARY">
+    <meta name="twitter:description" content="문학과지성사에서 나온 &lt;축음기, 영화, 타자기&gt;라는 책의 마지막에 나오는 아르노 슈미트 암호문이다. 챗지피티에게 물어보니 아직도 딱히 해독되지는 않았다고 했다. 이런 용도가 맞는지 모르겠지만 나는 언어모델에게 사람은 지겨워서 매달려 있지 못하는 연속적인 사고를 시키는 것...">
+    <meta name="twitter:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    
+      <meta property="article:published_time" content="2026-09-11T06:24:21+09:00">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="BOUNDARY" href="/feed.xml">
+  </head>
+  <body class="layout-post lang-ko">
+    
+
+
+
+
+
+
+<a class="skip-link" href="#content">본문으로 건너뛰기</a>
+<header class="site-header">
+  <a class="site-title" href="/ko/" aria-label="BOUNDARY by RUP L.">
+    <span class="site-title__name">BOUNDARY</span>
+    <span class="site-title__byline">by RUP L.</span>
+  </a>
+  <nav class="site-nav" aria-label="주요 메뉴">
+    
+      <a href="/ko/">처음</a>
+    
+      <a href="/ko/writing/">글</a>
+    
+      <a href="/ko/fiction/">소설</a>
+    
+      <a href="/ko/research/">연구</a>
+    
+      <a href="/ko/projects/">프로젝트</a>
+    
+      <a href="/ko/shop/">상점</a>
+    
+      <a href="/ko/about/">소개</a>
+    
+    <a class="language-switch" href="/posts/essays/solving-a-cipher-with-chatgpt-fixed.html" lang="en" hreflang="en">English</a>
+  </nav>
+  <details class="mobile-menu">
+    <summary>메뉴</summary>
+    <nav aria-label="모바일 메뉴">
+      
+        <a href="/ko/">처음</a>
+      
+        <a href="/ko/writing/">글</a>
+      
+        <a href="/ko/fiction/">소설</a>
+      
+        <a href="/ko/research/">연구</a>
+      
+        <a href="/ko/projects/">프로젝트</a>
+      
+        <a href="/ko/shop/">상점</a>
+      
+        <a href="/ko/about/">소개</a>
+      
+      <a class="language-switch" href="/posts/essays/solving-a-cipher-with-chatgpt-fixed.html" lang="en" hreflang="en">English</a>
+    </nav>
+  </details>
+</header>
+
+    <main class="site-main" id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+<article class="article">
+  <header class="article-header">
+    <p class="eyebrow">
+      에세이
+    </p>
+    <h1 class="article-title">chatGPT로 암호문 풀기</h1>
+    
+    <p class="article-meta">
+      <time datetime="2026-09-11T06:24:21+09:00">2026년 9월 11일</time>
+    </p>
+    
+      <p class="article-translation">
+        
+          <a href="/posts/essays/solving-a-cipher-with-chatgpt-fixed.html" hreflang="en">English translation →</a>
+        
+        
+          <a href="https://brunch.co.kr/@rup-l/434" target="_blank" rel="noopener noreferrer">브런치 원문 ↗</a>
+        
+      </p>
+    
+  </header>
+
+  <div class="article-body">
+    <p>문학과지성사에서 나온 &lt;<a href="https://aladin.kr/p/7ezTw">축음기, 영화, 타자기</a>&gt;라는 책의 마지막에 나오는 아르노 슈미트 암호문이다.  챗지피티에게 물어보니 아직도 딱히 해독되지는 않았다고 했다. 이런 용도가 맞는지 모르겠지만 나는 언어모델에게 사람은 지겨워서 매달려 있지 못하는 연속적인 사고를 시키는 것을 주용도로 사용하게 된지라 이 암호문도 푼다는 정도는 아니더라도 어느 정도 과정이라도 보면 재미있지 않을까 싶어 밀어붙여 보았다. 처음부터 순탄한 건 아니었고 채팅창을 한 번 다시 열면서 이틀 정도 매달렸더니 뭔가 나오긴 했다.</p>
+
+<p>나 :</p>
+
+<p>읽을 수 있는 부분이 여섯 줄이잖아. 여섯 부분으로 나눌 수 있다고 치고 각각 다른 기법으로 풀어봐. 나누는 것부터가 숙제이지만. 문장부호는 일단 암호화된 게 아니라고 치고. 그러니까 !?!:!로 구분되는 거지.</p>
+
+<p>GPT :</p>
+
+<p>문장부호를 살아 있는 경계로 놓으면 6분할은 이게 가장 자연스럽습니다. Glent 31, glent 14 Po는 본문이 아니라 뒤에 붙은 해독 힌트/검산문으로 따로 두겠습니다. 실제로 여섯 부분에 서로 다른 방식을 하나씩 걸어봤습니다.</p>
+
+<ol>
+  <li>8 c 357 8xup ZEUs! — 시각치환/leet + 재배열</li>
+</ol>
+
+<p>3→E, 5→S, 7→T를 쓰면 c 357 → C EST → C’EST가 정확히 나옵니다. 그리고 ZEUs → SUEZ는 완전한 애너그램입니다. 더구나 포츠담 회담에서 실제로 수에즈 운하 문제가 Stalin·Churchill 측 사이에서 논의됐습니다.</p>
+
+<p>따라서 현재 읽히는 뼈대는 … C’EST … SUEZ! 입니다. 8과 8xup은 아직 확정 못 했습니다.</p>
+
+<ol>
+  <li>id 21v18 Pt 7 gallisc 314002a 17? — 문헌/책 암호</li>
+</ol>
+
+<p>여기서는 Caesar shift보다 Pt 7 gallisc가 “Part 7, Gallic [War]”, 즉 카이사르 《갈리아 전쟁》 7권을 가리킨다고 보는 쪽이 훨씬 강합니다. 실제 7권에는 17·18·21장이 모두 존재합니다.</p>
+
+<p>그래서 21v18 … 17을 장/절 좌표처럼 대입해 봤지만 314002a까지 일관되게 풀리지는 않았습니다. 2번은 아직 해독 실패입니다.</p>
+
+<ol>
+  <li>V 31 GpU 4a 29, 39, 49? — 역사 약호/연도</li>
+</ol>
+
+<p>GpU는 GPU로 읽는 게 매우 강합니다. 기존 연구에서도 그렇게 읽습니다.</p>
+
+<p>그리고 29, 39, 49를 1929·1939·1949로 놓으면 각각 소련 비밀경찰 조직명이 OGPU → NKVD → MGB로 바뀌는 시기와 맞물립니다. 따라서 이 부분은 GPU라는 동일한 국가폭력기관의 변신을 묻는 식의 문장으로 보이지만, V 31 / 4a가 안 풀려 문장 확정은 아직 못 합니다.</p>
+
+<ol>
+  <li>mz 71Fi16 34007129 pp 34 udi19jem 13349 bubu WEg! — 원소번호→원소기호→애너그램</li>
+</ol>
+
+<p>여기서 처음으로 아주 세게 걸립니다.</p>
+
+<p>71=Lu, 16=S → Lu + Fi + S → FUSIL(프랑스어 ‘소총’).</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>더 강한 것은 13349 = 13</td>
+      <td>34</td>
+      <td>9 = Al</td>
+      <td>Se</td>
+      <td>F → FALSE가 정확히 됩니다. 그런데 13349는 동시에 이 글을 쓴 날짜 13.3.49이기도 합니다. 작성일 자체가 본문에 들어 있다는 것은 기존 연구에서도 확인됩니다.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>즉 <strong>FUSIL … FALSE … WEG!</strong>까지 실제 글자가 떨어집니다. 4번은 상당히 유력합니다.</p>
+
+<ol>
+  <li>Muff 19 exi; … FlisCh 26: — 어순/철자 재배열 + 다언어</li>
+</ol>
+
+<p>다른 기법을 걸었더니 오히려 재미있는 게 나옵니다. asti siv의 문자만 재배열하면 정확히 ISTA VIS(라틴어 ‘저 힘/그 힘’)가 됩니다. 그런데 이 구간에서도 원소표 방식이 다시 출현합니다.</p>
+
+<p>pem + 8(O) → POEM, FR26a, 즉 FR + Fe + a → AFFRE(프랑스어 ‘공포’), FlisCh + 26(Fe)에서는 기존 F와 Fe의 F를 겹치면 남는 E를 넣어 FLEISCH가 정확히 만들어집니다.</p>
+
+<p>그래서 5번은 4번과 완전히 다른 암호라기보다 ‘다언어 애너그램’에 원소표를 섞은 방식일 가능성이 높아졌습니다.</p>
+
+<ol>
+  <li>iwo – 18447 g7 gg! — 날짜+단위+역사 사건</li>
+</ol>
+
+<p>이건 거의 풀립니다. 18447 = 18.4.47, g7 gg ≈ 7 Gg. 1947년 4월 18일 영국군이 헬골란트에서 약 6,700톤의 폭약을 폭파했고, SI로 약 6.7 Gg ≈ 7 Gg입니다. 기존 연구에서도 바로 이 해독을 제시합니다.</p>
+
+<p>따라서 뒤쪽은 “18.4.1947 — 약 7 Gg!” = 헬골란트 대폭파로 상당히 확실합니다. iwo는 Iwo [Jima]처럼 보이지만 아직 확정하지 않겠습니다.</p>
+
+<p>그리고 마지막 줄이 중요합니다.</p>
+
+<p>Glent 31 → 31=Ga → Glent + Ga → GELANGT</p>
+
+<p>glent 14 → 14=Si → glent + Si → GELINST</p>
+
+<p>Po 자체도 원소기호입니다. gelinst는 실제 독일어 linsen의 과거분사입니다.</p>
+
+<p>이건 꽤 큽니다. 31과 14를 원소번호로 읽으라는 힌트가 마지막 줄에 박혀 있고, 그 방법을 4·5번에 되돌려 넣었을 때 FUSIL·FALSE·POEM 같은 정확한 단어가 연달아 나옵니다.</p>
+
+<p>그러니까 “문장부호로 6개를 먼저 자른다”는 방향은 상당히 좋고, 실험 결과는 6개가 전부 다른 암호라기보다는 구간마다 다른 장치를 쓰되 원소표+문자재배열이 여러 구간을 관통하는 구조 쪽으로 기울었습니다.</p>
+
+<p>( <a href="https://chatgpt.com/s/t_6aa39b66afcc81919d86fc8b1ae03f92">https://chatgpt.com/s/t_6aa39b66afcc81919d86fc8b1ae03f92</a> )</p>
+
+<p>나 :</p>
+
+<p>더 밀어붙여 봐.</p>
+
+<p>GPT :</p>
+
+<p>죄송합니다. 더 밀어보니 하나가 크게 걸렸습니다.</p>
+
+<ol>
+  <li>8 c 357 8xup ZEUs !</li>
+</ol>
+
+<table>
+  <tbody>
+    <tr>
+      <td>여기는 아직 두 독해가 경쟁합니다. c 357 → C EST → C’EST, ZEUs → SUEZ가 되고, 동시에 주기율표로 357 = 3</td>
+      <td>57 = Li</td>
+      <td>La → LILA도 정확히 됩니다. 즉 처음부터 숫자→문자와 재배열을 중첩시킨 것 같습니다. 8xup은 아직 못 닫았습니다.</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li>id 21v18 Pt 7 gallisc 314002a 17 ?</li>
+</ol>
+
+<p>gallisc는 그냥 깨진 gallisch가 아니라 실제 고대영어 단어로 <strong>“Gaulish/French”</strong>입니다. 그래서 제가 앞서 잡았던 단순 Caesar 7권 책암호보다 범위가 넓습니다. 이 부분은 고전어/문헌 인용형으로 계속 보는 게 맞지만 아직 문장을 못 만들었습니다.</p>
+
+<ol>
+  <li>V 31 GpU 4a 29, 39, 49 ?</li>
+</ol>
+
+<p>GpU는 소련 GPU로 보는 것이 가장 강하고, 29,39,49는 1929·1939·1949의 기관 변천을 묻는 구조가 가장 자연스럽습니다. 기존 연구도 GpU를 소련 기관으로 읽습니다.</p>
+
+<p>즉 3번은 약호+연대 퀴즈 쪽입니다.</p>
+
+<ol>
+  <li>mz 71Fi16 … 13349 bubu WEg !</li>
+</ol>
+
+<p>여기서 주기율표 방식이 거의 잡혔습니다.</p>
+
+<p>71 = Lu, 16 = S</p>
+
+<p>71Fi16 → LuFiS → FUSIL</p>
+
+<p>그런데 더 강한 게 있습니다.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>13349 = 13</td>
+      <td>34</td>
+      <td>9 = Al</td>
+      <td>Se</td>
+      <td>F → ALSEF → FALSE</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>정확히 다섯 글자입니다.</p>
+
+<ol>
+  <li>긴 다섯째 부분에서 결정적인 반복이 나왔습니다.</li>
+</ol>
+
+<table>
+  <tbody>
+    <tr>
+      <td>13999 = 13</td>
+      <td>9</td>
+      <td>99 = Al</td>
+      <td>F</td>
+      <td>Es → ALFES → FALSE</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>즉 서로 다른 숫자열</p>
+
+<p>13349 → FALSE</p>
+
+<p>13999 → FALSE</p>
+
+<p>가 똑같은 단어를 만듭니다. 이건 우연으로 보기 굉장히 어렵습니다.</p>
+
+<p>게다가 같은 부분에서:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>070 = 0</td>
+      <td>70 → O</td>
+      <td>Yb → OYB → BOY</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>19o37 = 19</td>
+      <td>o</td>
+      <td>37 → K</td>
+      <td>o</td>
+      <td>Rb → KORB</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>pem 8 = pem + O → POEM</p>
+
+<p>FR26a = FR + Fe + a → AFFRE</p>
+
+<p>FlisCh 26에서 26=Fe를 써 F를 Fe로 확장하면 → FLEISCH</p>
+
+<p>까지 연달아 나옵니다.</p>
+
+<p>더 놀라운 건 13999 … 48입니다. 13999를 동시에 13.9.1899로 읽으면, 바로 그날 영국 전쟁장관 Lansdowne가 트란스발 전쟁에 필요한 병력을 48,000명으로 계산했습니다. 암호문에도 정확히 13999 … 48,이 붙어 있습니다.</p>
+
+<p>그러니까 13999는 한쪽으로 읽으면 FALSE, 다른 쪽으로 읽으면 13.9.1899입니다. 같은 숫자열에 두 독해를 겹친 흔적이 생겼습니다.</p>
+
+<p>그리고 1012도 다시 봐야 합니다. 편지가 1949년 3월 작성됐으므로 가장 가까운 정치적 10.12는 1948년 12월 10일 세계인권선언 채택일입니다. 더구나 그 표결이 찬성 48, 반대 0, 기권 8이었습니다. 이 부분 안에 실제로 48과 8이 모두 있습니다. 아직 배열까지 닫힌 것은 아니지만 우선순위가 상당히 높아졌습니다.</p>
+
+<ol>
+  <li>iwo – 18447 g7 gg !</li>
+</ol>
+
+<p>이쪽은 거의 닫혔습니다. 18447 = 18.4.47, 그날 영국이 헬골란트에서 약 6,700톤의 폭약을 폭파했고, 이것을 SI로 쓰면 약 6.7 Gg ≈ 7 Gg입니다. 기존 연구도 정확히 같은 해독을 얻었습니다.</p>
+
+<p>따라서 iwo – [Helgoland,] 18.4.47, 7 Gg!처럼 Iwo Jima와 Helgoland를 나란히 놓은 전쟁폭력 비교일 가능성이 높습니다.</p>
+
+<p>그리고 여섯 부분 뒤의</p>
+
+<p>Glent 31, glent 14 Po</p>
+
+<p>는 본문보다 해독 열쇠일 가능성이 더 커졌습니다.</p>
+
+<p>31 = Ga</p>
+
+<p>Glent + Ga → GLENTGA → GELANGT</p>
+
+<p>그리고 마지막 Po 자체가 원소기호입니다. 즉 여기서 대놓고 <strong>“원자번호 → 원소기호 → 문자 재배열”</strong>을 알려준 셈입니다.</p>
+
+<p>더 중요한 것은 이제 구조가 보인다는 겁니다. 기존 연구도 문장부호가 의미 단위를 정한다고 보면서 고전적인 단일 치환암호는 아니라고 결론냈습니다. 지금 결과는 그보다 한 단계 더 갑니다.</p>
+
+<p>같은 문자열을 날짜·원소번호·약어·외국어·애너그램으로 중첩해서 읽게 만든 압축문입니다.</p>
+
+<p>특히 13349 → FALSE와 13999 → FALSE의 이중 적중, 그리고 13999 → 13.9.1899 → 48,000의 역사적 적중은 지금까지 나온 것 중 가장 강합니다. 여기서부터는 5번을 중심으로 앞뒤 단어까지 역으로 복원할 수 있습니다.</p>
+
+<p>( <a href="https://chatgpt.com/s/t_6aa39be24d708191959b1302c41bf82c">https://chatgpt.com/s/t_6aa39be24d708191959b1302c41bf82c</a> )</p>
+
+<p>나 :</p>
+
+<p>중간에 왜 쪼개? 멈추지 말고 계속해.</p>
+
+<p>GPT :</p>
+
+<p>죄송합니다. 제가 중간 결과를 내놓고 거기서 멈춘 게 잘못입니다. 계속 밀었어야 했습니다.</p>
+
+<p>여섯 구간을 끝까지 다시 돌려보니, 분할 자체는 ! ? ? ! : !가 상당히 강합니다. 실제 연구에서도 문장부호가 의미 단위를 나누는다고 봅니다.</p>
+
+<ol>
+  <li>8 c 357 8xup ZEUs !</li>
+</ol>
+
+<p>여기서는 형태변환/뒤집기가 가장 강합니다. ZEUs → SUEZ는 정확합니다. c 357 → c’est도 3→E, 5→S, 7→T로 읽으면 나옵니다. 그러면 프랑스어 계열이 생깁니다. 문제는 8, 8xup. 주기율표까지 넣어 8=O로 하면 8xup → Oxup → POUX가 정확한 프랑스어 애너그램이지만, 전체 문장이 안 닫힙니다. 1번은 프랑스어+시각변환 가능성이 높지만 아직 미해결.</p>
+
+<ol>
+  <li>id 21v18 Pt 7 gallisc 314002a 17 ?</li>
+</ol>
+
+<p>이건 성격이 완전히 다릅니다. gallisc는 실제로 ‘Gaulish’를 뜻하는 말이고, 7과 21,18,17의 조합은 Caesar, De Bello Gallico 제7권의 장 번호와 정확히 맞아떨어집니다. 그래서 단순 Caesar shift가 아니라 문헌 좌표/인용 암호 쪽이 강합니다. 314002a가 아직 안 열립니다.</p>
+
+<p>즉 2번은 책/문헌 참조형으로 보고 계속 가는 게 맞습니다.</p>
+
+<ol>
+  <li>V 31 GpU 4a 29, 39, 49 ?</li>
+</ol>
+
+<p>여기서는 역사 연표 문제가 제일 잘 맞습니다. GpU는 소련 GPU로 읽는 것이 기존 연구에서도 가장 유력합니다.</p>
+
+<p>29, 39, 49를 각각 1929·1939·1949로 놓으면 소련 비밀경찰 조직이 시대에 따라 OGPU → NKVD → MGB로 변합니다. 물음표까지 있으니 “그때그때 뭐라고 불렀느냐?”와 같은 연대-명칭 대응 퀴즈일 가능성이 큽니다. V 31, 4a가 남았습니다.</p>
+
+<ol>
+  <li>mz 71Fi16 34007129 pp 34 udi19jem 13349 bubu WEg !</li>
+</ol>
+
+<p>여기서 주기율표+애너그램이 제대로 작동합니다.</p>
+
+<p>71 = Lu, 16 = S</p>
+
+<p>71Fi16 → LuFiS → FUSIL</p>
+
+<p>정확히 같은 다섯 글자입니다. 프랑스어로 소총입니다.</p>
+
+<p>그리고 13349는 별도로 13.3.49, 바로 이 글을 쓴 날짜라는 것이 문헌으로 확인됩니다.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>그런데 같은 문자열을 13</td>
+      <td>34</td>
+      <td>9로 읽으면</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Al</td>
+      <td>Se</td>
+      <td>F → ALSEF → FALSE</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>역시 정확한 애너그램입니다.</p>
+
+<p>이건 앞서 제가 아무 숫자나 마음대로 쪼갠 것과 달리, 뒤의 Glent 31이 실제로 원자번호→원소기호 방식을 확증하기 때문에 다시 살아납니다. 즉 13349는 날짜와 원소번호를 동시에 품게 만든 이중표기일 가능성이 있습니다.</p>
+
+<p>34007129는 아직 확정 못 했지만 숫자 모양 그대로 34°00′, 71°29′라는 좌표 표기와 매우 닮았습니다. 그렇게 읽으면 페샤와르 부근입니다. 따라서 4번은 여러 종류의 과학적 숫자 표기—원자번호·날짜·좌표—를 섞었을 가능성이 생겼습니다.</p>
+
+<ol>
+  <li>긴 … : 구간</li>
+</ol>
+
+<p>여기서는 다언어 낱말놀이/애너그램이 반복됩니다.</p>
+
+<p>asti siv → ISTA VIS — 정확한 라틴어 배열</p>
+
+<p>pem + 8(O) → PEMO → POEM — 정확</p>
+
+<p>FR26a, 26=Fe → FRFea → AFFRE — 정확한 프랑스어 애너그램</p>
+
+<p>idle → LIED — 정확한 독일어 애너그램</p>
+
+<p>동시에 13999, 19037은 앞의 13349, 18447과 같은 형태여서 날짜일 가능성이 높습니다. 기존 연구도 13999 ≈ 13.9.1899, 19037 ≈ 1937 가능성을 잡았습니다.</p>
+
+<p>따라서 5번은 하나의 치환표가 아니라 날짜 + 외국어 + 원소번호 + 문자재배열을 섞은 압축문으로 보입니다. 아직 전체 평문은 안 닫혔습니다.</p>
+
+<ol>
+  <li>iwo – 18447 g7 gg !</li>
+</ol>
+
+<p>여기는 가장 강하게 풀립니다.</p>
+
+<p>18447 = 18.4.47. 이날 영국군이 헬골란트에서 약 6,700톤의 폭약을 폭파했습니다. 6,700 t = 6.7 Gg ≈ 7 Gg, 그래서 g7 gg와 맞습니다. 이 부분은 기존 연구도 같은 해독에 도달했습니다.</p>
+
+<p>앞의 iwo는 <strong>Iwo [Jima]</strong>일 가능성이 높습니다. 그러면 이 구간은 이오지마와 헬골란트라는 두 거대한 전쟁 파괴를 대조하는 형태가 됩니다.</p>
+
+<p>그리고 마지막 Glent 31, glent 14 Po를 더 밀어봤더니 이게 굉장히 중요합니다.</p>
+
+<p>31 = Ga</p>
+
+<p>Glent + Ga → GELANGT — 글자 하나도 남지 않는 정확한 애너그램.</p>
+
+<p>그다음은 더 기묘합니다.</p>
+
+<p>14 = Si, Po = Po</p>
+
+<p>glent + Si + Po → SPION LEGT</p>
+
+<p>이것도 글자 하나도 남지 않는 정확한 애너그램입니다.</p>
+
+<p>즉 마지막 줄은 우연한 숫자열이 아니라 적어도 원자번호를 원소기호로 바꾼 뒤 재배열하라는 장치를 실제로 품고 있습니다.</p>
+
+<p>현재 여섯 구간에 가장 잘 맞는 기법 배치는</p>
+
+<p>① 시각/프랑스어 변환 → ② 문헌참조 → ③ 역사연표 → ④ 주기율표·과학표기 → ⑤ 다언어 압축/재배열 → ⑥ 날짜·SI단위</p>
+
+<p>까지 왔습니다.</p>
+
+<p>그리고 이건 아직 해독 완료라고 부를 단계가 아닙니다. 1·2·3·4·5에서 남은 토큰을 이 구조에 맞춰 계속 밀어야 합니다.</p>
+
+<p>( <a href="https://chatgpt.com/s/t_6aa39c657a908191a7e598849e95f0b3">https://chatgpt.com/s/t_6aa39c657a908191a7e598849e95f0b3</a> )</p>
+
+<p>나 :</p>
+
+<p>남은 토큰을 그 구조에 맞춰 계속 밀어야 한다고 말하지 말고 계속 밀고 가라고!</p>
+
+<p>GPT :</p>
+
+<p>끝까지 문장으로 밀면 현재 가장 일관되게 이어지는 복원문은 이쪽입니다. 문장부호 6구간은 그대로 유지했습니다.</p>
+
+<ol>
+  <li>„C’est un coup de Zeus!“</li>
+</ol>
+
+<p>→ “이건 제우스의 일격이다!”</p>
+
+<ol>
+  <li>„Ist Deutschland wie Gallien in vier Teile geteilt?“</li>
+</ol>
+
+<p>→ “독일을 갈리아처럼 네 조각으로 나눈 것인가?”</p>
+
+<p>여기서는 카이사르의 유명한 Gallia est omnis divisa in partes tres를 비틀어, 전후 독일의 4개 점령구역을 찌르는 문장으로 봅니다.</p>
+
+<ol>
+  <li>„Wie hieß die GPU 1929, 1939, 1949?“</li>
+</ol>
+
+<p>→ “GPU는 1929년, 1939년, 1949년에는 각각 뭐라고 불렸나?”</p>
+
+<p>즉 OGPU → NKVD → MGB로 이름만 바뀌어 이어지는 소련 억압기관을 묻는 조롱으로 읽힙니다. GpU를 소련 비밀경찰로 읽는 것은 기존 연구에서도 제시됩니다.</p>
+
+<ol>
+  <li>„Mit Fusil und Atomwaffe seid ihr am 13.3.49 immer noch da – weg!“</li>
+</ol>
+
+<p>→ “소총과 원자무기를 들고 1949년 3월 13일에도 아직 여기 있는가—꺼져라!”</p>
+
+<p>여기서 71Fi16 → FUSIL이 가장 강하고, 13349는 실제로 이 글을 쓴 13.3.1949입니다. 마지막 WEg!까지 합치면 단순한 날짜 기록보다는 점령군에게 나가라는 명령으로 읽는 것이 문맥상 가장 자연스럽습니다. 글 자체가 연합국과 전후 점령을 비판하는 것으로 분석되어 왔습니다.</p>
+
+<ol>
+  <li>„Das ist eure Gewalt: 13.9.1899 – 48.000 Mann gegen die Buren; 1937 – acht Generäle und Zehntausende Offiziere; 10.12.1948 – Menschenrechte, doch Homo sapiens bleibt Fleisch:“</li>
+</ol>
+
+<p>→ “이것이 너희의 폭력이다. 1899년 9월 13일—보어인들을 상대로 4만 8천 명; 1937년—여덟 장군과 수만 명의 장교들; 1948년 12월 10일—그러고는 인권이라니, 호모 사피엔스는 결국 살덩이일 뿐인데:”</p>
+
+<p>이 부분이 지금 제일 크게 열립니다.</p>
+
+<p>13999 … 48 = 1899.9.13 + 48,000명은 실제로 그날 Lansdowne가 트란스발 전쟁에 필요하다고 판단한 병력 48,000명과 정확히 맞습니다.</p>
+
+<p>19037 … 8 … 36 = 1937년 스탈린의 군부 숙청으로 읽으면, 1937년에 투하쳅스키를 포함한 8명의 최고 지휘관이 처형된 사건과 수만 명 규모의 군 장교 숙청이 맞물립니다.</p>
+
+<p>그리고 1012를 <strong>10.12.</strong>로 읽으면 바로 1948년 12월 10일 세계인권선언 채택일입니다.</p>
+
+<p>뒤의 sabi … FlisCh 26은 여기서 sapiens / Fleisch(살, 육체) 쪽으로 읽는 것이 문장 전체와 가장 잘 붙습니다.</p>
+
+<ol>
+  <li>„Iwo Jima – Helgoland: 18.4.47, 7 Gigagramm Sprengstoff!“</li>
+</ol>
+
+<p>→ “이오지마—헬골란트. 1947년 4월 18일, 폭약 7기가 그램!”</p>
+
+<p>18447 g7 gg는 가장 확실합니다. 1947년 4월 18일 헬골란트 폭파에 약 6,700톤 = 6.7 Gg ≈ 7 Gg의 폭약이 사용됐다는 것까지 기존 연구에서 독립적으로 잡혔습니다.</p>
+
+<p>그래서 여섯 문장을 한꺼번에 이어 읽으면:</p>
+
+<p>“너희는 제우스라도 된 것처럼 군다! 독일을 갈리아처럼 네 조각으로 나누었느냐? GPU는 1929년, 1939년, 1949년엔 이름이 무엇이었지? 총과 원자무기를 들고 1949년 3월 13일에도 여전히 여기 있느냐—나가라! 이것이 너희의 폭력의 역사다. 1899년 보어전쟁의 4만 8천 명, 1937년 스탈린의 숙청, 그러고는 1948년 12월 10일 ‘인권’을 선언한다. 인간은 여전히 살덩이로 죽어간다. 이오지마—그리고 헬골란트, 1947년 4월 18일, 7기가 그램의 폭약!”</p>
+
+<p>이렇게 놓으니까 처음의 Truman/Stalin/Churchill — Yalta/Tehran/Potsdam과 마지막까지 한 방향으로 닫힙니다. 단순한 암호문이라기보다 미국·소련·영국 각각의 폭력을 역사적 숫자와 언어유희로 압축해서 세 정상에게 되돌려 던지는 고발문으로 읽힙니다. 이 방향은 기존 연구가 독립적으로 잡은 “연합국에 대한 고발”이라는 전체 의미와도 정확히 겹칩니다.</p>
+
+<p>( <a href="https://chatgpt.com/s/t_6aa39cb42ecc81919adccaabfacaf5c9">https://chatgpt.com/s/t_6aa39cb42ecc81919adccaabfacaf5c9</a> )</p>
+
+<p>나 :</p>
+
+<p>기존 연구? 해독은 안 됐다면서 의미가 밝혀져 있었다고?</p>
+
+<p>GPT :</p>
+
+<p>네. 완전 해독은 안 됐는데, 전체 주제는 기존 연구에서 어느 정도 추정돼 있었습니다. 제가 아까 그걸 마치 “해독된 전체 의미”처럼 말해서 과장했습니다. 죄송합니다.</p>
+
+<p>2014년 Bruns·Grahl 논문은 제목부터 <strong>「Arno Schmidt의 『An die Exzellenzen』를 연합국에 대한 고발로 읽고, 해독을 시도함」</strong>입니다. 그런데 결론에서 저자들이 명시적으로 <strong>“완전한 해독은 이루지 못했다”</strong>고 합니다.</p>
+
+<p>그들이 “연합국 비판”이라는 전체 방향을 잡은 근거는 두 종류였습니다. 첫째, 수신인이 Truman·Stalin·Churchill이고, 같은 편지집의 다른 정치·전쟁 관련 글들과 Schmidt의 당시 태도를 보면 전쟁과 점령정책에 대한 비판적·논쟁적 내용일 가능성이 높다는 문맥 분석입니다.</p>
+
+<p>둘째, 실제 암호문에서 몇 군데는 부분적으로 읽혔습니다. 예를 들어 13349는 편지 작성일인 13.3.1949, GpU는 소련의 GPU, 18447 g7 gg는 1947년 4월 18일 헬골란트 폭파와 약 6,700톤의 폭약으로 읽었습니다. 그래서 “무의미한 난수 장난은 아니다”라는 데까지는 갔습니다.</p>
+
+<p>그래서 정확히 말하면:</p>
+
+<p>기존 연구: “전체 평문은 모름. 다만 정치·전쟁, 특히 연합국 비판이라는 방향과 몇 개의 조각은 잡힘.”</p>
+
+<p>우리가 지금 하는 것: 그 조각들을 넘어서 실제 여섯 문장을 복원하려고 밀어붙이는 것입니다.</p>
+
+<p>그리고 중요한 점 하나 더 있습니다. 그 논문도 처음 잡은 것과 비슷하게 문장부호가 의미 단위를 나누는 경계일 가능성을 명시적으로 봤습니다.</p>
+
+<p>( <a href="https://chatgpt.com/s/t_6aa39cec52b48191bf01815645ab537f">https://chatgpt.com/s/t_6aa39cec52b48191bf01815645ab537f</a> )</p>
+
+  </div>
+
+  <nav class="post-navigation" aria-label="글 이동">
+    
+      <a href="/ko/posts/brunch-432.html">← 마무리하며</a>
+    
+    
+      <a href="/ko/posts/brunch-435.html">후설, 후설... →</a>
+    
+  </nav>
+
+  
+    <aside class="related-writing" aria-labelledby="related-writing-title">
+      <div class="section-heading">
+        <span id="related-writing-title">같은 분류의 글</span>
+        <span>같은 서가</span>
+      </div>
+      
+      
+      <div class="post-index post-index--compact">
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+
+
+<a class="post-index__row post-index__row--compact" href="/ko/posts/brunch-436.html">
+  <time class="post-index__date" datetime="2026-09-29T01:16:55+09:00">2026.09.29</time>
+  <span class="post-index__title">아르노슈미트 암호문 논문투고본</span>
+  <span class="post-index__category">에세이</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+
+
+<a class="post-index__row post-index__row--compact" href="/ko/posts/brunch-435.html">
+  <time class="post-index__date" datetime="2026-09-28T23:54:34+09:00">2026.09.28</time>
+  <span class="post-index__title">후설, 후설...</span>
+  <span class="post-index__category">에세이</span>
+</a>
+
+            
+          
+        
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+
+
+<a class="post-index__row post-index__row--compact" href="/ko/posts/brunch-416.html">
+  <time class="post-index__date" datetime="2026-06-26T14:33:04+09:00">2026.06.26</time>
+  <span class="post-index__title">화재, 그리고 세 개의 공간</span>
+  <span class="post-index__category">에세이</span>
+</a>
+
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </aside>
+  
+</article>
+
+    </main>
+    
+
+<footer class="site-footer">
+  <div>
+    <a class="site-footer__mark" href="/ko/" aria-label="BOUNDARY by RUP L.">
+      <span class="site-footer__name">BOUNDARY</span>
+      <span class="site-footer__byline">by RUP L.</span>
+    </a>
+    <p>글 / 프로젝트 / 물건</p>
+  </div>
+  <nav class="site-footer__links" aria-label="External links">
+    <a href="https://github.com/ize-studio/ize-compose" target="_blank" rel="noopener noreferrer">Ize Compose ↗</a>
+    <a href="https://github.com/ize-studio/ize-compose/tree/emulator" target="_blank" rel="noopener noreferrer">Emulator ↗</a>
+    <a href="https://brunch.co.kr/@rup-l" target="_blank" rel="noopener noreferrer">Brunch ↗</a>
+    <a href="https://www.youtube.com/@ize-studio" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+    <a href="https://ko-fi.com/dievesa" target="_blank" rel="noopener noreferrer">Ko-fi ↗</a>
+  </nav>
+  <p class="site-notice">이 사이트의 모든 글은 RUP L.의 창작물입니다. © 2026 RUP L.</p>
+</footer>
+
+  </body>
+</html>

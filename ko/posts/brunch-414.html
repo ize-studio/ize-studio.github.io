@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    
+    
+    <title>한글 활자 만들기 | BOUNDARY</title>
+    <meta name="description" content="멀티랭귀지, 즉 다개국어 입력을 현실화해야겠다는 생각을 했던 것보다 한글을 구현한 이야기를 먼저 하는 것이 순서인 것 같다. 처음에 내 힘으로 할 수 없을 것처럼 보였던 것이 단지 하나의 관문일 뿐이었다는 것을 깨달았기에 한글 외에도 도전해보고 싶다는 생각을 했던 것이기 때문이다....">
+    <link rel="canonical" href="https://ize-studio.github.io/ko/posts/brunch-414.html">
+    <link rel="alternate" hreflang="ko" href="https://ize-studio.github.io/ko/posts/brunch-414.html">
+    
+      <link rel="alternate" hreflang="en" href="https://ize-studio.github.io/posts/projects/making-hangul-type.html">
+    
+    <link rel="alternate" hreflang="x-default" href="https://ize-studio.github.io/">
+    <meta property="og:site_name" content="BOUNDARY">
+    <meta property="og:title" content="한글 활자 만들기 | BOUNDARY">
+    <meta property="og:description" content="멀티랭귀지, 즉 다개국어 입력을 현실화해야겠다는 생각을 했던 것보다 한글을 구현한 이야기를 먼저 하는 것이 순서인 것 같다. 처음에 내 힘으로 할 수 없을 것처럼 보였던 것이 단지 하나의 관문일 뿐이었다는 것을 깨달았기에 한글 외에도 도전해보고 싶다는 생각을 했던 것이기 때문이다....">
+    <meta property="og:url" content="https://ize-studio.github.io/ko/posts/brunch-414.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="한글 활자 만들기 | BOUNDARY">
+    <meta name="twitter:description" content="멀티랭귀지, 즉 다개국어 입력을 현실화해야겠다는 생각을 했던 것보다 한글을 구현한 이야기를 먼저 하는 것이 순서인 것 같다. 처음에 내 힘으로 할 수 없을 것처럼 보였던 것이 단지 하나의 관문일 뿐이었다는 것을 깨달았기에 한글 외에도 도전해보고 싶다는 생각을 했던 것이기 때문이다....">
+    <meta name="twitter:image" content="https://ize-studio.github.io/assets/images/initial.png">
+    
+      <meta property="article:published_time" content="2026-06-21T23:00:36+09:00">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="BOUNDARY" href="/feed.xml">
+  </head>
+  <body class="layout-post lang-ko">
+    
+
+
+
+
+
+
+<a class="skip-link" href="#content">본문으로 건너뛰기</a>
+<header class="site-header">
+  <a class="site-title" href="/ko/" aria-label="BOUNDARY by RUP L.">
+    <span class="site-title__name">BOUNDARY</span>
+    <span class="site-title__byline">by RUP L.</span>
+  </a>
+  <nav class="site-nav" aria-label="주요 메뉴">
+    
+      <a href="/ko/">처음</a>
+    
+      <a href="/ko/writing/">글</a>
+    
+      <a href="/ko/fiction/">소설</a>
+    
+      <a href="/ko/research/">연구</a>
+    
+      <a href="/ko/projects/">프로젝트</a>
+    
+      <a href="/ko/shop/">상점</a>
+    
+      <a href="/ko/about/">소개</a>
+    
+    <a class="language-switch" href="/posts/projects/making-hangul-type.html" lang="en" hreflang="en">English</a>
+  </nav>
+  <details class="mobile-menu">
+    <summary>메뉴</summary>
+    <nav aria-label="모바일 메뉴">
+      
+        <a href="/ko/">처음</a>
+      
+        <a href="/ko/writing/">글</a>
+      
+        <a href="/ko/fiction/">소설</a>
+      
+        <a href="/ko/research/">연구</a>
+      
+        <a href="/ko/projects/">프로젝트</a>
+      
+        <a href="/ko/shop/">상점</a>
+      
+        <a href="/ko/about/">소개</a>
+      
+      <a class="language-switch" href="/posts/projects/making-hangul-type.html" lang="en" hreflang="en">English</a>
+    </nav>
+  </details>
+</header>
+
+    <main class="site-main" id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+<article class="article">
+  <header class="article-header">
+    <p class="eyebrow">
+      프로젝트
+    </p>
+    <h1 class="article-title">한글 활자 만들기</h1>
+    
+    <p class="article-meta">
+      <time datetime="2026-06-21T23:00:36+09:00">2026년 6월 21일</time>
+    </p>
+    
+      <p class="article-translation">
+        
+          <a href="/posts/projects/making-hangul-type.html" hreflang="en">English translation →</a>
+        
+        
+          <a href="https://brunch.co.kr/@rup-l/414" target="_blank" rel="noopener noreferrer">브런치 원문 ↗</a>
+        
+      </p>
+    
+  </header>
+
+  <div class="article-body">
+    <p>멀티랭귀지, 즉 다개국어 입력을 현실화해야겠다는 생각을 했던 것보다 한글을 구현한 이야기를 먼저 하는 것이 순서인 것 같다. 처음에 내 힘으로 할 수 없을 것처럼 보였던 것이 단지 하나의 관문일 뿐이었다는 것을 깨달았기에 한글 외에도 도전해보고 싶다는 생각을 했던 것이기 때문이다. 한글과 영어 입력만 구현하는 데에도 내가 처음에 생각했던 것처럼 수 주의 시간과 하루에 한두 시간 이상의 노력이 들어갔다면 더 이상은 꿈도 꾸지 못했을 것이다. 조금 힘들더라도 ‘할 만하다’는 생각이 드는 것과 그걸 할 만한 환경이나 재능이 있었으면 좋았겠다고 단지 바라기만 하는 상황은 매우 다르다. 착수를 하게 되느냐 마느냐라는, 0 아니면 100인 상황을 만드는 것이기 때문이다.</p>
+
+<p>윈도우나 맥, 리눅스처럼 운영체제가 있다면 해당 운영체제에서 제공하는 언어팩을 그대로 사용하면 된다. 라즈베리 파이를 이용한 <Ize-Ribbon>에서는 그리 많은 시간이 소요되지 않은 이유이다. 그렇지만 처음부터 쌓아 올려야 하는 펌웨어에서는 약간 환경이 달랐다. 그때는 몰랐지만 하나하나 해 보면서 알게 된 것들이다.</Ize-Ribbon></p>
+
+<p>우선, 키보드 입력이 코드에서 어떻게 적용되는지 모른다. 테스트해 보아야 한다. 둘째, 폰트가 없다. 셋째, 한글은 받침이 있느냐 없느냐에 따라 글자의 코드가 다르다.</p>
+
+<p>이 모두가 펌웨어를 만들게 되니 알게 된 관문들이었다. 그전에는 모든 언어에 대해 이미 공통된 언어팩 같은 게 있어서, 윈도우나 맥에서 한글을 선택하듯이 선택만 하면 될 줄 알았다. 키보드만 눌러도 알아서 글자가 나타날 줄 알았는데, 키보드에서 들어온 신호와 글자도 내가 일일이 매칭시켜 주어야 한다는 것도 그때 처음 알았다. 그때는 그냥 제미나이가 이렇게 하면 된다, 저렇게 하면 된다고 하는 말만 따라서 그저 옛날 대학생 시절 임베이드 리눅스 책을 보고 멋모르고 명령어만 따라 치던 시절처럼 입력만 똑같이 했을 뿐인 그런 식이었기에 내가 넣으면서도 ‘이런 과정을 다 거쳐야 한다고? 아예 새로 만드는 기분인데?’하고 생각했다.</p>
+
+<p>그런데, 정말로 새로 만드는 것이었다.</p>
+
+<p>무엇보다 놀랐던 것은 그 ‘새로’ 만든다는 범위였다. 제미나이 말로는 아스키코드를 넣는 건 어려운 일이 아니지만 그 글자 모양을 화면이 알지 못하기에 표시할 수가 없다는 것이었다. 이해가 가는가? 이제까지는 컴퓨터에 키보드를 통해 글자를 넣으면 컴퓨터는 그 글자를 표시해 준다고 알고 있었는데, 글자 코드를 넣어도 그 코드로 표시해야 하는 것이 무엇인지까지도 내가 모두 알려 주어야 한다는 것이다. “기역”이라고 입력을 하면 그 모양이 “ㄱ”이라는 것을 알려 주어야 한다. 그렇게 만 자가 넘는 글자를 모두 알려 주어야만 하는 것이었다.</p>
+
+<p>‘하면 되지. 내가 직접 하나? 제미나이가 하지.”</p>
+
+<p>그런 생각으로 시작했다. 그때 내가 했던 생각은, 글자 코드에 따라 글자 모양을 모두 넣을 필요 없이, 한글 자모만 넣고, 화면 표시는 타자기처럼 그냥 그렇게 모아서 표시만 하고 말자는 것이었다. 아마 그렇게 표시를 하게 했다면 정말 타자기처럼 받침 자리로 한 줄을 띄워 놓는 형태가 되었을 것이었다. 그런데 제미나이가 한글 오토마타는 대부분 인터넷에서 알려져 있는 것이고, 그렇게 코드가 조합되는, 그러니까 ‘ㄱ’과 ‘ㅏ’가 만나서 ‘가’라는 글자가 만들어지는 과정은 이미 구현이 쉽다는 것이었다. 솔직히 무슨 말인지도 모르고 된다고 하니 그 방향으로 그냥 진행을 했던 셈이었다.</p>
+
+<p>다른 부분에서는 안 되면 돌아가고 다시 하고, 그것도 아니면 AI한계라고 포기하고 내가 고민해서 새로운 아이디어를 내기도 했지만 한글은 전적으로 제미나이 마음대로 하라고 해서 아마도 네 시간 만에 완성했던 것 같다. 퇴근 후 시작해서 그날 잠자리에 들기 전에 끝난 것이었다.</p>
+
+<p>시프트를 눌러서 ‘ㄲ’이나 ‘ㅉ’ 등이 써지는 것을 확인했지만, 시프트를 누른 상태에서 쌍자음이 없는 글자는 아예 입력이 안 되는 것을 보았다. 캡스락 켜져 있는 상태에서는 쌍자음만 써지는 것을 보았다. 캡스락이 켜져 있는 상태에서 숫자를 누르면 $% 등이 나타나기에 캡스락은 무시하게 했더니 시프트를 눌러도 숫자 키 위의 특수문자가 입력되지 않는 것을 보았다.</p>
+
+<p>나머지 주말까지는 이런 식으로 디버깅 아닌 디버깅만 계속했다. 프로그램이 오류가 나거나 하는 건 아니니 디버깅이라고 할 만한 성격은 아닌 것 같지만, 어쨌든 글을 쓰면서 기대하게 되는 기능과 다르게 움직이는 것은 고쳐야 하는 것이 맞았다.</p>
+
+<p>글을 아랫줄부터 쓰게 하고 싶어서 맨 위에서 시작하게 하지 말고 화면 안의 면적과 글 한 줄, 굴과 글 사이 공간의 면적을 계산해서 맨 아랫줄로 내려달라고 했다. 아마도 이것이 가장 큰 고비가 아니었을까 싶다. 뒤에서 부딪히는 고난은 진짜 고난이고 이건 계속하느냐 마느냐 하는 그냥 고비였다. 위에서부터 쓰게 하는 코드는 어차피 백업돼 있으니 여기서 멈추고 그냥 쓸 수도 있었지만 될 듯 안될 듯 뭔가 걸리는 느낌은 주말 내내 매달릴 수밖에 없게 만들었다.</p>
+
+<p>사실, 한글 조합 작업 자체는 거기서 모두 끝났다. 한글을 조합하는 함수와 ‘ㄱ’와 ‘ㅏ’와 ‘ㄱ’을 입력받고 그 뒤에 오는 것이 스페이스나 자음이면 ‘각’이라는 글자를 대신 세워 놓고 기존 입력을 버리는 기능은 정상적으로 잘 작동하고 있었다. 이제는 그렇게 만들어진 글자들을 유지하는 것이 문제였다. 더욱이 그것은 내부적인 연산 자체보다도 사용자의 눈에 비치는 화면 표시가 더 중요한 시점이 되었다. 아무리 내부에서 연산되는 과정이 정상이라 할지라도 글자가 하나 안 보이는 것이 더 중요한 상태가 된 것이다.</p>
+
+  </div>
+
+  <nav class="post-navigation" aria-label="글 이동">
+    
+      <a href="/ko/posts/brunch-413.html">← 첫 도구 첫 디버깅</a>
+    
+    
+      <a href="/ko/posts/brunch-416.html">화재, 그리고 세 개의 공간 →</a>
+    
+  </nav>
+
+  
+    <aside class="related-writing" aria-labelledby="related-writing-title">
+      <div class="section-heading">
+        <span id="related-writing-title">같은 분류의 글</span>
+        <span>같은 서가</span>
+      </div>
+      
+      
+      <div class="post-index post-index--compact">
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+
+
+<a class="post-index__row post-index__row--compact" href="/ko/posts/brunch-432.html">
+  <time class="post-index__date" datetime="2026-09-06T23:00:22+09:00">2026.09.06</time>
+  <span class="post-index__title">마무리하며</span>
+  <span class="post-index__category">프로젝트</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+
+
+<a class="post-index__row post-index__row--compact" href="/ko/posts/brunch-427.html">
+  <time class="post-index__date" datetime="2026-08-30T23:00:21+09:00">2026.08.30</time>
+  <span class="post-index__title">실사용기는 실사용이 최고</span>
+  <span class="post-index__category">프로젝트</span>
+</a>
+
+            
+          
+        
+          
+            
+            
+            
+            
+            
+            
+              
+              
+
+
+
+
+<a class="post-index__row post-index__row--compact" href="/ko/posts/brunch-426.html">
+  <time class="post-index__date" datetime="2026-08-23T23:00:38+09:00">2026.08.23</time>
+  <span class="post-index__title">기기 없이 펌웨어를 써보기?</span>
+  <span class="post-index__category">프로젝트</span>
+</a>
+
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </aside>
+  
+</article>
+
+    </main>
+    
+
+<footer class="site-footer">
+  <div>
+    <a class="site-footer__mark" href="/ko/" aria-label="BOUNDARY by RUP L.">
+      <span class="site-footer__name">BOUNDARY</span>
+      <span class="site-footer__byline">by RUP L.</span>
+    </a>
+    <p>글 / 프로젝트 / 물건</p>
+  </div>
+  <nav class="site-footer__links" aria-label="External links">
+    <a href="https://github.com/ize-studio/ize-compose" target="_blank" rel="noopener noreferrer">Ize Compose ↗</a>
+    <a href="https://github.com/ize-studio/ize-compose/tree/emulator" target="_blank" rel="noopener noreferrer">Emulator ↗</a>
+    <a href="https://brunch.co.kr/@rup-l" target="_blank" rel="noopener noreferrer">Brunch ↗</a>
+    <a href="https://www.youtube.com/@ize-studio" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+    <a href="https://ko-fi.com/dievesa" target="_blank" rel="noopener noreferrer">Ko-fi ↗</a>
+  </nav>
+  <p class="site-notice">이 사이트의 모든 글은 RUP L.의 창작물입니다. © 2026 RUP L.</p>
+</footer>
+
+  </body>
+</html>

@@ -4,7 +4,7 @@ Writing, projects, machines, and objects by RUP L.
 
 This is the source repository for the BOUNDARY GitHub Pages site. It is currently published through the `ize-studio` GitHub account.
 
-The site is a Jekyll archive for essays, fiction, reading notes, writing tools, project records, Korean writing links, and future small editions or objects.
+The site is a bilingual Jekyll archive for essays, fiction, reading notes, writing tools, project records, Korean originals, and future small editions or objects.
 
 ## Local Run
 
@@ -18,6 +18,8 @@ This repository is built by GitHub Actions and published to `ize-studio/ize-stud
 ## Structure
 
 - `_posts/`: English archive posts. Existing post URLs use `/posts/:categories/:title.html`.
+- `_korean_posts/`: Korean originals paired to English posts through `translation_key`.
+- `ko/`: Korean homepage and archive pages.
 - `writing/`: editorial writing index.
 - `fiction/`: fiction index.
 - `projects/`: project record index.
@@ -42,6 +44,7 @@ layout: post
 title: "Post Title"
 date: 2026-06-03
 category: Essays
+canonical_url: "https://brunch.co.kr/@rup-l/123"
 ---
 ```
 
@@ -56,6 +59,14 @@ categories: [Essays]
 ```
 
 Category aliases include singular, plural, and Korean names for the existing archive pages.
+
+Run the pairing script after adding an English translation. It uses an existing Korean file, a local Brunch export, or the public Brunch article in that order:
+
+```sh
+python scripts/import_korean_posts.py --source-dir D:\brunch
+```
+
+The Korean post points to Brunch as its original. The English post points to the Korean post as its original, and both use the same `translation_key`.
 
 ## Adding a Product
 
@@ -99,4 +110,4 @@ The scheduled workflow is `.github/workflows/sync-brunch.yml`. If parsing return
 
 ## Deploy
 
-`.github/workflows/publish.yml` builds this source repository with Jekyll and publishes the generated site to the public GitHub Pages repository.
+`.github/workflows/publish.yml` pairs any newly added translation in its build checkout, builds the source with Jekyll, and publishes the generated site to the public GitHub Pages repository.
