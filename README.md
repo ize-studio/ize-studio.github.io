@@ -18,7 +18,7 @@ This repository is built by GitHub Actions and published to `ize-studio/ize-stud
 ## Structure
 
 - `_posts/`: English archive posts. Existing post URLs use `/posts/:categories/:title.html`.
-- `_korean_posts/`: Korean originals paired to English posts through `translation_key`.
+- `_korean_posts/`: Korean originals. They may be published before an English translation and are paired later through `translation_key`.
 - `ko/`: Korean homepage and archive pages.
 - `writing/`: editorial writing index.
 - `fiction/`: fiction index.
@@ -97,16 +97,17 @@ Supported status values:
 
 ## Brunch Sync
 
-The Brunch cache is metadata only. It stores title, URL, date, excerpt, thumbnail, source, and language.
+The Brunch cache stores title, URL, date, excerpt, thumbnail, source, and language for the listing. The scheduled workflow also imports every newly discovered article into `_korean_posts/`, so a Korean article can be published before its English translation exists.
 
 Run manually:
 
 ```sh
 python scripts/test_fetch_brunch.py
 python scripts/fetch_brunch.py
+python scripts/import_korean_posts.py --include-brunch-cache --allow-missing
 ```
 
-The scheduled workflow is `.github/workflows/sync-brunch.yml`. If parsing returns zero posts or fails, the script keeps the previous `_data/brunch.json` cache.
+The scheduled workflow is `.github/workflows/sync-brunch.yml`. It commits both `_data/brunch.json` and new Korean posts. If parsing returns zero posts or fails, the script keeps the previous cache and published posts.
 
 ## Deploy
 

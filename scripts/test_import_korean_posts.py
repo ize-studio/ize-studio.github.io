@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import unittest
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
 import import_korean_posts
 
@@ -48,6 +50,17 @@ class ImportKoreanPostsTests(unittest.TestCase):
         tokens = []
         import_korean_posts.collect_text_tokens(node, tokens)
         self.assertEqual("".join(tokens), "[https://youtu.be/example](https://youtu.be/example)")
+
+    def test_cached_brunch_numbers_are_deduplicated(self):
+        with TemporaryDirectory() as directory:
+            path = Path(directory) / "brunch.json"
+            path.write_text(
+                '[{"url":"https://brunch.co.kr/@rup-l/394"},'
+                '{"url":"https://brunch.co.kr/@rup-l/394"},'
+                '{"url":"https://example.com/not-brunch"}]',
+                encoding="utf-8",
+            )
+            self.assertEqual(import_korean_posts.cached_brunch_numbers(path), [394])
 
     def test_update_english_document_points_to_korean_post(self):
         original = """---

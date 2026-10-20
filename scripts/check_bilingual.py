@@ -44,6 +44,10 @@ def main() -> int:
         korean_by_key[key] = document
         if not document[2].strip():
             errors.append(f"Empty Korean body: {document[0].name}")
+        number = key.removeprefix("brunch-")
+        korean_original = import_korean_posts.scalar(document[1], "canonical_url")
+        if korean_original != f"https://brunch.co.kr/@rup-l/{number}":
+            errors.append(f"Wrong Korean original link: {key}")
 
     for key, (_, front, _) in english_by_key.items():
         korean_document = korean_by_key.get(key)
@@ -54,12 +58,6 @@ def main() -> int:
         expected = f"https://ize-studio.github.io/ko/posts/brunch-{number}.html"
         if import_korean_posts.scalar(front, "canonical_url") != expected:
             errors.append(f"Wrong English original link: {key}")
-        korean_original = import_korean_posts.scalar(korean_document[1], "canonical_url")
-        if korean_original != f"https://brunch.co.kr/@rup-l/{number}":
-            errors.append(f"Wrong Korean original link: {key}")
-
-    for key in korean_by_key.keys() - english_by_key.keys():
-        errors.append(f"Missing English counterpart: {key}")
 
     required_pages = [
         "ko/index.md",
@@ -79,7 +77,11 @@ def main() -> int:
         for error in errors:
             print(f"ERROR: {error}")
         return 1
-    print(f"Validated {len(english_by_key)} bilingual post pairs and {len(required_pages)} Korean pages.")
+    korean_only = len(korean_by_key.keys() - english_by_key.keys())
+    print(
+        f"Validated {len(english_by_key)} bilingual post pairs, {korean_only} Korean-only posts, "
+        f"and {len(required_pages)} Korean pages."
+    )
     return 0
 
 

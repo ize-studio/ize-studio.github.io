@@ -16,6 +16,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 ENGLISH_DIR = ROOT / "_posts"
 KOREAN_DIR = ROOT / "_korean_posts"
+BRUNCH_CACHE = ROOT / "_data" / "brunch.json"
 SITE_URL = "https://ize-studio.github.io"
 USER_AGENT = "BoundaryKoreanArchive/1.0 (+https://ize-studio.github.io/)"
 FRONT_MATTER_RE = re.compile(r"\A---\r?\n(?P<front>.*?)\r?\n---\r?\n(?P<body>.*)\Z", re.DOTALL)
@@ -259,11 +260,28 @@ def english_posts() -> list[tuple[Path, str, str, int]]:
     return posts
 
 
+def cached_brunch_numbers(path: Path = BRUNCH_CACHE) -> list[int]:
+    if not path.exists():
+        return []
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    numbers: set[int] = set()
+    for item in payload if isinstance(payload, list) else []:
+        if not isinstance(item, dict):
+            continue
+        match = BRUNCH_URL_RE.fullmatch(str(item.get("url", "")).strip())
+        if match:
+            numbers.add(int(match.group("number")))
+    return sorted(numbers)
+
+
 def render_korean_post(source: SourcePost, english_front: str) -> str:
     categories = list_value(english_front, "categories")
     if not categories:
         category = scalar(english_front, "category")
-        categories = [category] if category else ["Essays"]
+        categories = [category] if category else ["한국어 작품"]
     front_lines = [
         "---",
         "layout: post",
@@ -314,17 +332,33 @@ def main() -> int:
         action="store_true",
         help="Refetch posts that are not present in the local source archive.",
     )
+    parser.add_argument(
+        "--include-brunch-cache",
+        action="store_true",
+        help="Create Korean-only posts for Brunch cache entries without English translations.",
+    )
     args = parser.parse_args()
 
     local_sources = load_local_sources(args.source_dir)
     existing_sources = load_existing_sources()
     pairs = english_posts()
+    english_by_number = {number: (path, text, front) for path, text, front, number in pairs}
+    target_numbers = set(english_by_number)
+    if args.include_brunch_cache:
+        target_numbers.update(cached_brunch_numbers())
     fetched = 0
     missing: list[int] = []
     if not args.dry_run:
         KOREAN_DIR.mkdir(parents=True, exist_ok=True)
 
-    for path, text, front, number in pairs:
+    for number in sorted(target_numbers):
+        english_document = english_by_number.get(number)
+        if english_document:
+            path, text, front = english_document
+        else:
+            path = None
+            text = ""
+            front = ""
         source = local_sources.get(number)
         if source is None and not args.refresh_live:
             source = existing_sources.get(number)
@@ -345,10 +379,15 @@ def main() -> int:
             continue
         korean_path = KOREAN_DIR / f"brunch-{number}.md"
         korean_path.write_text(render_korean_post(source, front), encoding="utf-8", newline="\n")
-        path.write_text(update_english_document(text, number), encoding="utf-8", newline="\n")
+        if path is not None:
+            path.write_text(update_english_document(text, number), encoding="utf-8", newline="\n")
 
-    paired = len(pairs) - len(missing)
-    print(f"Paired {paired} posts ({paired - fetched} cached/local, {fetched} fetched, {len(missing)} missing).")
+    imported = len(target_numbers) - len(missing)
+    korean_only = len(target_numbers - set(english_by_number))
+    print(
+        f"Imported {imported} Korean posts ({imported - fetched} cached/local, "
+        f"{fetched} fetched, {korean_only} Korean-only, {len(missing)} missing)."
+    )
     return 0
 
 
