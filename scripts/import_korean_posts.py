@@ -372,6 +372,10 @@ def main() -> int:
                 print(f"Warning: could not import Brunch article {number}: {exc}")
                 missing.append(number)
                 continue
+        existing_source = existing_sources.get(number)
+        if existing_source is not None:
+            # Keep the archive's edited title when refreshing its Brunch source.
+            source.title = existing_source.title
         if not source.title or not source.body.strip():
             raise RuntimeError(f"Incomplete Korean source for Brunch article {number}")
         if args.dry_run:
